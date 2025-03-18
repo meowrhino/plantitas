@@ -3,183 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbario Mágico 🌿✨</title>
+    <title>Herbario Mágico 🌿</title>
     <style>
         :root {
-            --color1: #ff6b6b;
-            --color2: #4ecdc4;
-            --color3: #ffe66d;
+            --color1: #e8f5e9;
+            --color2: #c8e6c9;
+            --color3: #a5d6a7;
         }
 
         body {
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Arial Rounded MT Bold', sans-serif;
             margin: 0;
-            overflow-x: hidden;
-            background: 
-                linear-gradient(45deg, var(--color1), var(--color2), var(--color3)),
-                repeating-linear-gradient(-45deg, 
-                    transparent 0px 20px,
-                    rgba(255,255,255,0.1) 20px 40px);
-            animation: fondoLocura 20s infinite linear;
+            background-color: #f1f8e9;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2390caf9' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
-        @keyframes fondoLocura {
-            0% { background-position: 0 0; }
-            100% { background-position: 1000px 1000px; }
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .filtros {
-            padding: 20px;
-            backdrop-filter: blur(5px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255,255,255,0.8);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 15px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .grid-hierbas {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         }
 
         .hierba {
-            background: rgba(255,255,255,0.9);
+            background: white;
             padding: 20px;
-            margin: 15px;
-            border-radius: 20px;
-            transform: rotate(-1deg);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
             position: relative;
-            overflow: hidden;
         }
 
         .hierba:hover {
-            transform: rotate(1deg) scale(1.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
         }
 
-        .hierba::before {
-            content: "🌿";
+        .stock {
             position: absolute;
-            font-size: 100px;
-            opacity: 0.1;
-            right: -20px;
-            bottom: -30px;
-            transform: rotate(20deg);
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .stock.disponible {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .stock.agotado {
+            background: #ffcdd2;
+            color: #c62828;
         }
 
         .efectos {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             margin: 15px 0;
         }
 
         .efecto-tag {
-            background: linear-gradient(45deg, var(--color1), var(--color3));
-            padding: 8px 15px;
-            border-radius: 30px;
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .efecto-tag:hover {
-            transform: scale(1.1) rotate(3deg);
+            background: var(--color2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
         }
 
         .estrellas {
-            font-size: 1.5em;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .estrellas span {
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .estrellas span:hover {
-            transform: scale(1.3) rotate(10deg);
-        }
-
-        .grid-hierbas {
-            display: grid;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        @media (min-width: 768px) {
-            .grid-hierbas {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
+            color: #ffd700;
+            margin-left: 5px;
         }
 
         h1 {
             text-align: center;
-            font-size: 3em;
-            color: white;
-            text-shadow: 3px 3px 0 var(--color1),
-                         -3px -3px 0 var(--color2);
-            animation: tituloBrillante 2s infinite alternate;
+            color: #2e7d32;
+            margin: 30px 0;
+            font-size: 2.5em;
         }
 
-        @keyframes tituloBrillante {
-            from { text-shadow: 3px 3px 0 var(--color1), -3px -3px 0 var(--color2); }
-            to { text-shadow: 5px 5px 0 var(--color3), -5px -5px 0 var(--color1); }
+        @media (max-width: 768px) {
+            .grid-hierbas {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
         }
-
-        .flor {
-            position: fixed;
-            pointer-events: none;
-            animation: flotar 5s infinite linear;
-        }
-
-        @keyframes flotar {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-100px) rotate(180deg); }
-            100% { transform: translateY(0) rotate(360deg); }
-        }
-
     </style>
 </head>
 <body>
-    <h1>🌼 Herbario Mágico �</h1>
-    
-    <div class="filtros" id="filtros-container">
-        <h2>✨ Filtra por poderes mágicos ✨</h2>
-    </div>
+    <div class="contenedor">
+        <h1>🌿 Inventario de Plantas Medicinales</h1>
+        
+        <div class="filtros" id="filtros-container">
+            <h3>Filtrar por efectos:</h3>
+        </div>
 
-    <div class="grid-hierbas" id="inventario"></div>
+        <div class="grid-hierbas" id="inventario"></div>
+    </div>
 
 <script>
 const inventario = [
     {
-        nombre: "Manzanilla Feliz 🌼",
-        descripcion: "Sus pétalos bailan al ritmo del viento!",
-        efectos: [
-            {nombre: "relajante", fuerza: 2},
-            {nombre: "digestivo", fuerza: 3},
-            {nombre: "antiinflamatorio", fuerza: 1}
-        ]
+        nombre: "Manzanilla",
+        descripcion: "Flores blancas con centro amarillo, ideal para infusiones relajantes.",
+        efectos: [{nombre: "Relajante", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
+        stock: true
     },
     {
-        nombre: "Valeriana Electrizante ⚡",
-        descripcion: "¡Cuidado con sus hojas que dan cosquillas!",
-        efectos: [
-            {nombre: "relajante", fuerza: 3},
-            {nombre: "sedante", fuerza: 3},
-            {nombre: "energizante", fuerza: 2}
-        ]
+        nombre: "Valeriana",
+        descripcion: "Raíz poderosa para el equilibrio nervioso.",
+        efectos: [{nombre: "Sedante", fuerza: 3}, {nombre: "Relajante", fuerza: 3}],
+        stock: false
     },
     {
-        nombre: "Menta Salvaje 🌪️",
-        descripcion: "¡Su aroma te hará volar como un cohete!",
-        efectos: [
-            {nombre: "digestivo", fuerza: 3},
-            {nombre: "energizante", fuerza: 3},
-            {nombre: "descongestivo", fuerza: 2}
-        ]
+        nombre: "Menta Piperita",
+        descripcion: "Hojas aromáticas para refrescar y aliviar.",
+        efectos: [{nombre: "Digestivo", fuerza: 3}, {nombre: "Energizante", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Aloe Vera",
+        descripcion: "Gel regenerativo para la piel y digestión.",
+        efectos: [{nombre: "Regenerativo", fuerza: 3}, {nombre: "Antiinflamatorio", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Caléndula",
+        descripcion: "Flores naranjas para cuidado dérmico.",
+        efectos: [{nombre: "Antiséptico", fuerza: 2}, {nombre: "Cicatrizante", fuerza: 3}],
+        stock: true
+    },
+    {
+        nombre: "Eucalipto",
+        descripcion: "Hojas aromáticas para vías respiratorias.",
+        efectos: [{nombre: "Descongestivo", fuerza: 3}, {nombre: "Antimicrobiano", fuerza: 2}],
+        stock: false
+    },
+    {
+        nombre: "Jengibre",
+        descripcion: "Raíz picante para múltiples beneficios.",
+        efectos: [{nombre: "Antiinflamatorio", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Romero",
+        descripcion: "Estimulante natural para la circulación.",
+        efectos: [{nombre: "Energizante", fuerza: 2}, {nombre: "Antioxidante", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Salvia",
+        descripcion: "Planta versátil con propiedades múltiples.",
+        efectos: [{nombre: "Antiséptico", fuerza: 2}, {nombre: "Regulador hormonal", fuerza: 2}],
+        stock: false
+    },
+    {
+        nombre: "Lavanda",
+        descripcion: "Aroma calmante para relajación profunda.",
+        efectos: [{nombre: "Relajante", fuerza: 3}, {nombre: "Antiestrés", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Diente de León",
+        descripcion: "Depurativo natural para el organismo.",
+        efectos: [{nombre: "Diurético", fuerza: 3}, {nombre: "Detox", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Equinácea",
+        descripcion: "Refuerzo inmunológico natural.",
+        efectos: [{nombre: "Inmunoestimulante", fuerza: 3}, {nombre: "Antiviral", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Ginkgo Biloba",
+        descripcion: "Mejora la circulación cerebral.",
+        efectos: [{nombre: "Neuroprotector", fuerza: 2}, {nombre: "Antioxidante", fuerza: 3}],
+        stock: false
+    },
+    {
+        nombre: "Tomillo",
+        descripcion: "Antiséptico natural de amplio espectro.",
+        efectos: [{nombre: "Antimicrobiano", fuerza: 3}, {nombre: "Expectorante", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Hinojo",
+        descripcion: "Regulador digestivo y hormonal.",
+        efectos: [{nombre: "Digestivo", fuerza: 3}, {nombre: "Galactogogo", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Cola de Caballo",
+        descripcion: "Diurético y regenerador tisular.",
+        efectos: [{nombre: "Diurético", fuerza: 3}, {nombre: "Regenerativo", fuerza: 2}],
+        stock: false
+    },
+    {
+        nombre: "Arnica",
+        descripcion: "Antiinflamatorio natural para golpes.",
+        efectos: [{nombre: "Antiinflamatorio", fuerza: 3}, {nombre: "Analgésico", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Boldo",
+        descripcion: "Protector hepático natural.",
+        efectos: [{nombre: "Hepatoprotector", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Pasiflora",
+        descripcion: "Ansiolítico natural suave.",
+        efectos: [{nombre: "Ansiolítico", fuerza: 2}, {nombre: "Sedante", fuerza: 2}],
+        stock: true
+    },
+    {
+        nombre: "Melisa",
+        descripcion: "Equilibrio nervioso y digestivo.",
+        efectos: [{nombre: "Relajante", fuerza: 2}, {nombre: "Carminativo", fuerza: 2}],
+        stock: false
     }
 ];
 
@@ -190,15 +249,16 @@ function crearEstrellas(num) {
 function generarHTMLHierbas(hierbas) {
     return hierbas.map(hierba => `
         <div class="hierba">
+            <div class="stock ${hierba.stock ? 'disponible' : 'agotado'}">
+                ${hierba.stock ? '✅ Disponible' : '❌ Agotado'}
+            </div>
             <h2>${hierba.nombre}</h2>
             <p>${hierba.descripcion}</p>
             <div class="efectos">
                 ${hierba.efectos.map(efecto => `
                     <div class="efecto-tag">
                         ${efecto.nombre}
-                        <div class="estrellas">
-                            ${crearEstrellas(efecto.fuerza)}
-                        </div>
+                        <span class="estrellas">${crearEstrellas(efecto.fuerza)}</span>
                     </div>
                 `).join('')}
             </div>
@@ -211,22 +271,9 @@ function generarFiltros() {
     const efectosUnicos = [...new Set(todosEfectos)];
     return efectosUnicos.map(efecto => `
         <button class="efecto-tag" data-efecto="${efecto}">
-            ${efecto} 
-            <span class="estrellas">${crearEstrellas(
-                Math.max(...inventario
-                    .filter(h => h.efectos.some(e => e.nombre === efecto))
-                    .map(h => h.efectos.find(e => e.nombre === efecto).fuerza)
-                )
-            )}</span>
+            ${efecto}
         </button>
     `).join('');
-}
-
-function actualizarFiltros() {
-    document.getElementById('filtros-container').innerHTML = `
-        <h2>✨ Filtra por poderes mágicos ✨</h2>
-        ${generarFiltros()}
-    `;
 }
 
 function filtrarHierbas(efecto) {
@@ -240,28 +287,14 @@ document.addEventListener('click', (e) => {
     if (e.target.closest('.efecto-tag')) {
         const efecto = e.target.closest('.efecto-tag').dataset.efecto;
         filtrarHierbas(efecto);
-        document.querySelectorAll('.efecto-tag').forEach(tag => 
-            tag.style.background = 'linear-gradient(45deg, var(--color1), var(--color3))'
-        );
-        e.target.closest('.efecto-tag').style.background = 'linear-gradient(45deg, var(--color2), var(--color1))';
-    }
-});
-
-// Efectos especiales!
-document.addEventListener('mousemove', (e) => {
-    if(Math.random() > 0.97) { // 3% de probabilidad de crear flor
-        const flor = document.createElement('div');
-        flor.className = 'flor';
-        flor.style.left = e.pageX + 'px';
-        flor.style.top = e.pageY + 'px';
-        flor.innerHTML = ['🌼','🌸','🌺','🍀','🌻'][Math.floor(Math.random()*5)];
-        document.body.appendChild(flor);
-        setTimeout(() => flor.remove(), 5000);
     }
 });
 
 // Inicialización
-actualizarFiltros();
+document.getElementById('filtros-container').innerHTML = `
+    <h3>Filtrar por efectos:</h3>
+    ${generarFiltros()}
+`;
 document.getElementById('inventario').innerHTML = generarHTMLHierbas(inventario);
 </script>
 </body>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Hierbas Medicinales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f9f0;
+        }
+
+        .filtros {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e0f0e0;
+            border-radius: 8px;
+        }
+
+        .hierba {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .efectos {
+            margin: 10px 0;
+        }
+
+        .efecto-tag {
+            display: inline-block;
+            background-color: #d0ebd0;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .estrellas {
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+
+        .filtro-activo {
+            background-color: #a0d8a0;
+            font-weight: bold;
+        }
+
+        .grid-hierbas {
+            display: grid;
+            grid-gap: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-hierbas {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="filtros" id="filtros-container">
+        <h3>Filtrar por efectos:</h3>
+        <!-- Los filtros se generarán automáticamente -->
+    </div>
+
+    <div class="grid-hierbas" id="inventario">
+        <!-- Las hierbas se generarán automáticamente -->
+    </div>
+
+<script>
+const inventario = [
+    {
+        nombre: "Manzanilla",
+        descripcion: "Planta con flores blancas y centro amarillo, hojas finamente divididas.",
+        efectos: ["relajante", "digestivo", "antiinflamatorio"],
+        fuerza: 2
+    },
+    {
+        nombre: "Valeriana",
+        descripcion: "Hojas verdes dentadas, flores rosadas agrupadas en corimbos.",
+        efectos: ["relajante", "sedante", "ansiolítico"],
+        fuerza: 3
+    },
+    {
+        nombre: "Menta",
+        descripcion: "Hojas ovaladas con bordes aserrados, aroma fuerte y refrescante.",
+        efectos: ["digestivo", "energizante", "descongestivo"],
+        fuerza: 2
+    }
+];
+
+function crearEstrellas(num) {
+    return '★'.repeat(num) + '☆'.repeat(3 - num);
+}
+
+function generarHTMLHierbas(hierbas) {
+    return hierbas.map(hierba => `
+        <div class="hierba">
+            <h2>${hierba.nombre}</h2>
+            <p>${hierba.descripcion}</p>
+            <div class="efectos">
+                ${hierba.efectos.map(efecto => 
+                    `<span class="efecto-tag" data-efecto="${efecto}">${efecto}</span>`
+                ).join('')}
+            </div>
+            <div class="estrellas">
+                Intensidad: ${crearEstrellas(hierba.fuerza)}
+            </div>
+        </div>
+    `).join('');
+}
+
+function generarFiltros(efectosUnicos) {
+    return efectosUnicos.map(efecto => `
+        <button class="efecto-tag" data-efecto="${efecto}">
+            ${efecto}
+        </button>
+    `).join('');
+}
+
+function actualizarFiltros() {
+    const todosEfectos = inventario.flatMap(hierba => hierba.efectos);
+    const efectosUnicos = [...new Set(todosEfectos)];
+    document.getElementById('filtros-container').innerHTML = `
+        <h3>Filtrar por efectos:</h3>
+        ${generarFiltros(efectosUnicos)}
+    `;
+}
+
+function filtrarHierbas(efecto) {
+    const hierbas = inventario.filter(hierba => 
+        hierba.efectos.includes(efecto)
+    );
+    document.getElementById('inventario').innerHTML = generarHTMLHierbas(hierbas);
+}
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('efecto-tag')) {
+        const efecto = e.target.dataset.efecto;
+        filtrarHierbas(efecto);
+        document.querySelectorAll('.efecto-tag').forEach(tag => 
+            tag.classList.remove('filtro-activo')
+        );
+        e.target.classList.add('filtro-activo');
+    }
+});
+
+// Inicialización
+actualizarFiltros();
+document.getElementById('inventario').innerHTML = generarHTMLHierbas(inventario);
+</script>
+</body>
+</html>

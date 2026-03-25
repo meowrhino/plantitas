@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview 5: Editorial Kinfolk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f6f2;
+            color: #1a1a1a;
+            min-height: 100vh;
+        }
+
+        .hero {
+            padding: 80px 48px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero-label {
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #999;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 6em;
+            font-weight: 400;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: #7a8a5e;
+        }
+        .hero-desc {
+            font-size: 1.05em;
+            color: #888;
+            max-width: 400px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .meta-bar {
+            display: flex;
+            gap: 48px;
+            padding: 32px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid #e5e0d8;
+            border-bottom: 1px solid #e5e0d8;
+        }
+        .meta-item {}
+        .meta-num {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.8em;
+            line-height: 1;
+            color: #1a1a1a;
+        }
+        .meta-label {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #aaa;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .filtros {
+            display: flex;
+            gap: 0;
+            padding: 0 48px;
+            max-width: 1200px;
+            margin: 32px auto 40px;
+            flex-wrap: wrap;
+        }
+        .filtro {
+            padding: 10px 20px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82em;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #aaa;
+            letter-spacing: 0.02em;
+        }
+        .filtro:hover { color: #1a1a1a; }
+        .filtro.activo {
+            color: #1a1a1a;
+            border-bottom-color: #7a8a5e;
+            font-weight: 600;
+        }
+
+        .grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #e5e0d8;
+            border: 1px solid #e5e0d8;
+        }
+
+        .card {
+            background: #f8f6f2;
+            padding: 32px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover {
+            background: #fff;
+        }
+
+        .card-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .card-emoji {
+            font-size: 2em;
+        }
+        .card-status {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+        .tag {
+            font-size: 0.65em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 3px;
+        }
+        .tag-safe { background: #e8eddf; color: #5a6b40; }
+        .tag-caution { background: #fef3e2; color: #a67c37; }
+        .tag-danger { background: #fce8e8; color: #a04040; }
+        .tag-have { color: #7a8a5e; }
+        .tag-want { color: #9b6db0; }
+
+        .card h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+        }
+        .card-cat {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #bbb;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .card-desc {
+            color: #888;
+            font-size: 0.88em;
+            line-height: 1.6;
+            margin-bottom: 18px;
+            font-weight: 300;
+        }
+
+        .card-props {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .prop {
+            font-size: 0.75em;
+            font-weight: 500;
+            color: #666;
+            padding: 4px 0;
+            border-bottom: 1px solid #e5e0d8;
+        }
+        .prop + .prop { margin-left: 12px; }
+        .prop .on { color: #7a8a5e; font-weight: 600; }
+        .prop .off { color: #ddd; }
+
+        .card-line {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 2px;
+        }
+        .line-safe { background: #7a8a5e; }
+        .line-caution { background: #c4a97d; }
+        .line-danger { background: #c0564f; }
+
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 3.5em; }
+            .hero, .meta-bar, .filtros, .grid { padding-left: 24px; padding-right: 24px; }
+        }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.8em; }
+            .meta-bar { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-label">Guía de plantas medicinales</div>
+        <h1>El<br><em>Herbario</em></h1>
+        <p class="hero-desc">Infusiones, remedios y autocuidado. Con info de seguridad real para que nadie la líe.</p>
+    </div>
+
+    <div class="meta-bar">
+        <div class="meta-item"><div class="meta-num">32</div><div class="meta-label">Plantas</div></div>
+        <div class="meta-item"><div class="meta-num">17</div><div class="meta-label">En stock</div></div>
+        <div class="meta-item"><div class="meta-num">15</div><div class="meta-label">Por comprar</div></div>
+        <div class="meta-item"><div class="meta-num">4</div><div class="meta-label">Peligro alto</div></div>
+    </div>
+
+    <div class="filtros">
+        <button class="filtro activo">Todas</button>
+        <button class="filtro">Relajantes</button>
+        <button class="filtro">Digestivas</button>
+        <button class="filtro">Respiratorias</button>
+        <button class="filtro">Circulatorias</button>
+        <button class="filtro">Peligro alto</button>
+        <button class="filtro">En stock</button>
+        <button class="filtro">Por comprar</button>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-line line-danger"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">🍬</span>
+                <div class="card-status">
+                    <span class="tag tag-have">En stock</span>
+                    <span class="tag tag-danger">Peligro</span>
+                </div>
+            </div>
+            <h2>Regaliz</h2>
+            <div class="card-cat">Digestiva</div>
+            <p class="card-desc">Dulce, antiulceroso, antiinflamatorio... pero con trampa. La glicirricina sube la tensión arterial.</p>
+            <div class="card-props">
+                <span class="prop">Antiulceroso <span class="on">++</span><span class="off">.</span></span>
+                <span class="prop">Digestivo <span class="on">++</span><span class="off">.</span></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-line line-safe"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">🌺</span>
+                <div class="card-status">
+                    <span class="tag tag-have">En stock</span>
+                    <span class="tag tag-safe">Segura</span>
+                </div>
+            </div>
+            <h2>Hibisco</h2>
+            <div class="card-cat">Circulatoria</div>
+            <p class="card-desc">Flores carmesí para infusiones espectaculares. Refrescante, antioxidante, baja la tensión.</p>
+            <div class="card-props">
+                <span class="prop">Antioxidante <span class="on">+++</span></span>
+                <span class="prop">Hipotensor <span class="on">++</span><span class="off">.</span></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-line line-safe"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">💐</span>
+                <div class="card-status">
+                    <span class="tag tag-have">En stock</span>
+                    <span class="tag tag-safe">Segura</span>
+                </div>
+            </div>
+            <h2>Lavanda</h2>
+            <div class="card-cat">Relajante</div>
+            <p class="card-desc">Aroma calmante para relajación profunda. Tan bonita como efectiva contra el estrés y la ansiedad.</p>
+            <div class="card-props">
+                <span class="prop">Relajante <span class="on">+++</span></span>
+                <span class="prop">Antiespasmódico <span class="on">++</span><span class="off">.</span></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-line line-caution"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">🧠</span>
+                <div class="card-status">
+                    <span class="tag tag-want">Por comprar</span>
+                    <span class="tag tag-caution">Precaución</span>
+                </div>
+            </div>
+            <h2>Ginkgo Biloba</h2>
+            <div class="card-cat">Circulatoria</div>
+            <p class="card-desc">El árbol de la memoria. Mejora la circulación cerebral y es antioxidante potente.</p>
+            <div class="card-props">
+                <span class="prop">Neuroprotector <span class="on">++</span><span class="off">.</span></span>
+                <span class="prop">Antioxidante <span class="on">+++</span></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-line line-safe"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">🫖</span>
+                <div class="card-status">
+                    <span class="tag tag-have">En stock</span>
+                    <span class="tag tag-safe">Segura</span>
+                </div>
+            </div>
+            <h2>Tomillo</h2>
+            <div class="card-cat">Respiratoria</div>
+            <p class="card-desc">Antiséptico natural de amplio espectro. El mejor aliado cuando la garganta está destrozada.</p>
+            <div class="card-props">
+                <span class="prop">Antiséptico <span class="on">++</span><span class="off">.</span></span>
+                <span class="prop">Expectorante <span class="on">++</span><span class="off">.</span></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-line line-safe"></div>
+            <div class="card-header-row">
+                <span class="card-emoji">🌼</span>
+                <div class="card-status">
+                    <span class="tag tag-want">Por comprar</span>
+                    <span class="tag tag-safe">Segura</span>
+                </div>
+            </div>
+            <h2>Manzanilla</h2>
+            <div class="card-cat">Digestiva</div>
+            <p class="card-desc">La reina de las infusiones. Flores blancas con centro amarillo, ideal para relajarse y calmar la tripa.</p>
+            <div class="card-props">
+                <span class="prop">Digestivo <span class="on">++</span><span class="off">.</span></span>
+                <span class="prop">Calmante <span class="on">++</span><span class="off">.</span></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

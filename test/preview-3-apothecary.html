@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview 3: Neo-Apothecary</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #f5f0eb;
+            color: #2c2420;
+            min-height: 100vh;
+        }
+
+        /* Textura sutil de papel */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23f5f0eb'/%3E%3Crect width='1' height='1' fill='%23ede8e2' opacity='0.4'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content { position: relative; z-index: 1; }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 20px;
+            position: relative;
+        }
+        .ornament {
+            font-size: 1.5em;
+            color: #c4a97d;
+            letter-spacing: 12px;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.8em;
+            font-weight: 400;
+            color: #2c2420;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 em {
+            color: #7a8c5e;
+            font-style: italic;
+        }
+        .hero p {
+            font-size: 1.05em;
+            color: #8a7e74;
+            max-width: 440px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            max-width: 300px;
+            margin: 24px auto 32px;
+        }
+        .divider span { flex: 1; height: 1px; background: #d4c9ba; }
+        .divider i { color: #7a8c5e; font-size: 1.2em; font-style: normal; }
+
+        .stats-strip {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 24px 20px;
+            border: 1px solid #d4c9ba;
+            border-left: none;
+            border-right: none;
+            max-width: 700px;
+            margin: 0 auto 36px;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2em;
+            color: #7a8c5e;
+        }
+        .stat-label {
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #a09585;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        .filtros {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 0 20px 36px;
+            flex-wrap: wrap;
+        }
+        .filtro {
+            padding: 8px 18px;
+            border: 1px solid #d4c9ba;
+            border-radius: 4px;
+            background: transparent;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #8a7e74;
+            letter-spacing: 0.03em;
+        }
+        .filtro:hover, .filtro.activo {
+            background: #7a8c5e;
+            color: white;
+            border-color: #7a8c5e;
+        }
+
+        .grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #faf8f5;
+            border: 1px solid #e0d8ce;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(44,36,32,0.08);
+            border-color: #c4a97d;
+        }
+
+        .card-stamp {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 52px;
+            height: 52px;
+            border: 2px solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transform: rotate(-12deg);
+            line-height: 1.1;
+            text-align: center;
+        }
+        .stamp-safe { border-color: #7a8c5e; color: #7a8c5e; }
+        .stamp-caution { border-color: #c4a97d; color: #c4a97d; }
+        .stamp-danger { border-color: #c0564f; color: #c0564f; }
+
+        .card-inner { padding: 24px; }
+
+        .card-label {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #a09585;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .card h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #2c2420;
+            padding-right: 60px;
+        }
+        .card-desc {
+            color: #8a7e74;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .card-props {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .prop {
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.78em;
+            font-weight: 500;
+            background: #eee8de;
+            color: #6b5e50;
+        }
+        .prop .dots { margin-left: 3px; font-size: 0.8em; }
+        .prop .on { color: #7a8c5e; }
+        .prop .off { color: #d4c9ba; }
+
+        .card-footer {
+            padding: 12px 24px;
+            border-top: 1px solid #e8e0d6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(201,168,76,0.03);
+        }
+        .card-cat {
+            font-size: 0.75em;
+            font-weight: 500;
+            color: #a09585;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        .card-stock {
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+        .stock-have { background: #e8eddf; color: #5a6b40; }
+        .stock-want { background: #f0e5f5; color: #7b4f8a; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.6em; }
+            .grid { grid-template-columns: 1fr; }
+            .stats-strip { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="hero">
+            <div class="ornament">- - -</div>
+            <h1>El <em>Herbario</em></h1>
+            <p>Guía de plantas medicinales para infusiones, remedios naturales y autocuidado.</p>
+        </div>
+
+        <div class="divider"><span></span><i>leaf</i><span></span></div>
+
+        <div class="stats-strip">
+            <div class="stat"><div class="stat-num">32</div><div class="stat-label">Plantas</div></div>
+            <div class="stat"><div class="stat-num">17</div><div class="stat-label">En stock</div></div>
+            <div class="stat"><div class="stat-num">15</div><div class="stat-label">Por comprar</div></div>
+            <div class="stat"><div class="stat-num">4</div><div class="stat-label">Peligrosas</div></div>
+        </div>
+
+        <div class="filtros">
+            <button class="filtro activo">Todas</button>
+            <button class="filtro">Relajantes</button>
+            <button class="filtro">Digestivas</button>
+            <button class="filtro">Respiratorias</button>
+            <button class="filtro">Circulatorias</button>
+            <button class="filtro">Peligro alto</button>
+            <button class="filtro">En stock</button>
+            <button class="filtro">Por comprar</button>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-stamp stamp-danger">peligro<br>alto</div>
+                <div class="card-inner">
+                    <div class="card-label">Digestiva</div>
+                    <h2>Regaliz</h2>
+                    <p class="card-desc">Dulce, antiulceroso, antiinflamatorio... pero con trampa. La glicirricina sube la tensión arterial si te excedes.</p>
+                    <div class="card-props">
+                        <span class="prop">Antiulceroso <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                        <span class="prop">Antiinflamatorio <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                        <span class="prop">Digestivo <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">🫄 Digestiva</span>
+                    <span class="card-stock stock-have">En stock</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-stamp stamp-safe">segura</div>
+                <div class="card-inner">
+                    <div class="card-label">Circulatoria</div>
+                    <h2>Hibisco</h2>
+                    <p class="card-desc">Flores carmesí para infusiones con color espectacular. Refrescante, antioxidante y baja la tensión suavemente.</p>
+                    <div class="card-props">
+                        <span class="prop">Antioxidante <span class="dots"><span class="on">+++</span></span></span>
+                        <span class="prop">Hipotensor <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">❤️ Circulatoria</span>
+                    <span class="card-stock stock-have">En stock</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-stamp stamp-safe">segura</div>
+                <div class="card-inner">
+                    <div class="card-label">Relajante</div>
+                    <h2>Lavanda</h2>
+                    <p class="card-desc">Aroma calmante para relajación profunda. Tan bonita como efectiva contra el estrés y la ansiedad.</p>
+                    <div class="card-props">
+                        <span class="prop">Relajante <span class="dots"><span class="on">+++</span></span></span>
+                        <span class="prop">Antiespasmódico <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">😴 Relajante</span>
+                    <span class="card-stock stock-have">En stock</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-stamp stamp-caution">precau-<br>ción</div>
+                <div class="card-inner">
+                    <div class="card-label">Circulatoria</div>
+                    <h2>Ginkgo Biloba</h2>
+                    <p class="card-desc">El árbol de la memoria. Mejora la circulación cerebral y es antioxidante potente. Cuidado con anticoagulantes.</p>
+                    <div class="card-props">
+                        <span class="prop">Neuroprotector <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                        <span class="prop">Antioxidante <span class="dots"><span class="on">+++</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">❤️ Circulatoria</span>
+                    <span class="card-stock stock-want">Por comprar</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-stamp stamp-safe">segura</div>
+                <div class="card-inner">
+                    <div class="card-label">Inmunológica</div>
+                    <h2>Equinácea</h2>
+                    <p class="card-desc">Refuerzo inmunológico natural. La planta que tomas cuando notas que se acerca el catarro.</p>
+                    <div class="card-props">
+                        <span class="prop">Inmunoestimulante <span class="dots"><span class="on">+++</span></span></span>
+                        <span class="prop">Antiviral <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">🛡️ Inmunológica</span>
+                    <span class="card-stock stock-have">En stock</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-stamp stamp-safe">segura</div>
+                <div class="card-inner">
+                    <div class="card-label">Digestiva</div>
+                    <h2>Manzanilla</h2>
+                    <p class="card-desc">La reina de las infusiones. Flores blancas con centro amarillo, ideal para relajarse y calmar la tripa.</p>
+                    <div class="card-props">
+                        <span class="prop">Digestivo <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                        <span class="prop">Calmante <span class="dots"><span class="on">++</span><span class="off">.</span></span></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="card-cat">🫄 Digestiva</span>
+                    <span class="card-stock stock-want">Por comprar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,299 +3,1052 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herbario Mágico 🌿</title>
+    <title>El Herbario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color1: #e8f5e9;
-            --color2: #c8e6c9;
-            --color3: #a5d6a7;
+            --bg: #f8f6f2;
+            --bg-card: #faf8f5;
+            --text: #1a1a1a;
+            --text-muted: #8a7e74;
+            --text-light: #a09585;
+            --border: #e5e0d8;
+            --border-light: #ede8e0;
+            --accent: #7a8a5e;
+            --accent-light: #e8eddf;
+            --danger: #c0564f;
+            --danger-light: #fce8e8;
+            --caution: #c4a97d;
+            --caution-light: #fef3e2;
+            --purple: #8b6b9e;
+            --purple-light: #f0e5f5;
+            --radius: 10px;
         }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Arial Rounded MT Bold', sans-serif;
-            margin: 0;
-            background-color: #f1f8e9;
-            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2390caf9' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .contenedor {
+        /* ======== HERO (editorial style) ======== */
+        .hero {
+            padding: 72px 48px 0;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
-
-        .filtros {
-            padding: 15px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 10px;
+        .hero-label {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(3.5em, 8vw, 6em);
+            font-weight: 400;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+        .hero-desc {
+            font-size: 1em;
+            color: var(--text-muted);
+            max-width: 420px;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
-        .grid-hierbas {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        /* ======== META BAR ======== */
+        .meta-bar {
+            display: flex;
+            gap: 48px;
+            padding: 28px 48px;
+            max-width: 1200px;
+            margin: 32px auto 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .meta-num {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.4em;
+            line-height: 1;
+        }
+        .meta-label {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 4px;
         }
 
-        .hierba {
+        /* ======== SEARCH + FILTERS ======== */
+        .controls {
+            max-width: 1200px;
+            margin: 28px auto 0;
+            padding: 0 48px;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-card);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.92em;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-bar input::placeholder { color: var(--text-light); }
+        .search-bar input:focus { border-color: var(--accent); }
+        .search-bar svg {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        /* Filter: segmented horizontal bar */
+        .filter-bar {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .filter-group {
+            display: flex;
+            gap: 2px;
+            background: var(--border-light);
+            border-radius: 8px;
+            padding: 3px;
+        }
+        .filter-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        .filter-btn:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.5);
+        }
+        .filter-btn.active {
             background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            color: var(--text);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+        .filter-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Category colors */
+        .cat-relajante { background: #b8c5e2; }
+        .cat-digestiva { background: #e2c87a; }
+        .cat-respiratoria { background: #7abfb0; }
+        .cat-circulatoria { background: #d4868a; }
+        .cat-depurativa { background: #8ab87a; }
+        .cat-inmune { background: #b09cd6; }
+        .cat-urinaria { background: #7ab5d4; }
+        .cat-hormonal { background: #c97ab8; }
+        .cat-piel { background: #d4a87a; }
+        .cat-general { background: #aaa59c; }
+        .cat-especias { background: #c98a5a; }
+
+        /* ======== GRID ======== */
+        .grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+        }
+
+        /* ======== CARDS (apothecary style) ======== */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 32px rgba(0,0,0,0.06);
+            border-color: var(--border);
+        }
+
+        /* Colored top line per category */
+        .card-top-line {
+            height: 3px;
+            width: 100%;
+        }
+
+        .card-inner {
+            padding: 22px 24px 18px;
             position: relative;
         }
 
-        .hierba:hover {
-            transform: translateY(-5px);
-        }
-
-        .stock {
+        /* Stamp (safety indicator) */
+        .card-stamp {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.9em;
+            top: 16px;
+            right: 18px;
+            width: 48px;
+            height: 48px;
+            border: 2px solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transform: rotate(-12deg);
+            line-height: 1.15;
+            text-align: center;
+        }
+        .stamp-safe { border-color: var(--accent); color: var(--accent); }
+        .stamp-caution { border-color: var(--caution); color: var(--caution); }
+        .stamp-danger { border-color: var(--danger); color: var(--danger); }
+
+        .card-category-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+        .card-category-label .cat-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .card-category-label span:last-child {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-light);
+            font-weight: 500;
         }
 
-        .stock.disponible {
-            background: #c8e6c9;
-            color: #2e7d32;
+        .card h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--text);
+            padding-right: 56px;
+            letter-spacing: -0.01em;
         }
-
-        .stock.agotado {
-            background: #ffcdd2;
-            color: #c62828;
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.88em;
+            line-height: 1.55;
+            margin-bottom: 14px;
+            font-weight: 300;
+            padding-right: 20px;
         }
-
-        .efectos {
+        .card-props {
             display: flex;
             flex-wrap: wrap;
+            gap: 6px;
+        }
+        .prop-tag {
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.76em;
+            font-weight: 500;
+            background: var(--border-light);
+            color: #6b5e50;
+        }
+        .prop-dots { margin-left: 3px; letter-spacing: 1px; }
+        .prop-dots .on { color: var(--accent); }
+        .prop-dots .off { color: #d4c9ba; }
+
+        .card-footer {
+            padding: 10px 24px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-footer-cat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72em;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .card-footer-cat .cat-dot-sm {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+        }
+        .card-stock {
+            font-size: 0.72em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 5px;
+        }
+        .stock-have { background: var(--accent-light); color: #5a6b40; }
+        .stock-want { background: var(--purple-light); color: var(--purple); }
+
+        /* ======== MODAL ======== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.visible { display: flex; }
+
+        .modal {
+            background: var(--bg);
+            border-radius: 12px;
+            max-width: 580px;
+            width: 100%;
+            max-height: 88vh;
+            overflow-y: auto;
+            animation: modalIn 0.3s ease-out;
+            position: relative;
+        }
+        @keyframes modalIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-close {
+            position: sticky;
+            top: 12px;
+            float: right;
+            margin-right: 16px;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            font-size: 1.1em;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.2s;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover { background: var(--border-light); }
+
+        .modal-top-line { height: 4px; border-radius: 12px 12px 0 0; }
+
+        .modal-header {
+            padding: 28px 28px 0;
+        }
+        .modal-category-bar {
+            display: flex;
+            align-items: center;
             gap: 8px;
-            margin: 15px 0;
+            margin-bottom: 8px;
+        }
+        .modal-cat-dot { width: 9px; height: 9px; border-radius: 50%; }
+        .modal-cat-label {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .modal-header h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.2em;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+        .modal-badges {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .modal-badge {
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 0.72em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .mbadge-safe { background: var(--accent-light); color: #5a6b40; }
+        .mbadge-caution { background: var(--caution-light); color: #a67c37; }
+        .mbadge-danger { background: var(--danger-light); color: var(--danger); }
+        .mbadge-have { background: var(--accent-light); color: #5a6b40; }
+        .mbadge-want { background: var(--purple-light); color: var(--purple); }
+
+        .modal-section {
+            padding: 20px 28px 0;
+        }
+        .modal-section:last-child { padding-bottom: 28px; }
+
+        .modal-section-title {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .modal-section p {
+            font-size: 0.92em;
+            color: var(--text-muted);
+            line-height: 1.65;
+            font-weight: 300;
         }
 
-        .efecto-tag {
-            background: var(--color2);
-            padding: 6px 12px;
-            border-radius: 20px;
+        .modal-props-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .modal-prop-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+        }
+        .modal-prop-name {
+            font-size: 0.88em;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .modal-prop-dots {
+            display: flex;
+            gap: 4px;
+        }
+        .modal-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--border-light);
+        }
+        .modal-dot.filled { background: var(--accent); }
+
+        .modal-safety-box {
+            padding: 14px 16px;
+            border-radius: 8px;
+            border-left: 3px solid;
             font-size: 0.9em;
+            line-height: 1.55;
+            font-weight: 400;
+        }
+        .safety-safe { background: var(--accent-light); border-color: var(--accent); color: #4a5a36; }
+        .safety-caution { background: var(--caution-light); border-color: var(--caution); color: #7a6030; }
+        .safety-danger { background: var(--danger-light); border-color: var(--danger); color: #8a3a36; }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+        }
+        .modal-list li {
+            font-size: 0.88em;
+            color: var(--text-muted);
+            line-height: 1.55;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-light);
+            font-weight: 300;
+        }
+        .modal-list li:last-child { border-bottom: none; }
+        .modal-list li::before {
+            content: '';
+            display: inline-block;
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--text-light);
+            margin-right: 10px;
+            vertical-align: middle;
         }
 
-        .estrellas {
-            color: #ffd700;
-            margin-left: 5px;
+        .modal-prep-box {
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: #f0f5f2;
+            border-left: 3px solid var(--accent);
+            font-size: 0.9em;
+            color: #4a5a36;
+            line-height: 1.55;
+            font-weight: 300;
         }
 
-        h1 {
+        .modal-reco-box {
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: var(--purple-light);
+            border-left: 3px solid var(--purple);
+            margin-top: 4px;
+        }
+        .modal-reco-box strong {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--purple);
+            display: block;
+            margin-bottom: 4px;
+        }
+        .modal-reco-box p {
+            color: #6a4a7a !important;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
             text-align: center;
-            color: #2e7d32;
-            margin: 30px 0;
-            font-size: 2.5em;
+            padding: 80px 20px;
+            color: var(--text-light);
+        }
+        .no-results h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--text-muted);
         }
 
+        /* ======== RESPONSIVE ======== */
         @media (max-width: 768px) {
-            .grid-hierbas {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
+            .hero, .meta-bar, .controls, .grid { padding-left: 20px; padding-right: 20px; }
+            .hero { padding-top: 48px; }
+            .grid { grid-template-columns: 1fr; }
+            .meta-bar { gap: 24px; flex-wrap: wrap; }
+            .filter-group { flex-wrap: wrap; }
+            .modal-header, .modal-section { padding-left: 20px; padding-right: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="contenedor">
-        <h1>🌿 Inventario de Plantas Medicinales</h1>
-        
-        <div class="filtros" id="filtros-container">
-            <h3>Filtrar por efectos:</h3>
-        </div>
 
-        <div class="grid-hierbas" id="inventario"></div>
+<div class="hero">
+    <div class="hero-label">Guía de plantas medicinales</div>
+    <h1>El<br><em>Herbario</em></h1>
+    <p class="hero-desc">Infusiones, remedios y autocuidado. Con info de seguridad real para que nadie la líe.</p>
+</div>
+
+<div class="meta-bar" id="meta-bar"></div>
+
+<div class="controls">
+    <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search" placeholder="Buscar planta, propiedad, efecto...">
     </div>
+    <div class="filter-bar" id="filter-bar"></div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal"></div>
+</div>
 
 <script>
-const inventario = [
+// ====== DATA ======
+const categorias = {
+    relajante:    { label: "Relajante",     color: "#8a9cc4", dot: "cat-relajante" },
+    digestiva:    { label: "Digestiva",     color: "#c4a84e", dot: "cat-digestiva" },
+    respiratoria: { label: "Respiratoria",  color: "#5aaa96", dot: "cat-respiratoria" },
+    circulatoria: { label: "Circulatoria",  color: "#c07074", dot: "cat-circulatoria" },
+    depurativa:   { label: "Depurativa",    color: "#6ea05a", dot: "cat-depurativa" },
+    inmune:       { label: "Inmunológica",  color: "#9580ba", dot: "cat-inmune" },
+    urinaria:     { label: "Urinaria",      color: "#5a9ab4", dot: "cat-urinaria" },
+    hormonal:     { label: "Hormonal",      color: "#a85a96", dot: "cat-hormonal" },
+    piel:         { label: "Piel / Tópica", color: "#b48a5a", dot: "cat-piel" },
+    especias:     { label: "Especia",       color: "#c98a5a", dot: "cat-especias" },
+    general:      { label: "General",       color: "#8a857c", dot: "cat-general" }
+};
+
+const plantas = [
+    // ===== TENEMOS =====
     {
-        nombre: "Manzanilla",
-        descripcion: "Flores blancas con centro amarillo, ideal para infusiones relajantes.",
-        efectos: [{nombre: "Relajante", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
-        stock: true
+        nombre: "Cola de Caballo", categoria: "urinaria", tenemos: true, peligrosidad: "media",
+        descripcion: "Diurético y regenerador de tejidos. Rica en sílice para uñas, pelo y huesos.",
+        propiedades: [{ nombre: "Diurético", intensidad: 3 }, { nombre: "Regenerativo", intensidad: 2 }],
+        contraindicaciones: ["Contiene tiaminasa: destruye vitamina B1", "No usar a largo plazo", "Peligrosa con enfermedad renal", "No en embarazo, lactancia ni menores de 12", "Interactúa con litio"],
+        preparacion: "Decocción: tallos secos 10-15 min. No usar más de 2-3 semanas seguidas. Complementar con vitamina B1.",
+        seguridad: "Segura a corto plazo en personas sanas. El problema es el uso prolongado por la tiaminasa."
     },
     {
-        nombre: "Valeriana",
-        descripcion: "Raíz poderosa para el equilibrio nervioso.",
-        efectos: [{nombre: "Sedante", fuerza: 3}, {nombre: "Relajante", fuerza: 3}],
-        stock: false
+        nombre: "Rooibos", categoria: "general", tenemos: true, peligrosidad: "baja",
+        descripcion: "No es técnicamente una hierba sino un arbusto sudafricano. Sin cafeína, lleno de antioxidantes y con sabor dulce natural.",
+        propiedades: [{ nombre: "Antioxidante", intensidad: 3 }, { nombre: "Calmante", intensidad: 1 }],
+        contraindicaciones: ["Prácticamente sin contraindicaciones conocidas", "Efecto estrogénico muy leve en grandes cantidades"],
+        preparacion: "Infusión: 1-2 cucharaditas, 5-7 min. Se puede dejar más tiempo sin que amargue. Genial con leche.",
+        seguridad: "Extremadamente seguro. Se puede beber sin límite prácticamente."
     },
     {
-        nombre: "Menta Piperita",
-        descripcion: "Hojas aromáticas para refrescar y aliviar.",
-        efectos: [{nombre: "Digestivo", fuerza: 3}, {nombre: "Energizante", fuerza: 2}],
-        stock: true
+        nombre: "Equinácea", categoria: "inmune", tenemos: true, peligrosidad: "media",
+        descripcion: "Refuerzo inmunológico natural. La planta que tomas cuando notas que se acerca el catarro.",
+        propiedades: [{ nombre: "Inmunoestimulante", intensidad: 3 }, { nombre: "Antiviral", intensidad: 2 }],
+        contraindicaciones: ["EVITAR con enfermedades autoinmunes (lupus, esclerosis múltiple, artritis reumatoide)", "Puede afectar metabolismo hepático de medicamentos", "No usar de forma continua más de 8 semanas"],
+        preparacion: "Infusión o tintura: al primer síntoma de resfriado, 3 tazas/día durante 7-10 días máx.",
+        seguridad: "Segura para personas sin enfermedades autoinmunes. Muy eficaz al inicio de infecciones."
     },
     {
-        nombre: "Aloe Vera",
-        descripcion: "Gel regenerativo para la piel y digestión.",
-        efectos: [{nombre: "Regenerativo", fuerza: 3}, {nombre: "Antiinflamatorio", fuerza: 2}],
-        stock: true
+        nombre: "Hinojo", categoria: "digestiva", tenemos: true, peligrosidad: "media",
+        descripcion: "Regulador digestivo estrella. Adiós gases, adiós hinchazón. Sabor anisado agradable.",
+        propiedades: [{ nombre: "Carminativo", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }, { nombre: "Galactógeno", intensidad: 2 }],
+        contraindicaciones: ["Posiblemente inseguro en embarazo", "Efecto estrogénico: evitar con condiciones hormono-dependientes", "Alergia cruzada con apio, zanahoria, artemisa"],
+        preparacion: "Infusión: 1 cucharadita de semillas machacadas, 10 min. Masticar semillas para gases rápidos.",
+        seguridad: "Seguro en uso ocasional moderado. Mucha tradición como digestivo."
     },
     {
-        nombre: "Caléndula",
-        descripcion: "Flores naranjas para cuidado dérmico.",
-        efectos: [{nombre: "Antiséptico", fuerza: 2}, {nombre: "Cicatrizante", fuerza: 3}],
-        stock: true
+        nombre: "Rosas", categoria: "relajante", tenemos: true, peligrosidad: "baja",
+        descripcion: "Pétalos aromáticos para infusiones delicadas. Calmantes, antioxidantes y un placer para los sentidos.",
+        propiedades: [{ nombre: "Antioxidante", intensidad: 2 }, { nombre: "Calmante", intensidad: 2 }, { nombre: "Antiinflamatorio", intensidad: 1 }],
+        contraindicaciones: ["Prácticamente sin contraindicaciones", "Usar pétalos no tratados con pesticidas"],
+        preparacion: "Infusión: puñado de pétalos secos, 5-8 min. Preciosa combinada con hierbaluisa o manzanilla.",
+        seguridad: "Muy segura. Una de las infusiones más suaves y agradables que existen."
     },
     {
-        nombre: "Eucalipto",
-        descripcion: "Hojas aromáticas para vías respiratorias.",
-        efectos: [{nombre: "Descongestivo", fuerza: 3}, {nombre: "Antimicrobiano", fuerza: 2}],
-        stock: false
+        nombre: "Ortiga", categoria: "depurativa", tenemos: true, peligrosidad: "baja",
+        descripcion: "Depurativa, remineralizante y antiinflamatoria. Pica en fresco pero en infusión es pura medicina.",
+        propiedades: [{ nombre: "Depurativo", intensidad: 3 }, { nombre: "Antiinflamatorio", intensidad: 2 }, { nombre: "Remineralizante", intensidad: 2 }],
+        contraindicaciones: ["Puede potenciar efecto de antihipertensivos y diuréticos", "Precaución con diabetes (puede bajar glucemia)", "Precaución en embarazo (estimulante uterino)"],
+        preparacion: "Infusión: hojas secas, 10-15 min tapada. También se come cocida como espinaca. Muy nutritiva.",
+        seguridad: "Muy segura como infusión. Rica en hierro, calcio y vitaminas."
     },
     {
-        nombre: "Jengibre",
-        descripcion: "Raíz picante para múltiples beneficios.",
-        efectos: [{nombre: "Antiinflamatorio", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
-        stock: true
+        nombre: "Clavos de Olor", categoria: "especias", tenemos: true, peligrosidad: "baja",
+        descripcion: "Especia aromática con poder antiséptico y analgésico. Clásico remedio para el dolor de muelas.",
+        propiedades: [{ nombre: "Antiséptico", intensidad: 3 }, { nombre: "Analgésico", intensidad: 2 }, { nombre: "Digestivo", intensidad: 1 }],
+        contraindicaciones: ["El aceite esencial puro puede irritar mucosas", "Precaución con anticoagulantes", "No abusar en embarazo"],
+        preparacion: "Infusión: 3-4 clavos en agua caliente, 5-8 min. Para dolor de muelas: morder un clavo sobre la zona.",
+        seguridad: "Seguro como especia en infusiones. El aceite esencial concentrado requiere más precaución."
     },
     {
-        nombre: "Romero",
-        descripcion: "Estimulante natural para la circulación.",
-        efectos: [{nombre: "Energizante", fuerza: 2}, {nombre: "Antioxidante", fuerza: 2}],
-        stock: true
+        nombre: "Salvia", categoria: "hormonal", tenemos: true, peligrosidad: "media",
+        descripcion: "Planta versátil con propiedades hormonales, digestivas y antisépticas. La 'hierba sabia'.",
+        propiedades: [{ nombre: "Tónico hormonal", intensidad: 2 }, { nombre: "Antiséptico", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }],
+        contraindicaciones: ["LIMITAR en embarazo (puede causar contracciones)", "Contiene tuyona, neurotóxica en dosis muy altas", "No usar en exceso prolongado", "Precaución con epilepsia"],
+        preparacion: "Infusión: 1 cucharadita de hojas secas, 5-8 min. Gárgaras para infecciones bucales.",
+        seguridad: "Segura en dosis normales de infusión. No abusar de la cantidad.",
+        recomendacion_compra: null
     },
     {
-        nombre: "Salvia",
-        descripcion: "Planta versátil con propiedades múltiples.",
-        efectos: [{nombre: "Antiséptico", fuerza: 2}, {nombre: "Regulador hormonal", fuerza: 2}],
-        stock: false
+        nombre: "Hibisco", categoria: "circulatoria", tenemos: true, peligrosidad: "baja",
+        descripcion: "Flores carmesí para infusiones con color espectacular. Refrescante, antioxidante y baja la tensión suavemente.",
+        propiedades: [{ nombre: "Antioxidante", intensidad: 3 }, { nombre: "Hipotensor", intensidad: 2 }, { nombre: "Refrescante", intensidad: 2 }],
+        contraindicaciones: ["Puede potenciar medicación antihipertensiva", "Precaución en embarazo (datos limitados)", "Puede interactuar con paracetamol"],
+        preparacion: "Infusión: flores secas, 5-10 min. Espectacular fría con hielo y limón en verano.",
+        seguridad: "Muy segura. Hay estudios que respaldan su efecto sobre la tensión arterial."
     },
     {
-        nombre: "Lavanda",
-        descripcion: "Aroma calmante para relajación profunda.",
-        efectos: [{nombre: "Relajante", fuerza: 3}, {nombre: "Antiestrés", fuerza: 2}],
-        stock: true
+        nombre: "Lavanda", categoria: "relajante", tenemos: true, peligrosidad: "baja",
+        descripcion: "Aroma calmante para relajación profunda. Tan bonita como efectiva contra el estrés y la ansiedad.",
+        propiedades: [{ nombre: "Relajante", intensidad: 3 }, { nombre: "Antiespasmódico", intensidad: 2 }],
+        contraindicaciones: ["Alergia a familia Lamiáceas", "El aceite esencial puro NO se ingiere"],
+        preparacion: "Infusión: 1-2 cucharaditas de flores secas, 5-8 min. También genial en saquitos para almohada.",
+        seguridad: "Muy segura como infusión. Propiedades antiespasmódicas y relajantes suaves."
     },
     {
-        nombre: "Diente de León",
-        descripcion: "Depurativo natural para el organismo.",
-        efectos: [{nombre: "Diurético", fuerza: 3}, {nombre: "Detox", fuerza: 2}],
-        stock: true
+        nombre: "Malva", categoria: "respiratoria", tenemos: true, peligrosidad: "baja",
+        descripcion: "Emoliente y suavizante de mucosas. Perfecta para gargantas irritadas y estómagos delicados.",
+        propiedades: [{ nombre: "Emoliente", intensidad: 2 }, { nombre: "Suavizante", intensidad: 2 }],
+        contraindicaciones: ["Prácticamente sin contraindicaciones", "Puede ralentizar absorción de medicamentos orales"],
+        preparacion: "Infusión: flores y hojas secas, 10 min. Gárgaras para garganta irritada.",
+        seguridad: "Extremadamente segura. Una de las plantas más suaves y toleradas."
     },
     {
-        nombre: "Equinácea",
-        descripcion: "Refuerzo inmunológico natural.",
-        efectos: [{nombre: "Inmunoestimulante", fuerza: 3}, {nombre: "Antiviral", fuerza: 2}],
-        stock: true
+        nombre: "Eucalipto", categoria: "respiratoria", tenemos: true, peligrosidad: "media",
+        descripcion: "Hojas aromáticas que abren las vías respiratorias como por arte de magia. El bálsamo de los resfriados.",
+        propiedades: [{ nombre: "Antiséptico respiratorio", intensidad: 3 }, { nombre: "Descongestionante", intensidad: 3 }, { nombre: "Expectorante", intensidad: 2 }],
+        contraindicaciones: ["El aceite esencial es TÓXICO si se ingiere", "Solo inhalaciones/vahos, no beber aceite", "No usar en niños pequeños (espasmo laríngeo)"],
+        preparacion: "Vahos: hojas en agua hirviendo, inhalar con toalla. Infusión suave: pocas hojas, 5 min.",
+        seguridad: "Como inhalación es muy seguro. Cuidado solo con el aceite esencial puro."
     },
     {
-        nombre: "Ginkgo Biloba",
-        descripcion: "Mejora la circulación cerebral.",
-        efectos: [{nombre: "Neuroprotector", fuerza: 2}, {nombre: "Antioxidante", fuerza: 3}],
-        stock: false
+        nombre: "Tomillo", categoria: "respiratoria", tenemos: true, peligrosidad: "baja",
+        descripcion: "Antiséptico natural de amplio espectro. El mejor aliado cuando llegas con la garganta destrozada.",
+        propiedades: [{ nombre: "Antiséptico", intensidad: 2 }, { nombre: "Expectorante", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }],
+        contraindicaciones: ["Alergia a Lamiáceas", "El aceite esencial es potente, no ingerir puro"],
+        preparacion: "Infusión: 1-2 cucharaditas de tomillo seco, 8-10 min. Gárgaras para dolor de garganta.",
+        seguridad: "Muy seguro como infusión y especia. Potente antiviral y antibacteriano."
     },
     {
-        nombre: "Tomillo",
-        descripcion: "Antiséptico natural de amplio espectro.",
-        efectos: [{nombre: "Antimicrobiano", fuerza: 3}, {nombre: "Expectorante", fuerza: 2}],
-        stock: true
+        nombre: "Saúco", categoria: "inmune", tenemos: true, peligrosidad: "baja",
+        descripcion: "Flores y bayas que estimulan la sudoración y depuran. Aliado clásico contra resfriados y gripes.",
+        propiedades: [{ nombre: "Diaforético", intensidad: 2 }, { nombre: "Depurativo", intensidad: 1 }, { nombre: "Antiviral", intensidad: 2 }],
+        contraindicaciones: ["BAYAS CRUDAS SON TÓXICAS: solo cocidas o en infusión de flores", "Puede bajar glucemia: precaución diabéticos", "Precaución con inmunosupresores"],
+        preparacion: "Infusión de flores: 10 min. Las bayas SIEMPRE cocidas (jarabe, mermelada). Nunca crudas.",
+        seguridad: "Flores muy seguras en infusión. Bayas solo cocidas. Nunca crudas, hojas ni corteza."
     },
     {
-        nombre: "Hinojo",
-        descripcion: "Regulador digestivo y hormonal.",
-        efectos: [{nombre: "Digestivo", fuerza: 3}, {nombre: "Galactogogo", fuerza: 2}],
-        stock: true
+        nombre: "Regaliz", categoria: "digestiva", tenemos: true, peligrosidad: "alta",
+        descripcion: "Dulce, antiulceroso, antiinflamatorio... pero con trampa si te pasas. La glicirricina sube la tensión.",
+        propiedades: [{ nombre: "Antiulceroso", intensidad: 2 }, { nombre: "Antiinflamatorio", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }],
+        contraindicaciones: ["HIPERTENSIÓN: la glicirricina sube la tensión arterial", "Retención de líquidos e hipopotasemia", "Máximo 4-6 semanas continuadas", "NUNCA con cardiopatías, nefropatías o hepatopatías", "No en embarazo ni lactancia", "Alternativa segura: regaliz desglicirrizado (DGL)"],
+        preparacion: "Infusión: trocitos de raíz, 5-10 min. Máx. 1 taza/día y no a diario.",
+        seguridad: "Puede ser peligroso con uso excesivo. La glicirricina es el problema. La versión DGL es más segura."
+    },
+    // ===== NO TENEMOS =====
+    {
+        nombre: "Ginkgo Biloba", categoria: "circulatoria", tenemos: false, peligrosidad: "media",
+        descripcion: "El árbol de la memoria. Mejora la circulación cerebral y es antioxidante potente.",
+        propiedades: [{ nombre: "Neuroprotector", intensidad: 2 }, { nombre: "Antioxidante", intensidad: 3 }, { nombre: "Circulatorio", intensidad: 2 }],
+        contraindicaciones: ["Riesgo de SANGRADO con anticoagulantes", "Suspender 2 semanas antes de cirugía", "Inseguro en embarazo"],
+        preparacion: "Hojas secas en infusión 10 min. Más eficaz en extracto estandarizado.",
+        seguridad: "Seguro si no tomas anticoagulantes ni te vas a operar.",
+        recomendacion: "Interesante para épocas de estudio o trabajo mental intenso. Mejor en extracto estandarizado."
     },
     {
-        nombre: "Cola de Caballo",
-        descripcion: "Diurético y regenerador tisular.",
-        efectos: [{nombre: "Diurético", fuerza: 3}, {nombre: "Regenerativo", fuerza: 2}],
-        stock: false
+        nombre: "Manzanilla", categoria: "digestiva", tenemos: false, peligrosidad: "baja",
+        descripcion: "La reina de las infusiones. Flores blancas con centro amarillo, ideal para relajarse y calmar la tripa.",
+        propiedades: [{ nombre: "Digestivo", intensidad: 2 }, { nombre: "Antiinflamatorio", intensidad: 2 }, { nombre: "Calmante", intensidad: 2 }],
+        contraindicaciones: ["Alergia a compuestas (ambrosía, margaritas)", "No mezclar con anticoagulantes", "Puede reducir eficacia de estatinas"],
+        preparacion: "Infusión: 1-2 cucharaditas de flores secas, 5-10 min. 2-3 tazas al día.",
+        seguridad: "Muy segura para uso general. Lleva usándose miles de años.",
+        recomendacion: "Imprescindible. La infusión más versátil y segura que existe. Cómprala YA."
     },
     {
-        nombre: "Arnica",
-        descripcion: "Antiinflamatorio natural para golpes.",
-        efectos: [{nombre: "Antiinflamatorio", fuerza: 3}, {nombre: "Analgésico", fuerza: 2}],
-        stock: true
+        nombre: "Anís Estrellado", categoria: "digestiva", tenemos: false, peligrosidad: "media",
+        descripcion: "Especia con forma de estrella y sabor intenso a anís. Carminativo potente y expectorante.",
+        propiedades: [{ nombre: "Carminativo", intensidad: 3 }, { nombre: "Digestivo", intensidad: 2 }, { nombre: "Expectorante", intensidad: 2 }],
+        contraindicaciones: ["NUNCA confundir con anís estrellado japonés (Illicium anisatum): TÓXICO", "No en embarazo ni lactancia", "No dar a bebés ni niños pequeños (neurotoxicidad reportada)", "Puede tener efecto estrogénico"],
+        preparacion: "Infusión: 1 estrella por taza, 8-10 min. No exceder 2-3 estrellas al día.",
+        seguridad: "Seguro en dosis moderadas asegurándote de que sea Illicium verum (el chino). El japonés es tóxico.",
+        recomendacion: "Muy útil para gases y digestión pesada. Asegúrate de comprar en sitio de confianza."
     },
     {
-        nombre: "Boldo",
-        descripcion: "Protector hepático natural.",
-        efectos: [{nombre: "Hepatoprotector", fuerza: 3}, {nombre: "Digestivo", fuerza: 2}],
-        stock: true
+        nombre: "Árnica", categoria: "piel", tenemos: false, peligrosidad: "alta",
+        descripcion: "Antiinflamatorio potente para golpes y moratones. Pero OJO: solo uso externo, NUNCA ingerir.",
+        propiedades: [{ nombre: "Antiinflamatorio", intensidad: 3 }, { nombre: "Analgésico", intensidad: 2 }],
+        contraindicaciones: ["NUNCA ingerir: contiene helenalina, MORTAL en cantidad", "SOLO uso tópico (cremas, geles)", "No sobre heridas abiertas", "No con trastornos de coagulación", "Suspender 2 semanas antes de cirugía"],
+        preparacion: "SOLO EXTERNO: gel o crema de árnica sobre golpes y moratones. Nunca sobre heridas abiertas. Nunca beber.",
+        seguridad: "Segura SOLO como uso tópico. Tóxica y potencialmente letal si se ingiere.",
+        recomendacion: "Tenerla en formato crema o gel para golpes y moratones. No comprar para infusión."
     },
     {
-        nombre: "Pasiflora",
-        descripcion: "Ansiolítico natural suave.",
-        efectos: [{nombre: "Ansiolítico", fuerza: 2}, {nombre: "Sedante", fuerza: 2}],
-        stock: true
+        nombre: "Erísimo", categoria: "respiratoria", tenemos: false, peligrosidad: "baja",
+        descripcion: "La 'hierba de los cantores'. Demulcente para cuando te quedas sin voz.",
+        propiedades: [{ nombre: "Demulcente", intensidad: 2 }],
+        contraindicaciones: ["Pocos datos de seguridad disponibles", "Precaución en embarazo"],
+        preparacion: "Infusión: partes aéreas secas, 10 min. Gárgaras para afonía y laringitis.",
+        seguridad: "Considerada segura en uso tradicional.",
+        recomendacion: "Útil si cantas, das clases o te quedas afónico con frecuencia."
     },
     {
-        nombre: "Melisa",
-        descripcion: "Equilibrio nervioso y digestivo.",
-        efectos: [{nombre: "Relajante", fuerza: 2}, {nombre: "Carminativo", fuerza: 2}],
-        stock: false
+        nombre: "Menta", categoria: "digestiva", tenemos: false, peligrosidad: "baja",
+        descripcion: "Hojas aromáticas refrescantes. El todoterreno digestivo que además te despierta.",
+        propiedades: [{ nombre: "Digestivo", intensidad: 2 }, { nombre: "Carminativo", intensidad: 2 }, { nombre: "Refrescante", intensidad: 2 }],
+        contraindicaciones: ["Puede empeorar reflujo gastroesofágico", "Precaución con alergia a Lamiáceas"],
+        preparacion: "Infusión: hojas frescas o secas, 5-7 min. Deliciosa fría en verano con hielo.",
+        seguridad: "Muy segura. Una de las hierbas más usadas y toleradas.",
+        recomendacion: "Básica en cualquier herbario. Crece fácilmente en maceta."
+    },
+    {
+        nombre: "Melisa", categoria: "relajante", tenemos: false, peligrosidad: "baja",
+        descripcion: "Equilibrio nervioso y digestivo en una hoja con aroma a limón. La hermana tranquila de la menta.",
+        propiedades: [{ nombre: "Sedante", intensidad: 2 }, { nombre: "Ansiolítico", intensidad: 2 }, { nombre: "Digestivo", intensidad: 1 }],
+        contraindicaciones: ["Puede interferir con medicación tiroidea", "Puede potenciar efecto de sedantes"],
+        preparacion: "Infusión: hojas frescas o secas, 5-10 min. Genial combinada con manzanilla.",
+        seguridad: "Muy segura. Aumenta el GABA de forma natural.",
+        recomendacion: "Fácil de cultivar en casa, crece como loca. Muy recomendable tenerla fresca."
+    },
+    {
+        nombre: "Romero", categoria: "circulatoria", tenemos: false, peligrosidad: "baja",
+        descripcion: "Estimulante natural que mejora la circulación y hasta la memoria. El cerebro lo agradece.",
+        propiedades: [{ nombre: "Estimulante circulatorio", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }, { nombre: "Tónico general", intensidad: 2 }],
+        contraindicaciones: ["No usar aceite esencial puro internamente", "Precaución en embarazo (dosis medicinales)"],
+        preparacion: "Infusión: 1 ramita o cucharadita de hojas secas, 8-10 min.",
+        seguridad: "Muy seguro. Sniffar romero mejora el ánimo y la función cognitiva.",
+        recomendacion: "Facilísimo de cultivar. Un must en cualquier balcón mediterráneo."
+    },
+    {
+        nombre: "Gordolobo", categoria: "respiratoria", tenemos: false, peligrosidad: "baja",
+        descripcion: "Hojas aterciopeladas y flores amarillas. Expectorante suave que alivia la tos seca.",
+        propiedades: [{ nombre: "Expectorante", intensidad: 2 }, { nombre: "Suavizante", intensidad: 2 }],
+        contraindicaciones: ["Filtrar bien (los pelitos irritan la garganta)"],
+        preparacion: "Infusión: flores y/o hojas secas, 10-15 min. IMPORTANTE: filtrar con tela fina.",
+        seguridad: "Muy seguro. Uno de los mejores remedios para tos seca.",
+        recomendacion: "Imprescindible para temporada de tos. Se encuentra en herbolarios fácilmente."
+    },
+    {
+        nombre: "Cardamomo", categoria: "especias", tenemos: false, peligrosidad: "baja",
+        descripcion: "La reina de las especias. Aromático, digestivo y con un toque exótico que transforma cualquier infusión.",
+        propiedades: [{ nombre: "Digestivo", intensidad: 2 }, { nombre: "Carminativo", intensidad: 2 }, { nombre: "Refrescante", intensidad: 1 }],
+        contraindicaciones: ["Prácticamente sin contraindicaciones en uso culinario", "Precaución con cálculos biliares en dosis altas"],
+        preparacion: "Infusión: 2-3 vainas machacadas por taza, 8-10 min. Genial con chai o café.",
+        seguridad: "Muy seguro. Especia milenaria con uso extendidísimo.",
+        recomendacion: "Transforma un chai casero. Combina genial con jengibre, canela y clavos."
+    },
+    {
+        nombre: "Pasiflora", categoria: "relajante", tenemos: false, peligrosidad: "media",
+        descripcion: "Ansiolítico natural potente. Flor espectacular con efecto tranquilizador sin dejarte grogui.",
+        propiedades: [{ nombre: "Ansiolítico", intensidad: 3 }, { nombre: "Sedante", intensidad: 2 }],
+        contraindicaciones: ["NO usar en embarazo ni lactancia", "Potencia sedantes y ansiolíticos farmacológicos", "Puede causar somnolencia"],
+        preparacion: "Infusión: 1-2 cucharaditas de partes aéreas secas, 10 min. Máx. 2-3 tazas/día.",
+        seguridad: "Segura respetando las contraindicaciones. Uno de los mejores ansiolíticos naturales.",
+        recomendacion: "Para noches de ansiedad o épocas de mucho estrés. Muy recomendable."
+    },
+    {
+        nombre: "María Luisa", categoria: "relajante", tenemos: false, peligrosidad: "baja",
+        descripcion: "Aroma a limón suave y delicioso. Relaja sin tumbar, perfecta para después de comer. También llamada hierbaluisa.",
+        propiedades: [{ nombre: "Sedante", intensidad: 2 }, { nombre: "Digestivo", intensidad: 2 }, { nombre: "Antiespasmódico", intensidad: 2 }],
+        contraindicaciones: ["Pocos efectos adversos conocidos", "Precaución en embarazo por falta de estudios"],
+        preparacion: "Infusión: hojas frescas o secas, 5-8 min. Combina genial con menta.",
+        seguridad: "Muy segura. Excelente para uso diario.",
+        recomendacion: "Fácil de cultivar en maceta. Una de las infusiones más agradables."
     }
 ];
 
-function crearEstrellas(num) {
-    return '★'.repeat(num) + '☆'.repeat(3 - num);
+// ====== STATE ======
+let filtroCategoria = null;
+let filtroPeligrosidad = null;
+let filtroStock = null;
+let searchText = "";
+
+function filtrar() {
+    return plantas.filter(p => {
+        if (filtroCategoria && p.categoria !== filtroCategoria) return false;
+        if (filtroPeligrosidad && p.peligrosidad !== filtroPeligrosidad) return false;
+        if (filtroStock === "have" && !p.tenemos) return false;
+        if (filtroStock === "want" && p.tenemos) return false;
+        if (searchText) {
+            const s = searchText.toLowerCase();
+            return p.nombre.toLowerCase().includes(s)
+                || p.descripcion.toLowerCase().includes(s)
+                || p.propiedades.some(pr => pr.nombre.toLowerCase().includes(s))
+                || p.contraindicaciones.some(c => c.toLowerCase().includes(s));
+        }
+        return true;
+    });
 }
 
-function generarHTMLHierbas(hierbas) {
-    return hierbas.map(hierba => `
-        <div class="hierba">
-            <div class="stock ${hierba.stock ? 'disponible' : 'agotado'}">
-                ${hierba.stock ? '✅ Disponible' : '❌ Agotado'}
+// ====== RENDER ======
+function renderMeta() {
+    const t = plantas.length;
+    const h = plantas.filter(p => p.tenemos).length;
+    const peligro = plantas.filter(p => p.peligrosidad === "alta").length;
+    document.getElementById("meta-bar").innerHTML = `
+        <div><div class="meta-num">${t}</div><div class="meta-label">Plantas</div></div>
+        <div><div class="meta-num">${h}</div><div class="meta-label">En stock</div></div>
+        <div><div class="meta-num">${t - h}</div><div class="meta-label">Por comprar</div></div>
+        <div><div class="meta-num">${peligro}</div><div class="meta-label">Peligro alto</div></div>
+    `;
+}
+
+function renderFilters() {
+    // Category group
+    const cats = [...new Set(plantas.map(p => p.categoria))];
+    let catBtns = `<button class="filter-btn ${!filtroCategoria ? 'active' : ''}" onclick="setCategoria(null)">Todas</button>`;
+    cats.forEach(c => {
+        const info = categorias[c];
+        catBtns += `<button class="filter-btn ${filtroCategoria === c ? 'active' : ''}" onclick="setCategoria('${c}')">
+            <span class="filter-dot ${info.dot}"></span>${info.label}
+        </button>`;
+    });
+
+    // Safety + stock group
+    let statusBtns = `
+        <button class="filter-btn ${filtroPeligrosidad === 'alta' ? 'active' : ''}" onclick="setPeligro('alta')">
+            <span class="filter-dot" style="background:var(--danger)"></span>Peligro alto
+        </button>
+        <button class="filter-btn ${filtroPeligrosidad === 'media' ? 'active' : ''}" onclick="setPeligro('media')">
+            <span class="filter-dot" style="background:var(--caution)"></span>Precaución
+        </button>
+    `;
+
+    let stockBtns = `
+        <button class="filter-btn ${filtroStock === 'have' ? 'active' : ''}" onclick="setStock('have')">En stock</button>
+        <button class="filter-btn ${filtroStock === 'want' ? 'active' : ''}" onclick="setStock('want')">Por comprar</button>
+    `;
+
+    document.getElementById("filter-bar").innerHTML = `
+        <div class="filter-group">${catBtns}</div>
+        <div class="filter-group">${statusBtns}</div>
+        <div class="filter-group">${stockBtns}</div>
+    `;
+}
+
+function renderGrid() {
+    const list = filtrar();
+    const grid = document.getElementById("grid");
+
+    if (!list.length) {
+        grid.innerHTML = `<div class="no-results"><h3>Sin resultados</h3><p>Prueba otra combinación de filtros.</p></div>`;
+        return;
+    }
+
+    grid.innerHTML = list.map(p => {
+        const cat = categorias[p.categoria];
+        const stampClass = p.peligrosidad === "alta" ? "stamp-danger" : p.peligrosidad === "media" ? "stamp-caution" : "stamp-safe";
+        const stampText = p.peligrosidad === "alta" ? "peligro<br>alto" : p.peligrosidad === "media" ? "precau-<br>ción" : "segura";
+        const stockClass = p.tenemos ? "stock-have" : "stock-want";
+        const stockText = p.tenemos ? "En stock" : "Por comprar";
+
+        return `
+        <div class="card" onclick="openModal('${p.nombre.replace(/'/g, "\\'")}')">
+            <div class="card-top-line" style="background:${cat.color}"></div>
+            <div class="card-inner">
+                <div class="card-stamp ${stampClass}">${stampText}</div>
+                <div class="card-category-label">
+                    <span class="cat-dot" style="background:${cat.color}"></span>
+                    <span>${cat.label}</span>
+                </div>
+                <h2>${p.nombre}</h2>
+                <p class="card-desc">${p.descripcion}</p>
+                <div class="card-props">
+                    ${p.propiedades.map(pr =>
+                        `<span class="prop-tag">${pr.nombre} <span class="prop-dots"><span class="on">${'+'.repeat(pr.intensidad)}</span><span class="off">${'.'.repeat(3-pr.intensidad)}</span></span></span>`
+                    ).join('')}
+                </div>
             </div>
-            <h2>${hierba.nombre}</h2>
-            <p>${hierba.descripcion}</p>
-            <div class="efectos">
-                ${hierba.efectos.map(efecto => `
-                    <div class="efecto-tag">
-                        ${efecto.nombre}
-                        <span class="estrellas">${crearEstrellas(efecto.fuerza)}</span>
+            <div class="card-footer">
+                <span class="card-footer-cat">
+                    <span class="cat-dot-sm" style="background:${cat.color}"></span>
+                    ${cat.label}
+                </span>
+                <span class="card-stock ${stockClass}">${stockText}</span>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function renderAll() { renderMeta(); renderFilters(); renderGrid(); }
+
+function setCategoria(c) { filtroCategoria = filtroCategoria === c ? null : c; renderAll(); }
+function setPeligro(p) { filtroPeligrosidad = filtroPeligrosidad === p ? null : p; renderAll(); }
+function setStock(s) { filtroStock = filtroStock === s ? null : s; renderAll(); }
+
+document.getElementById("search").addEventListener("input", e => {
+    searchText = e.target.value;
+    renderGrid();
+});
+
+// ====== MODAL ======
+function openModal(nombre) {
+    const p = plantas.find(pl => pl.nombre === nombre);
+    if (!p) return;
+    const cat = categorias[p.categoria];
+    const safetyClass = p.peligrosidad === "alta" ? "safety-danger" : p.peligrosidad === "media" ? "safety-caution" : "safety-safe";
+    const safetyBadge = p.peligrosidad === "alta" ? "mbadge-danger" : p.peligrosidad === "media" ? "mbadge-caution" : "mbadge-safe";
+    const safetyLabel = p.peligrosidad === "alta" ? "Peligro alto" : p.peligrosidad === "media" ? "Precaución" : "Segura";
+
+    document.getElementById("modal").innerHTML = `
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-top-line" style="background:${cat.color}"></div>
+        <div class="modal-header">
+            <div class="modal-category-bar">
+                <span class="modal-cat-dot" style="background:${cat.color}"></span>
+                <span class="modal-cat-label">${cat.label}</span>
+            </div>
+            <h2>${p.nombre}</h2>
+            <div class="modal-badges">
+                <span class="modal-badge ${safetyBadge}">${safetyLabel}</span>
+                <span class="modal-badge ${p.tenemos ? 'mbadge-have' : 'mbadge-want'}">${p.tenemos ? 'En stock' : 'Por comprar'}</span>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <div class="modal-section-title">Descripción</div>
+            <p>${p.descripcion}</p>
+        </div>
+
+        <div class="modal-section">
+            <div class="modal-section-title">Propiedades</div>
+            <div class="modal-props-list">
+                ${p.propiedades.map(pr => `
+                    <div class="modal-prop-row">
+                        <span class="modal-prop-name">${pr.nombre}</span>
+                        <div class="modal-prop-dots">
+                            ${[1,2,3].map(i => `<div class="modal-dot ${i <= pr.intensidad ? 'filled' : ''}"></div>`).join('')}
+                        </div>
                     </div>
                 `).join('')}
             </div>
         </div>
-    `).join('');
+
+        <div class="modal-section">
+            <div class="modal-section-title">Seguridad</div>
+            <div class="modal-safety-box ${safetyClass}">${p.seguridad}</div>
+        </div>
+
+        <div class="modal-section">
+            <div class="modal-section-title">Contraindicaciones</div>
+            <ul class="modal-list">
+                ${p.contraindicaciones.map(c => `<li>${c}</li>`).join('')}
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <div class="modal-section-title">Preparación</div>
+            <div class="modal-prep-box">${p.preparacion}</div>
+        </div>
+
+        ${p.recomendacion && !p.tenemos ? `
+        <div class="modal-section">
+            <div class="modal-reco-box">
+                <strong>Por qué tenerla</strong>
+                <p>${p.recomendacion}</p>
+            </div>
+        </div>` : ''}
+    `;
+
+    document.getElementById("modal-overlay").classList.add("visible");
+    document.body.style.overflow = "hidden";
 }
 
-function generarFiltros() {
-    const todosEfectos = inventario.flatMap(h => h.efectos.map(e => e.nombre));
-    const efectosUnicos = [...new Set(todosEfectos)];
-    return efectosUnicos.map(efecto => `
-        <button class="efecto-tag" data-efecto="${efecto}">
-            ${efecto}
-        </button>
-    `).join('');
+function closeModal() {
+    document.getElementById("modal-overlay").classList.remove("visible");
+    document.body.style.overflow = "";
 }
 
-function filtrarHierbas(efecto) {
-    const hierbasFiltradas = inventario.filter(h => 
-        h.efectos.some(e => e.nombre === efecto)
-    );
-    document.getElementById('inventario').innerHTML = generarHTMLHierbas(hierbasFiltradas);
-}
-
-document.addEventListener('click', (e) => {
-    if (e.target.closest('.efecto-tag')) {
-        const efecto = e.target.closest('.efecto-tag').dataset.efecto;
-        filtrarHierbas(efecto);
-    }
+document.getElementById("modal-overlay").addEventListener("click", e => {
+    if (e.target.id === "modal-overlay") closeModal();
 });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 
-// Inicialización
-document.getElementById('filtros-container').innerHTML = `
-    <h3>Filtrar por efectos:</h3>
-    ${generarFiltros()}
-`;
-document.getElementById('inventario').innerHTML = generarHTMLHierbas(inventario);
+// Init
+renderAll();
 </script>
 </body>
 </html>

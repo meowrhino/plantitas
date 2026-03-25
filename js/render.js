@@ -1,4 +1,4 @@
-// render.js — Grid, meta bar, and filter rendering
+// render.js — Grid, meta bar, filter rendering + animations
 
 import { plantas, categorias } from './data.js';
 import { filtrar, getFiltroCategoria, getFiltroPeligrosidad, getFiltroStock,
@@ -8,16 +8,63 @@ import { openModal } from './modal.js';
 // Expose openModal globally for onclick handlers
 window._openModal = openModal;
 
+// ====== Intersection Observer for staggered card entrance ======
+let cardObserver = null;
+
+function setupCardObserver() {
+    if (cardObserver) cardObserver.disconnect();
+
+    cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                const delay = parseInt(card.dataset.index || 0) * 60;
+                setTimeout(() => card.classList.add('visible'), delay);
+                cardObserver.unobserve(card);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '40px' });
+
+    document.querySelectorAll('.card').forEach((card, i) => {
+        card.dataset.index = i % 6; // stagger within viewport batches
+        cardObserver.observe(card);
+    });
+}
+
+// ====== Animated counter ======
+function animateCounter(el, target) {
+    const duration = 800;
+    const start = performance.now();
+    const initial = 0;
+
+    function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // ease-out-expo
+        const eased = 1 - Math.pow(2, -10 * progress);
+        const value = Math.round(initial + (target - initial) * eased);
+        el.textContent = value;
+        if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+}
+
 function renderMeta() {
     const t = plantas.length;
     const h = plantas.filter(p => p.tenemos).length;
     const peligro = plantas.filter(p => p.peligrosidad === "alta").length;
     document.getElementById("meta-bar").innerHTML = `
-        <div><div class="meta-num">${t}</div><div class="meta-label">Plantas</div></div>
-        <div><div class="meta-num">${h}</div><div class="meta-label">En stock</div></div>
-        <div><div class="meta-num">${t - h}</div><div class="meta-label">Por comprar</div></div>
-        <div><div class="meta-num">${peligro}</div><div class="meta-label">Peligro alto</div></div>
+        <div class="meta-item"><div class="meta-num" data-target="${t}">0</div><div class="meta-label">Plantas</div></div>
+        <div class="meta-item"><div class="meta-num" data-target="${h}">0</div><div class="meta-label">En stock</div></div>
+        <div class="meta-item"><div class="meta-num" data-target="${t - h}">0</div><div class="meta-label">Por comprar</div></div>
+        <div class="meta-item"><div class="meta-num" data-target="${peligro}">0</div><div class="meta-label">Peligro alto</div></div>
     `;
+    // Animate counters after a beat
+    setTimeout(() => {
+        document.querySelectorAll('.meta-num[data-target]').forEach(el => {
+            animateCounter(el, parseInt(el.dataset.target));
+        });
+    }, 700);
 }
 
 function renderFilters() {
@@ -59,6 +106,14 @@ function renderGrid() {
     const list = filtrar();
     const grid = document.getElementById("grid");
 
+    // Update count
+    const countEl = document.getElementById("grid-count");
+    if (countEl) {
+        countEl.textContent = list.length === plantas.length
+            ? `Mostrando las ${list.length} plantas`
+            : `${list.length} de ${plantas.length} plantas`;
+    }
+
     if (!list.length) {
         grid.innerHTML = `<div class="no-results"><h3>Sin resultados</h3><p>Prueba otra combinacion de filtros.</p></div>`;
         return;
@@ -98,14 +153,29 @@ function renderGrid() {
             </div>
         </div>`;
     }).join('');
+
+    // Setup staggered entrance
+    setupCardObserver();
 }
 
 export function renderAll() { renderMeta(); renderFilters(); renderGrid(); }
 
 export function initControls() {
-    // Search
-    document.getElementById("search").addEventListener("input", e => {
+    const searchInput = document.getElementById("search");
+    const clearBtn = document.getElementById("search-clear");
+
+    // Search with clear button
+    searchInput.addEventListener("input", e => {
         setSearchText(e.target.value);
+        clearBtn.classList.toggle('visible', e.target.value.length > 0);
+        renderGrid();
+    });
+
+    clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        setSearchText("");
+        clearBtn.classList.remove('visible');
+        searchInput.focus();
         renderGrid();
     });
 
@@ -119,5 +189,14 @@ export function initControls() {
         else if (action === "peligro") togglePeligro(val);
         else if (action === "stock") toggleStock(val);
         renderAll();
+    });
+
+    // Back to top button
+    const topBtn = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+        topBtn.classList.toggle("visible", window.scrollY > 500);
+    }, { passive: true });
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }

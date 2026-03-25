@@ -14,21 +14,21 @@ let cardObserver = null;
 function setupCardObserver() {
     if (cardObserver) cardObserver.disconnect();
 
+    // Assign stagger index via CSS custom property
+    document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.setProperty('--index', i % 6);
+    });
+
     cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const card = entry.target;
-                const delay = parseInt(card.dataset.index || 0) * 60;
-                setTimeout(() => card.classList.add('visible'), delay);
-                cardObserver.unobserve(card);
+                entry.target.classList.add('visible');
+                cardObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.08, rootMargin: '40px' });
 
-    document.querySelectorAll('.card').forEach((card, i) => {
-        card.dataset.index = i % 6; // stagger within viewport batches
-        cardObserver.observe(card);
-    });
+    document.querySelectorAll('.card').forEach(card => cardObserver.observe(card));
 }
 
 // ====== Animated counter ======
@@ -158,7 +158,12 @@ function renderGrid() {
     setupCardObserver();
 }
 
-export function renderAll() { renderMeta(); renderFilters(); renderGrid(); }
+let metaRendered = false;
+export function renderAll() {
+    if (!metaRendered) { renderMeta(); metaRendered = true; }
+    renderFilters();
+    renderGrid();
+}
 
 export function initControls() {
     const searchInput = document.getElementById("search");

@@ -39,9 +39,9 @@ body {
 
 /* ======== HERO (editorial style) ======== */
 .hero {
-    padding: 72px 48px 0;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 64px 48px 0;
     opacity: 0;
     animation: heroFadeIn 1s var(--ease-out-expo) 0.1s forwards;
 }
@@ -50,12 +50,12 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero-label {
-    font-size: 0.68em;
+    font-size: 0.65em;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.35em;
     color: var(--text-light);
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     opacity: 0;
     animation: labelSlide 0.8s var(--ease-out-expo) 0.3s forwards;
 }
@@ -65,11 +65,11 @@ body {
 }
 .hero h1 {
     font-family: 'Instrument Serif', serif;
-    font-size: clamp(3.5em, 8vw, 6em);
+    font-size: clamp(3.5em, 8vw, 6.5em);
     font-weight: 400;
-    line-height: 0.95;
+    line-height: 0.92;
     letter-spacing: -0.03em;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 .hero h1 em {
     font-style: italic;
@@ -81,7 +81,7 @@ body {
     font-size: 1em;
     color: var(--text-muted);
     max-width: 420px;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
     opacity: 0;
     animation: heroFadeIn 0.8s var(--ease-out-expo) 0.5s forwards;
@@ -90,10 +90,8 @@ body {
 /* ======== META BAR ======== */
 .meta-bar {
     display: flex;
-    gap: 48px;
-    padding: 28px 48px;
-    max-width: 1200px;
-    margin: 32px auto 0;
+    gap: 0;
+    margin-top: 40px;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     opacity: 0;
@@ -101,20 +99,29 @@ body {
 }
 .meta-item {
     position: relative;
+    flex: 1;
+    padding: 24px 0;
+    text-align: center;
+    border-right: 1px solid var(--border-light);
+    transition: background 0.3s;
 }
+.meta-item:last-child { border-right: none; }
+.meta-item:hover { background: rgba(122, 138, 94, 0.03); }
 .meta-num {
     font-family: 'Instrument Serif', serif;
-    font-size: 2.4em;
+    font-size: 2.2em;
     line-height: 1;
-    display: inline-block;
+    display: block;
+    transition: transform 0.3s var(--spring);
 }
+.meta-item:hover .meta-num { transform: scale(1.08); }
 .meta-label {
-    font-size: 0.68em;
+    font-size: 0.62em;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     color: var(--text-light);
     font-weight: 500;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 /* ======== SEARCH + FILTERS ======== */
@@ -270,8 +277,8 @@ body {
     /* Staggered entrance */
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s var(--ease-out-expo),
-                transform 0.6s var(--ease-out-expo),
+    transition: opacity 0.6s var(--ease-out-expo) calc(var(--index, 0) * 70ms),
+                transform 0.6s var(--ease-out-expo) calc(var(--index, 0) * 70ms),
                 box-shadow 0.35s var(--ease-out-expo),
                 border-color 0.35s;
 }
@@ -281,7 +288,10 @@ body {
 }
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.03),
+        0 8px 16px rgba(0,0,0,0.05),
+        0 20px 44px rgba(0,0,0,0.08);
     border-color: var(--border);
 }
 .card:active {
@@ -869,10 +879,13 @@ body {
 
 /* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
-    .hero, .meta-bar, .controls, .grid, .grid-count { padding-left: 20px; padding-right: 20px; }
-    .hero { padding-top: 48px; }
+    .hero, .controls, .grid, .grid-count { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 40px; }
     .grid { grid-template-columns: 1fr; }
-    .meta-bar { gap: 24px; flex-wrap: wrap; }
+    .meta-bar { flex-wrap: wrap; }
+    .meta-item { flex: 1 1 45%; border-bottom: 1px solid var(--border-light); }
+    .meta-item:nth-child(2) { border-right: none; }
+    .meta-item:nth-last-child(-n+2) { border-bottom: none; }
     .filter-group { flex-wrap: wrap; }
     .modal-header, .modal-section { padding-left: 20px; padding-right: 20px; }
     .modal-detail-grid { grid-template-columns: 1fr; }

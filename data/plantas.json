@@ -1,0 +1,1791 @@
+[
+  {
+    "id": "cola-de-caballo",
+    "nombre": "Cola de Caballo",
+    "nombreCientifico": "Equisetum arvense",
+    "otrosNombres": ["Equiseto", "Rabo de mula", "Limpiaplata"],
+    "categoria": "urinaria",
+    "tenemos": true,
+    "peligrosidad": "media",
+    "parteUtilizada": "Tallos estériles",
+    "sabor": "Herbáceo suave, ligeramente amargo y terroso",
+    "mejorMomento": "Mañana o mediodía (diurético, no ideal antes de dormir)",
+    "dosisMaxima": "2-3 tazas al día, máximo 2-3 semanas seguidas",
+    "duracionMaximaUso": "2-3 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min (decocción)",
+    "descripcion": "Diurético y regenerador de tejidos. Rica en sílice para uñas, pelo y huesos.",
+    "propiedades": [
+      { "nombre": "Diurético", "intensidad": 3 },
+      { "nombre": "Regenerativo", "intensidad": 2 }
+    ],
+    "combinaciones": ["Ortiga (remineralización)", "Diente de león (depuración)", "Gayuba (vías urinarias)"],
+    "contraindicaciones": [
+      "Contiene tiaminasa: destruye vitamina B1",
+      "No usar a largo plazo",
+      "Peligrosa con enfermedad renal",
+      "No en embarazo, lactancia ni menores de 12",
+      "Interactúa con litio"
+    ],
+    "interaccionesMedicamentos": ["Litio (aumenta toxicidad)", "Diuréticos (efecto aditivo)"],
+    "preparacion": "Decocción: tallos secos 10-15 min. Complementar con vitamina B1 si se usa varios días.",
+    "seguridad": "Segura a corto plazo en personas sanas. El problema es el uso prolongado por la tiaminasa.",
+    "usosColoquiales": ["Retención de líquidos", "Uñas frágiles", "Pelo débil", "Huesos"],
+    "historia": {
+      "etimologia": "Del latín 'equus' (caballo) + 'seta' (cerda). En griego: 'hippo-uris', mismo significado. Se llama así porque las ramas recuerdan a la cola de un caballo.",
+      "origen": "Distribución mundial en zonas templadas del hemisferio norte.",
+      "datoCurioso": "Es un fósil viviente: sus ancestros gigantes (Calamites) de 20 metros dominaban los bosques del Carbonífero hace 300 millones de años. Compartió paisaje con dinosaurios. El patrón de espaciado de sus nudos supuestamente inspiró a John Napier para inventar los logaritmos.",
+      "usoAntiguo": "Los romanos la usaban para pulir metales y limpiar utensilios de cocina gracias a su alto contenido en sílice. Por eso uno de sus nombres es 'limpiaplata'."
+    }
+  },
+  {
+    "id": "rooibos",
+    "nombre": "Rooibos",
+    "nombreCientifico": "Aspalathus linearis",
+    "otrosNombres": ["Té rojo sudafricano", "Red bush"],
+    "categoria": "general",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas y tallos fermentados",
+    "sabor": "Dulce natural, suave, con notas de nuez y vainilla",
+    "mejorMomento": "Cualquier hora (sin cafeína)",
+    "dosisMaxima": "Sin límite práctico",
+    "duracionMaximaUso": "Uso continuado sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-7 min (se puede dejar más sin que amargue)",
+    "descripcion": "No es una hierba sino un arbusto sudafricano. Sin cafeína, lleno de antioxidantes y con sabor dulce natural.",
+    "propiedades": [
+      { "nombre": "Antioxidante", "intensidad": 3 },
+      { "nombre": "Calmante", "intensidad": 1 }
+    ],
+    "combinaciones": ["Canela y jengibre (chai rooibos)", "Vainilla (postres)", "Leche (rooibos latte)"],
+    "contraindicaciones": [
+      "Prácticamente sin contraindicaciones",
+      "Efecto estrogénico muy leve en grandes cantidades"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: 1-2 cucharaditas, 5-7 min. Se puede dejar más tiempo sin que amargue. Genial con leche.",
+    "seguridad": "Extremadamente seguro. Se puede beber sin límite prácticamente.",
+    "usosColoquiales": ["Antioxidante diario", "Alternativa al té sin cafeína", "Relax suave"],
+    "historia": {
+      "etimologia": "Del afrikáans 'rooi bos' = 'arbusto rojo'. En la UE tiene denominación de origen protegida, como el parmesano o el champán.",
+      "origen": "Solo crece en las montañas Cederberg, en la provincia del Cabo Occidental de Sudáfrica. Es el único lugar del mundo donde crece de forma natural.",
+      "datoCurioso": "En 2019 se firmó un acuerdo por el que la industria del rooibos paga el 1.5% de su valor al pueblo Khoisan, reconociendo que fueron ellos quienes descubrieron la planta. Es el único producto africano con denominación de origen protegida en la UE.",
+      "usoAntiguo": "Los pueblos indígenas Khoisan (San y Khoikhoi) la usaban como planta medicinal antes del siglo XVIII. El botánico Carl Thunberg la 'redescubrió' para Occidente en 1772 siguiendo los pasos de los Khoisan."
+    }
+  },
+  {
+    "id": "equinacea",
+    "nombre": "Equinácea",
+    "nombreCientifico": "Echinacea purpurea",
+    "otrosNombres": ["Purple coneflower", "Flor cónica morada", "Rudbeckia"],
+    "categoria": "inmune",
+    "tenemos": true,
+    "peligrosidad": "media",
+    "parteUtilizada": "Raíz, flores y hojas",
+    "sabor": "Terroso con un hormigueo/cosquilleo en la lengua muy característico",
+    "mejorMomento": "Al primer síntoma de resfriado",
+    "dosisMaxima": "3 tazas al día durante 7-10 días",
+    "duracionMaximaUso": "Máximo 8 semanas continuas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min",
+    "descripcion": "Refuerzo inmunológico natural. La planta que tomas cuando notas que se acerca el catarro.",
+    "propiedades": [
+      { "nombre": "Inmunoestimulante", "intensidad": 3 },
+      { "nombre": "Antiviral", "intensidad": 2 }
+    ],
+    "combinaciones": ["Saúco (inmunidad)", "Jengibre y limón (resfriados)", "Tomillo (infecciones respiratorias)"],
+    "contraindicaciones": [
+      "EVITAR con enfermedades autoinmunes (lupus, esclerosis múltiple, artritis reumatoide)",
+      "Puede afectar metabolismo hepático de medicamentos",
+      "No usar de forma continua más de 8 semanas"
+    ],
+    "interaccionesMedicamentos": ["Inmunosupresores (contradicción)", "Medicamentos metabolizados por el hígado"],
+    "preparacion": "Infusión o tintura: al primer síntoma de resfriado, 3 tazas/día durante 7-10 días máx.",
+    "seguridad": "Segura para personas sin enfermedades autoinmunes. Muy eficaz al inicio de infecciones.",
+    "usosColoquiales": ["Primer síntoma de catarro", "Refuerzo inmune", "Cambio de estación"],
+    "historia": {
+      "etimologia": "Del griego 'ekhinos' = erizo, por el disco central espinoso de la flor. También conocida como 'Indian Head', 'Missouri Snakeroot' o 'Cock Up Hat'.",
+      "origen": "Nativa de Norteamérica, especialmente las praderas del este y centro de EE.UU.",
+      "datoCurioso": "Lewis y Clark, los famosos exploradores, enviaron raíces y semillas de equinácea al presidente Thomas Jefferson en 1805, un honor reservado solo para descubrimientos 'del más alto valor científico o económico'. A principios del siglo XX era la planta medicinal más usada en toda América.",
+      "usoAntiguo": "Usada por al menos 19 tribus nativas americanas de las praderas, especialmente los Lakota Oglala, Cheyenne, Omaha, Kiowa y Comanche. Era posiblemente la planta medicinal más versátil, usada para mordeduras de serpiente, dolor de muelas, quemaduras y resfriados. El naturópata suizo Alfred Vogel recibió sus primeras semillas del jefe lakota Ben Black Elk en los años 50."
+    }
+  },
+  {
+    "id": "hinojo",
+    "nombre": "Hinojo",
+    "nombreCientifico": "Foeniculum vulgare",
+    "otrosNombres": ["Fennel", "Hierba santa"],
+    "categoria": "digestiva",
+    "tenemos": true,
+    "peligrosidad": "media",
+    "parteUtilizada": "Semillas (frutos)",
+    "sabor": "Anisado, dulce, refrescante",
+    "mejorMomento": "Después de las comidas",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Sin restricciones estrictas en uso moderado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min (semillas machacadas)",
+    "descripcion": "Regulador digestivo estrella. Adiós gases, adiós hinchazón. Sabor anisado agradable.",
+    "propiedades": [
+      { "nombre": "Carminativo", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Galactógeno", "intensidad": 2 }
+    ],
+    "combinaciones": ["Anís (antiflatulento potente)", "Manzanilla (digestión suave)", "Menta (refrescante digestivo)"],
+    "contraindicaciones": [
+      "Posiblemente inseguro en embarazo",
+      "Efecto estrogénico: evitar con condiciones hormono-dependientes",
+      "Alergia cruzada con apio, zanahoria, artemisa"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes", "Ciprofloxacino", "Tamoxifeno y otros antiestrógenos"],
+    "preparacion": "Infusión: 1 cucharadita de semillas machacadas, 10 min. Masticar semillas para gases rápidos.",
+    "seguridad": "Seguro en uso ocasional moderado. Mucha tradición como digestivo.",
+    "usosColoquiales": ["Gases", "Hinchazón", "Digestión pesada", "Cólicos bebé (con precaución)"],
+    "historia": {
+      "etimologia": "Del latín 'faeniculum', diminutivo de 'faenum' = heno, probablemente por sus hojas finas como heno. El nombre 'Marathon' viene del griego 'márathon' = lugar lleno de hinojo.",
+      "origen": "Mediterráneo, presente en tablillas micénicas del siglo XIII a.C.",
+      "datoCurioso": "La famosa Batalla de Maratón (490 a.C.) se libró literalmente en un campo de hinojo. La carrera de maratón se llama así por esta planta. Los atletas griegos comían hinojo creyendo que daba resistencia y fuerza.",
+      "usoAntiguo": "Carlomagno ordenó cultivar hinojo en todas las granjas imperiales. Los gladiadores romanos lo mezclaban con su comida, y los griegos lo asociaban con la victoria."
+    }
+  },
+  {
+    "id": "rosas",
+    "nombre": "Rosas",
+    "nombreCientifico": "Rosa spp.",
+    "otrosNombres": ["Rosa de Damasco", "Rosa centifolia", "Pétalos de rosa"],
+    "categoria": "relajante",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Pétalos secos",
+    "sabor": "Floral delicado, ligeramente dulce y perfumado",
+    "mejorMomento": "Tarde o noche",
+    "dosisMaxima": "Sin límite práctico",
+    "duracionMaximaUso": "Uso continuado sin restricciones",
+    "temperatura": "85-90°C (no hervir)",
+    "tiempoInfusion": "5-8 min",
+    "descripcion": "Pétalos aromáticos para infusiones delicadas. Calmantes, antioxidantes y un placer para los sentidos.",
+    "propiedades": [
+      { "nombre": "Antioxidante", "intensidad": 2 },
+      { "nombre": "Calmante", "intensidad": 2 },
+      { "nombre": "Antiinflamatorio", "intensidad": 1 }
+    ],
+    "combinaciones": ["María Luisa (floral-cítrico)", "Manzanilla (relax total)", "Cardamomo (exótico)"],
+    "contraindicaciones": [
+      "Prácticamente sin contraindicaciones",
+      "Usar pétalos no tratados con pesticidas"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: puñado de pétalos secos en agua a 85-90°C, 5-8 min. Preciosa combinada con hierbaluisa.",
+    "seguridad": "Muy segura. Una de las infusiones más suaves y agradables que existen.",
+    "usosColoquiales": ["Relajación", "Antioxidante suave", "Placer sensorial"],
+    "historia": {
+      "etimologia": "Del latín 'rosa', del griego 'rhódon', del persa antiguo 'wrd-' (wurdi). Cultivada desde hace al menos 5.000 años.",
+      "origen": "Persia (actual Irán) es considerada la cuna del cultivo de rosas. Los jardines persas 'Chahar bagh' del siglo VI a.C. ya las cultivaban.",
+      "datoCurioso": "Cleopatra ordenó cubrir el suelo con pétalos de rosa de 45 cm de espesor para recibir a Marco Antonio. En el siglo VIII, Persia perfeccionó la destilación de agua de rosas, convirtiendo su cultivo en un negocio tremendamente lucrativo.",
+      "usoAntiguo": "Los persas fueron pioneros del agua de rosas. En China, durante la dinastía Tang (618-907), empezaron a infusionar pétalos con té verde. Los vikingos llevaron escaramujos de rosa en sus viajes como fuente de vitamina C."
+    }
+  },
+  {
+    "id": "ortiga",
+    "nombre": "Ortiga",
+    "nombreCientifico": "Urtica dioica",
+    "otrosNombres": ["Stinging nettle", "Ortiga mayor", "Pringamoza"],
+    "categoria": "depurativa",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas secas (la cocción elimina el picor)",
+    "sabor": "Herbáceo verde, similar a espinacas, ligeramente terroso",
+    "mejorMomento": "Mañana (remineralizante y energizante)",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Curas de 3-4 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min tapada",
+    "descripcion": "Depurativa, remineralizante y antiinflamatoria. Pica en fresco pero en infusión es pura medicina.",
+    "propiedades": [
+      { "nombre": "Depurativo", "intensidad": 3 },
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Remineralizante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Cola de caballo (mineralización)", "Menta (sabor)", "Diente de león (depuración)"],
+    "contraindicaciones": [
+      "Puede potenciar antihipertensivos y diuréticos",
+      "Precaución con diabetes (baja glucemia)",
+      "Precaución en embarazo (estimulante uterino)"
+    ],
+    "interaccionesMedicamentos": ["Antihipertensivos", "Diuréticos", "Antidiabéticos", "Anticoagulantes"],
+    "preparacion": "Infusión: hojas secas, 10-15 min tapada. También se come cocida como espinaca.",
+    "seguridad": "Muy segura como infusión. Rica en hierro, calcio y vitaminas.",
+    "usosColoquiales": ["Anemia", "Pelo y uñas", "Limpieza primaveral", "Alergias estacionales"],
+    "historia": {
+      "etimologia": "Del latín 'urere' = quemar. 'Dioica' del griego = 'dos casas', porque tiene flores macho y hembra separadas. Sus tricomas inyectan histamina al contacto.",
+      "origen": "Nativa de Europa, Asia, norte de África y Norteamérica.",
+      "datoCurioso": "Los soldados de Julio César (58-45 a.C.) se azotaban con ortigas para mantenerse despiertos durante las guardias nocturnas. En el cuento de Hans Christian Andersen 'Los cisnes salvajes', la princesa tejía capas de ortiga para romper el hechizo de sus hermanos.",
+      "usoAntiguo": "Se han encontrado tejidos de fibra de ortiga de la Edad del Bronce (3.400 a.C.) en Dinamarca. En Escocia (s. XVI-XVII), la tela de ortiga era el material elegido para ropa de cama. Se dice que los uniformes del ejército alemán en la Primera Guerra Mundial se fabricaron con ortiga por la escasez de algodón."
+    }
+  },
+  {
+    "id": "clavos-de-olor",
+    "nombre": "Clavos de Olor",
+    "nombreCientifico": "Syzygium aromaticum",
+    "otrosNombres": ["Clavo", "Clove", "Girofle"],
+    "categoria": "especias",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Botones florales secos",
+    "sabor": "Intenso, cálido, ligeramente picante y adormecedor",
+    "mejorMomento": "Cualquier hora",
+    "dosisMaxima": "3-4 clavos por taza",
+    "duracionMaximaUso": "Sin restricciones en uso culinario",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-8 min",
+    "descripcion": "Especia aromática con poder antiséptico y analgésico. Clásico remedio para el dolor de muelas.",
+    "propiedades": [
+      { "nombre": "Antiséptico", "intensidad": 3 },
+      { "nombre": "Analgésico", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 1 }
+    ],
+    "combinaciones": ["Canela y cardamomo (chai)", "Jengibre (antiinflamatorio cálido)", "Naranja (aromático)"],
+    "contraindicaciones": [
+      "Aceite esencial puro puede irritar mucosas",
+      "Precaución con anticoagulantes",
+      "No abusar en embarazo"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes"],
+    "preparacion": "Infusión: 3-4 clavos por taza, 5-8 min. Dolor de muelas: morder un clavo sobre la zona.",
+    "seguridad": "Seguro como especia. El aceite esencial concentrado requiere más precaución.",
+    "usosColoquiales": ["Dolor de muelas", "Chai", "Digestión", "Dolor de garganta"],
+    "historia": {
+      "etimologia": "Del francés 'clou' = clavo (por su forma). En latín 'clavus'. El género 'Syzygium' del griego 'syzygos' = unido, por sus pétalos fusionados. En chino antiguo: 'especia lengua de pollo'.",
+      "origen": "Nativas de las Islas Molucas (Islas de las Especias), Indonesia. Hasta la era colonial solo crecían en unas pocas islas: Bacan, Makian, Ternate y Tidore.",
+      "datoCurioso": "En la China Han, los ministros debían chupar clavos para perfumar su aliento antes de hablar con el emperador. En las Molucas, los padres plantaban un árbol de clavos cuando nacía un hijo. El margen de beneficio del clavo llegó al 2.000%, y para mantener precios altos, los holandeses quemaban miles de kilos en hogueras.",
+      "usoAntiguo": "Se encontraron clavos en una casa incendiada en Terqa, Siria, datada en 1.720 a.C., la evidencia más antigua de su uso fuera de Asia. Los holandeses monopolizaron el comercio en el s. XVII restringiendo su cultivo a solo dos islas. Pierre Poivre, un francés, robó esquejes en 1770 y los llevó a Mauricio, rompiendo el monopolio."
+    }
+  },
+  {
+    "id": "salvia",
+    "nombre": "Salvia",
+    "nombreCientifico": "Salvia officinalis",
+    "otrosNombres": ["Sage", "Hierba sagrada", "Salvatrix"],
+    "categoria": "hormonal",
+    "tenemos": true,
+    "peligrosidad": "media",
+    "parteUtilizada": "Hojas",
+    "sabor": "Aromático, ligeramente amargo, terroso y alcanforado",
+    "mejorMomento": "Mañana o tarde (puede ser estimulante)",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "No exceder 2-3 semanas continuas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-8 min",
+    "descripcion": "Planta versátil con propiedades hormonales, digestivas y antisépticas. La 'hierba sabia'.",
+    "propiedades": [
+      { "nombre": "Tónico hormonal", "intensidad": 2 },
+      { "nombre": "Antiséptico", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 }
+    ],
+    "combinaciones": ["Tomillo (infecciones)", "Miel y limón (garganta)", "Romero (tónico general)"],
+    "contraindicaciones": [
+      "LIMITAR en embarazo (contracciones)",
+      "Contiene tuyona, neurotóxica en dosis muy altas",
+      "No en exceso prolongado",
+      "Precaución con epilepsia"
+    ],
+    "interaccionesMedicamentos": ["Anticonvulsivos", "Sedantes", "Medicamentos para diabetes"],
+    "preparacion": "Infusión: 1 cucharadita de hojas secas, 5-8 min. Gárgaras para infecciones bucales.",
+    "seguridad": "Segura en dosis normales de infusión. No abusar.",
+    "usosColoquiales": ["Regulación menstrual", "Sofocos menopausia", "Dolor de garganta", "Sudoración excesiva"],
+    "historia": {
+      "etimologia": "Del latín 'salvus' = sano, seguro, saludable. 'Officinalis' se refiere a la officina, el almacén de hierbas medicinales de los monasterios. Los romanos la llamaban 'la hierba sagrada'.",
+      "origen": "Mediterráneo, especialmente el sur de Europa.",
+      "datoCurioso": "Los romanos la consideraban tan sagrada que tenían un ritual elaborado para cosecharla: cuchillo especial (nunca de hierro), ropa limpia, pies lavados, y una ofrenda de comida antes de cortar. En el siglo XVII, los chinos intercambiaban 3-4 libras de té por 1 libra de salvia europea. Un proverbio medieval decía: '¿Por qué ha de morir un hombre que tiene salvia en su jardín?'",
+      "usoAntiguo": "Carlomagno ordenó cultivarla en los jardines monásticos en el siglo IX. Se la conocía como 'Salvia salvatrix' (salvia la salvadora). Los griegos la usaban contra la tuberculosis, úlceras y mordeduras de serpiente."
+    }
+  },
+  {
+    "id": "hibisco",
+    "nombre": "Hibisco",
+    "nombreCientifico": "Hibiscus sabdariffa",
+    "otrosNombres": ["Flor de Jamaica", "Karkadé", "Bissap", "Roselle", "Zobo"],
+    "categoria": "circulatoria",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Cálices de las flores",
+    "sabor": "Ácido afrutado, similar al arándano, color rojo intenso",
+    "mejorMomento": "Cualquier hora (fría en verano es espectacular)",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Uso continuado sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "Flores carmesí para infusiones con color espectacular. Refrescante, antioxidante y baja la tensión suavemente.",
+    "propiedades": [
+      { "nombre": "Antioxidante", "intensidad": 3 },
+      { "nombre": "Hipotensor", "intensidad": 2 },
+      { "nombre": "Refrescante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Jengibre (tropical picante)", "Menta (refrescante)", "Canela (cálido invernal)"],
+    "contraindicaciones": [
+      "Puede potenciar antihipertensivos",
+      "Precaución en embarazo",
+      "Puede interactuar con paracetamol"
+    ],
+    "interaccionesMedicamentos": ["Antihipertensivos", "Paracetamol", "Cloriquina"],
+    "preparacion": "Infusión: flores secas, 5-10 min. Espectacular fría con hielo y limón en verano. En México: 'agua de Jamaica'.",
+    "seguridad": "Muy segura. Hay estudios que respaldan su efecto sobre la tensión arterial.",
+    "usosColoquiales": ["Tensión alta", "Antioxidante", "Bebida refrescante", "Retención de líquidos"],
+    "historia": {
+      "etimologia": "El nombre 'karkadé' viene del árabe 'karkadīh'. Tiene diferentes nombres en cada región: 'bissap' en Senegal, 'zobo' en Nigeria, 'sobolo' en Ghana, 'sorrel' en el Caribe, 'agua de Jamaica' en México.",
+      "origen": "África, probablemente Sudán. Cultivada especialmente en Egipto, Sudán, Nigeria, México e India.",
+      "datoCurioso": "Se le llama 'el té de los faraones' porque aparece en el Papiro Ebers (1.550 a.C.), uno de los tratados médicos más antiguos del mundo. Cleopatra supuestamente bebía karkadé para mantener su famosa complexión. En las bodas egipcias actuales, se brinda con karkadé, conectando las celebraciones modernas con costumbres faraónicas.",
+      "usoAntiguo": "Los faraones la bebían para refrescarse en el calor del desierto y mantener la salud del corazón. En la medicina tradicional africana se usa desde hace milenios para la fiebre y problemas cardíacos."
+    }
+  },
+  {
+    "id": "lavanda",
+    "nombre": "Lavanda",
+    "nombreCientifico": "Lavandula angustifolia",
+    "otrosNombres": ["Espliego", "Alhucema", "Lavender"],
+    "categoria": "relajante",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores",
+    "sabor": "Floral intenso, ligeramente amargo, perfumado",
+    "mejorMomento": "Tarde-noche",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-8 min",
+    "descripcion": "Aroma calmante para relajación profunda. Tan bonita como efectiva contra el estrés.",
+    "propiedades": [
+      { "nombre": "Relajante", "intensidad": 3 },
+      { "nombre": "Antiespasmódico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Manzanilla (relax profundo)", "Rosas (floral)", "Melisa (ansiolítico suave)"],
+    "contraindicaciones": [
+      "Alergia a Lamiáceas",
+      "Aceite esencial puro NO se ingiere"
+    ],
+    "interaccionesMedicamentos": ["Sedantes (efecto aditivo)"],
+    "preparacion": "Infusión: 1-2 cucharaditas de flores secas, 5-8 min. Saquitos para almohada.",
+    "seguridad": "Muy segura como infusión.",
+    "usosColoquiales": ["Insomnio", "Estrés", "Ansiedad", "Dolores de cabeza tensionales"],
+    "historia": {
+      "etimologia": "Del latín 'lavare' = lavar, porque los romanos la usaban para perfumar sus baños. Los griegos la llamaban 'Nardus' por la ciudad siria de Naardus.",
+      "origen": "Islas Hyères (Grecia), llevada a Francia, España e Italia por los árabes hacia el 600 a.C.",
+      "datoCurioso": "En la Biblia se la llama 'nardo' y aparece en los evangelios de Lucas y Juan. Los romanos la usaban para perfumar baños, camas, ropa y pelo. Se usó para embalsamar momias en Egipto. Existen más de 300 cultivares de las 30 especies conocidas.",
+      "usoAntiguo": "Usada en el antiguo Egipto para embalsamar y en cosmética. Los romanos descubrieron sus propiedades antisépticas y la usaban para relajar músculos cansados y repeler insectos."
+    }
+  },
+  {
+    "id": "malva",
+    "nombre": "Malva",
+    "nombreCientifico": "Malva sylvestris",
+    "otrosNombres": ["Mallow", "Malva común", "Malva silvestre"],
+    "categoria": "respiratoria",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores y hojas",
+    "sabor": "Muy suave, ligeramente dulce, mucilaginoso",
+    "mejorMomento": "Cualquier hora",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min",
+    "descripcion": "Emoliente y suavizante de mucosas. Perfecta para gargantas irritadas y estómagos delicados.",
+    "propiedades": [
+      { "nombre": "Emoliente", "intensidad": 2 },
+      { "nombre": "Suavizante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Gordolobo (tos)", "Tomillo (infección + suavizar)", "Miel (garganta)"],
+    "contraindicaciones": [
+      "Prácticamente sin contraindicaciones",
+      "Puede ralentizar absorción de medicamentos orales"
+    ],
+    "interaccionesMedicamentos": ["Cualquier medicamento oral (ralentiza absorción, tomar 1h antes)"],
+    "preparacion": "Infusión: flores y hojas secas, 10 min. Gárgaras para garganta irritada.",
+    "seguridad": "Extremadamente segura. Una de las plantas más suaves y toleradas.",
+    "usosColoquiales": ["Garganta irritada", "Tos seca", "Estómago irritado", "Estreñimiento leve"],
+    "historia": {
+      "etimologia": "Del latín 'malva', del griego 'malakhe' probablemente relacionado con 'malakós' = blando, suave, por la textura de sus hojas.",
+      "origen": "Europa, norte de África y Asia occidental.",
+      "datoCurioso": "Los pitagóricos consideraban la malva una planta sagrada. En la antigua Roma era una verdura de mesa común y se cultivaba en los huertos. Carlomagno ordenó su cultivo en los jardines imperiales.",
+      "usoAntiguo": "Hipócrates la prescribía como emoliente. Los romanos la cultivaban como verdura. En la Edad Media se plantaba en todos los jardines monásticos por su suavidad y falta de toxicidad."
+    }
+  },
+  {
+    "id": "eucalipto",
+    "nombre": "Eucalipto",
+    "nombreCientifico": "Eucalyptus globulus",
+    "otrosNombres": ["Eucalyptus", "Árbol de la fiebre"],
+    "categoria": "respiratoria",
+    "tenemos": true,
+    "peligrosidad": "media",
+    "parteUtilizada": "Hojas",
+    "sabor": "Mentolado, alcanforado, refrescante intenso",
+    "mejorMomento": "Cuando hay congestión respiratoria",
+    "dosisMaxima": "2-3 inhalaciones/vahos al día",
+    "duracionMaximaUso": "Mientras dure la congestión",
+    "temperatura": "100°C (para vahos)",
+    "tiempoInfusion": "5 min (infusión suave) / vahos: hervir y respirar vapor",
+    "descripcion": "Hojas aromáticas que abren las vías respiratorias. El bálsamo de los resfriados.",
+    "propiedades": [
+      { "nombre": "Antiséptico respiratorio", "intensidad": 3 },
+      { "nombre": "Descongestionante", "intensidad": 3 },
+      { "nombre": "Expectorante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Tomillo (infección respiratoria)", "Pino (balsámico)", "Miel y limón (resfriado)"],
+    "contraindicaciones": [
+      "Aceite esencial TÓXICO si se ingiere",
+      "Solo inhalaciones/vahos",
+      "No en niños pequeños (espasmo laríngeo)"
+    ],
+    "interaccionesMedicamentos": ["Medicamentos metabolizados por el hígado"],
+    "preparacion": "Vahos: hojas en agua hirviendo, inhalar con toalla sobre la cabeza. Infusión muy suave: pocas hojas, 5 min.",
+    "seguridad": "Como inhalación es muy seguro. Cuidado solo con el aceite esencial puro.",
+    "usosColoquiales": ["Resfriado", "Nariz taponada", "Bronquitis", "Sinusitis"],
+    "historia": {
+      "etimologia": "Del griego 'eû' = bien + 'kaluptós' = cubierto, por el capuchón que cubre el capullo floral antes de abrirse.",
+      "origen": "Australia. Introducido al resto del mundo tras la expedición del capitán Cook en 1770, cuando Joseph Banks recolectó especímenes.",
+      "datoCurioso": "Los aborígenes australianos llevan usando el eucalipto miles de años antes de que los europeos lo 'descubrieran'. La madera de eucalipto se usa tradicionalmente para hacer didgeridús. Hay más de 700 especies de eucalipto y dominan el paisaje australiano desde hace 60 millones de años.",
+      "usoAntiguo": "Los aborígenes machacaban hojas y las aplicaban sobre heridas e infecciones por sus propiedades antisépticas. Usaban infusiones e inhalaciones de vapor para tratar tos, resfriados, fiebres e infecciones."
+    }
+  },
+  {
+    "id": "tomillo",
+    "nombre": "Tomillo",
+    "nombreCientifico": "Thymus vulgaris",
+    "otrosNombres": ["Thyme", "Tremoncillo", "Farigola"],
+    "categoria": "respiratoria",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas y flores",
+    "sabor": "Aromático, cálido, ligeramente picante",
+    "mejorMomento": "Cualquier hora, especialmente con dolor de garganta",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min",
+    "descripcion": "Antiséptico natural de amplio espectro. El mejor aliado cuando la garganta está destrozada.",
+    "propiedades": [
+      { "nombre": "Antiséptico", "intensidad": 2 },
+      { "nombre": "Expectorante", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 }
+    ],
+    "combinaciones": ["Miel y limón (garganta)", "Eucalipto (respiratorio)", "Romero (tónico)"],
+    "contraindicaciones": [
+      "Alergia a Lamiáceas",
+      "Aceite esencial potente, no ingerir puro"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: 1-2 cucharaditas de tomillo seco, 8-10 min. Gárgaras para dolor de garganta.",
+    "seguridad": "Muy seguro como infusión y especia. Potente antiviral y antibacteriano.",
+    "usosColoquiales": ["Dolor de garganta", "Tos", "Bronquitis", "Digestión"],
+    "historia": {
+      "etimologia": "Del griego 'thymos' que puede significar 'fumigación' (por quemarse como incienso), 'valor/coraje', o 'perfume'. Probablemente de la raíz protoindoeuropea 'dheu-' = humo.",
+      "origen": "Sureste de Europa, región del Levante. La primera referencia es el Papiro de Ebers (1.550 a.C.).",
+      "datoCurioso": "Los hombres griegos se frotaban tomillo en el pecho porque creían que daba coraje. Las damas medievales bordaban una abeja sobre una rama de tomillo en los pañuelos que daban a sus caballeros. En la Primera Guerra Mundial, el aceite esencial de tomillo se usaba para desinfectar quirófanos y salas de hospital.",
+      "usoAntiguo": "Los egipcios lo usaban para embalsamar. Los griegos lo quemaban como incienso en sus templos creyendo que era fuente de coraje. Los romanos lo usaban en baños. La miel de tomillo de Sicilia ha sido famosa durante siglos."
+    }
+  },
+  {
+    "id": "sauco",
+    "nombre": "Saúco",
+    "nombreCientifico": "Sambucus nigra",
+    "otrosNombres": ["Elder", "Elderberry", "Sabuco"],
+    "categoria": "inmune",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores (infusión) y bayas (solo cocidas)",
+    "sabor": "Flores: floral dulce, almizclado. Bayas: afrutado oscuro, ácido",
+    "mejorMomento": "Al inicio de resfriado/gripe",
+    "dosisMaxima": "3-4 tazas al día (flores)",
+    "duracionMaximaUso": "Mientras dure la infección",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min (flores)",
+    "descripcion": "Flores y bayas que estimulan la sudoración y depuran. Aliado clásico contra resfriados y gripes.",
+    "propiedades": [
+      { "nombre": "Diaforético", "intensidad": 2 },
+      { "nombre": "Depurativo", "intensidad": 1 },
+      { "nombre": "Antiviral", "intensidad": 2 }
+    ],
+    "combinaciones": ["Equinácea (inmunidad doble)", "Tomillo (respiratorio)", "Miel y limón (gripe)"],
+    "contraindicaciones": [
+      "BAYAS CRUDAS SON TÓXICAS (sambunigrina)",
+      "Puede bajar glucemia",
+      "Precaución con inmunosupresores"
+    ],
+    "interaccionesMedicamentos": ["Inmunosupresores", "Antidiabéticos", "Diuréticos"],
+    "preparacion": "Infusión de flores: 10 min. Las bayas SIEMPRE cocidas (jarabe, mermelada). Nunca crudas, hojas ni corteza.",
+    "seguridad": "Flores muy seguras. Bayas solo cocidas.",
+    "usosColoquiales": ["Gripe", "Resfriado", "Fiebre", "Inmunidad"],
+    "historia": {
+      "etimologia": "Del anglosajón 'aeld' = encender fuego, porque los tallos huecos se usaban para soplar brasas. El género 'Sambucus' del griego 'sambuce', una flauta antigua, porque los tallos huecos se usaban como instrumentos.",
+      "origen": "Europa, desde Escandinavia hasta el Mediterráneo. Naturalizado en Norteamérica.",
+      "datoCurioso": "En la mitología nórdica, la 'Hyldemoer' (Madre del Saúco) era el espíritu que habitaba el árbol y se vengaba de quien lo cortara sin permiso. Los niños usaban los tallos huecos para hacer cerbatanas y pistolas de juguete. Se han encontrado pruebas de su cultivo en yacimientos de la Edad del Bronce (3.000-4.000 a.C.).",
+      "usoAntiguo": "Hipócrates le prestó especial atención. Dioscórides recomendaba vino de raíz de saúco contra mordeduras de serpiente. Los romanos lo cultivaban por usos culinarios y medicinales y lo extendieron por todo su imperio. Asociado a la diosa Freya en la mitología nórdica."
+    }
+  },
+  {
+    "id": "regaliz",
+    "nombre": "Regaliz",
+    "nombreCientifico": "Glycyrrhiza glabra",
+    "otrosNombres": ["Licorice", "Orozuz", "Paloduz", "Regalicia"],
+    "categoria": "digestiva",
+    "tenemos": true,
+    "peligrosidad": "alta",
+    "parteUtilizada": "Raíz",
+    "sabor": "Dulce intenso (50 veces más dulce que el azúcar), anisado",
+    "mejorMomento": "Después de comer (no antes de dormir)",
+    "dosisMaxima": "1 taza al día, no a diario",
+    "duracionMaximaUso": "Máximo 4-6 semanas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "Dulce, antiulceroso, antiinflamatorio... pero con trampa si te pasas. La glicirricina sube la tensión.",
+    "propiedades": [
+      { "nombre": "Antiulceroso", "intensidad": 2 },
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 }
+    ],
+    "combinaciones": ["Manzanilla (estómago)", "Malvavisco (gastritis)", "Menta (digestivo)"],
+    "contraindicaciones": [
+      "HIPERTENSIÓN: la glicirricina sube la tensión arterial",
+      "Retención de líquidos e hipopotasemia",
+      "Máximo 4-6 semanas continuadas",
+      "NUNCA con cardiopatías, nefropatías o hepatopatías",
+      "No en embarazo ni lactancia",
+      "Alternativa segura: regaliz desglicirrizado (DGL)"
+    ],
+    "interaccionesMedicamentos": ["Antihipertensivos", "Diuréticos", "Corticoides", "Anticoagulantes", "Digoxina"],
+    "preparacion": "Infusión: trocitos de raíz, 5-10 min. Máx. 1 taza/día y no a diario.",
+    "seguridad": "Puede ser peligroso con uso excesivo. La versión desglicirrizada (DGL) es más segura.",
+    "usosColoquiales": ["Acidez", "Úlcera", "Tos (suavizante)", "Dolor de garganta"],
+    "historia": {
+      "etimologia": "Del griego 'glykyrrhiza': 'glykys' = dulce + 'rhiza' = raíz. Literalmente 'raíz dulce'. En español 'regaliz' evolucionó del latín 'liquiritia'. Es 50 veces más dulce que el azúcar.",
+      "origen": "Asia occidental, Asia tropical y norte de África. Cultivada comercialmente en España, Iraq, Turquía, China y Sicilia desde el siglo XVI.",
+      "datoCurioso": "Se encontró una gran cantidad de regaliz perfectamente conservada en la tumba de Tutankamón (1.343-1.325 a.C.). En China, el emperador Shennong la clasificó entre las 300 plantas medicinales más importantes hace 5.000 años, en el primer herbolario conocido. En la Edad Media, medio kilo de regaliz costaba casi lo mismo que una oveja.",
+      "usoAntiguo": "Documentada desde el 2.300 a.C. en China. Los griegos la conocieron a través de los escitas (pueblo nómada de Ucrania). Alejandro Magno la daba a sus tropas para combatir la sed en largas marchas."
+    }
+  },
+  {
+    "id": "ginkgo-biloba",
+    "nombre": "Ginkgo Biloba",
+    "nombreCientifico": "Ginkgo biloba",
+    "otrosNombres": ["Árbol de los cuarenta escudos", "Maidenhair tree", "Árbol de la memoria"],
+    "categoria": "circulatoria",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Hojas",
+    "sabor": "Ligeramente amargo, herbáceo",
+    "mejorMomento": "Mañana (para función cognitiva)",
+    "dosisMaxima": "2-3 tazas al día o extracto estandarizado",
+    "duracionMaximaUso": "Consultar profesional para uso prolongado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min",
+    "descripcion": "El árbol de la memoria. Mejora la circulación cerebral y es antioxidante potente.",
+    "propiedades": [
+      { "nombre": "Neuroprotector", "intensidad": 2 },
+      { "nombre": "Antioxidante", "intensidad": 3 },
+      { "nombre": "Circulatorio", "intensidad": 2 }
+    ],
+    "combinaciones": ["Romero (memoria y circulación)", "Rooibos (antioxidante sin cafeína)"],
+    "contraindicaciones": [
+      "Riesgo de SANGRADO con anticoagulantes",
+      "Suspender 2 semanas antes de cirugía",
+      "Inseguro en embarazo"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes (warfarina, aspirina)", "Ibuprofeno", "Antidepresivos ISRS"],
+    "preparacion": "Hojas secas en infusión 10 min. Más eficaz en extracto estandarizado.",
+    "seguridad": "Seguro si no tomas anticoagulantes ni te vas a operar.",
+    "usosColoquiales": ["Memoria", "Concentración", "Circulación cerebral", "Estudio"],
+    "recomendacion": "Interesante para épocas de estudio. Mejor en extracto estandarizado que en infusión.",
+    "historia": {
+      "etimologia": "El nombre viene de un error de transcripción centenario del japonés 'ginkyō' = 'albaricoque plateado'. 'Biloba' del latín = dos lóbulos, por la forma de sus hojas.",
+      "origen": "China, donde fue cultivado en templos budistas y jardines palaciegos desde hace más de 1.000 años.",
+      "datoCurioso": "Es literalmente un fósil viviente: fósiles de 170 millones de años son casi idénticos al árbol actual. Sobrevivió a DOS de las cinco extinciones masivas de la Tierra, incluyendo la que acabó con los dinosaurios. Seis ginkgos sobrevivieron a la bomba atómica de Hiroshima a menos de 2 km del epicentro y siguen vivos hoy.",
+      "usoAntiguo": "Los monjes budistas lo consideraban árbol sagrado y lo plantaban en templos. El médico alemán Engelbert Kaempfer lo descubrió para Occidente en 1691 trabajando para la Compañía Holandesa de las Indias Orientales en Japón."
+    }
+  },
+  {
+    "id": "manzanilla",
+    "nombre": "Manzanilla",
+    "nombreCientifico": "Matricaria chamomilla",
+    "otrosNombres": ["Chamomile", "Camomila", "Manzanilla dulce"],
+    "categoria": "digestiva",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores (capítulos florales)",
+    "sabor": "Dulce, floral, con notas de manzana",
+    "mejorMomento": "Cualquier hora, especial antes de dormir",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "La reina de las infusiones. Flores blancas con centro amarillo, ideal para relajarse y calmar la tripa.",
+    "propiedades": [
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Calmante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Miel (garganta y sueño)", "Lavanda (relax profundo)", "Menta (digestión fresca)"],
+    "contraindicaciones": [
+      "Alergia a compuestas (ambrosía, margaritas)",
+      "No mezclar con anticoagulantes",
+      "Puede reducir eficacia de estatinas"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes (warfarina)", "Estatinas", "Sedantes"],
+    "preparacion": "Infusión: 1-2 cucharaditas de flores secas, 5-10 min a 90°C. 2-3 tazas al día.",
+    "seguridad": "Muy segura. Lleva usándose miles de años.",
+    "usosColoquiales": ["Digestión", "Insomnio", "Nervios", "Ojos cansados (compresas)"],
+    "recomendacion": "Imprescindible. La infusión más versátil y segura que existe. Cómprala YA.",
+    "historia": {
+      "etimologia": "Del griego 'khamaimelon': 'khamai' = en el suelo + 'melon' = manzana. Literalmente 'manzana de tierra', porque huele a manzana cuando se pisa.",
+      "origen": "Europa y Asia occidental. Cultivada hoy en todo el mundo templado.",
+      "datoCurioso": "Era sagrada para el dios Ra en el antiguo Egipto. Los sajones la consideraban una de las nueve hierbas sagradas. Los monjes medievales descubrieron que plantarla cerca de plantas enfermas las ayudaba a recuperarse (porque su olor repele insectos). Cleopatra la usaba para el cuidado de su piel. EE.UU. importa entre 350.000 y 450.000 kg al año, el 90% para infusiones.",
+      "usoAntiguo": "Los egipcios la representaban en jeroglíficos hace más de 2.000 años. Los romanos la bebían como bebida curativa y la quemaban como incienso. En la Edad Media se esparcía por el suelo para repeler plagas y como desodorizante natural. Los cerveceros ingleses medievales la usaron como amargante de la cerveza antes del lúpulo."
+    }
+  },
+  {
+    "id": "anis-estrellado",
+    "nombre": "Anís Estrellado",
+    "nombreCientifico": "Illicium verum",
+    "otrosNombres": ["Star anise", "Badiana", "Bajiao (chino)"],
+    "categoria": "digestiva",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Fruto en forma de estrella",
+    "sabor": "Anisado intenso, dulce, ligeramente picante",
+    "mejorMomento": "Después de comidas pesadas",
+    "dosisMaxima": "1 estrella por taza, máx. 2-3 al día",
+    "duracionMaximaUso": "Sin restricciones en uso moderado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min",
+    "descripcion": "Especia con forma de estrella y sabor intenso a anís. Carminativo potente y expectorante.",
+    "propiedades": [
+      { "nombre": "Carminativo", "intensidad": 3 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Expectorante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Canela y clavos (ponche)", "Jengibre (digestivo cálido)", "Hinojo (antiflatulento)"],
+    "contraindicaciones": [
+      "NUNCA confundir con anís estrellado japonés (Illicium anisatum): es TÓXICO",
+      "No en embarazo ni lactancia",
+      "No dar a bebés ni niños pequeños",
+      "Posible efecto estrogénico"
+    ],
+    "interaccionesMedicamentos": ["Tamoxifeno", "Anticoagulantes"],
+    "preparacion": "Infusión: 1 estrella por taza, 8-10 min. No exceder 2-3 estrellas al día.",
+    "seguridad": "Seguro asegurándote de que sea Illicium verum (el chino). El japonés es tóxico.",
+    "usosColoquiales": ["Gases", "Digestión pesada", "Tos con flema", "Sabor para postres"],
+    "recomendacion": "Muy útil para gases. Comprar en sitio de confianza para evitar el japonés tóxico.",
+    "historia": {
+      "etimologia": "El género 'Illicium' del latín 'illicere' = seducir/atraer, por su aroma intenso. 'Verum' = verdadero (para distinguirlo del tóxico japonés). En chino: 'bājiǎo' = ocho cuernos.",
+      "origen": "Sur de China y noreste de Vietnam. Cultivado desde hace 3.000 años.",
+      "datoCurioso": "Hasta 2012, la farmacéutica Roche compraba el 90% de la cosecha mundial de anís estrellado para fabricar Tamiflu (oseltamivir), el antiviral contra la gripe. El ácido shikímico del anís estrellado es el precursor del medicamento. Contiene anetol, el mismo compuesto que da sabor al anís común, aunque no están emparentados.",
+      "usoAntiguo": "Usado en la medicina tradicional china durante 3.000 años como digestivo y para el aliento. Es ingrediente esencial del polvo chino de cinco especias."
+    }
+  },
+  {
+    "id": "arnica",
+    "nombre": "Árnica",
+    "nombreCientifico": "Arnica montana",
+    "otrosNombres": ["Tabaco de montaña", "Mountain tobacco", "Wolf's bane"],
+    "categoria": "piel",
+    "tenemos": false,
+    "peligrosidad": "alta",
+    "parteUtilizada": "Flores (SOLO uso externo)",
+    "sabor": "NO INGERIR",
+    "mejorMomento": "Tras golpes o contusiones",
+    "dosisMaxima": "Solo tópico",
+    "duracionMaximaUso": "Mientras haya inflamación",
+    "temperatura": "N/A",
+    "tiempoInfusion": "N/A",
+    "descripcion": "Antiinflamatorio potente para golpes y moratones. SOLO uso externo, NUNCA ingerir.",
+    "propiedades": [
+      { "nombre": "Antiinflamatorio", "intensidad": 3 },
+      { "nombre": "Analgésico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Caléndula (cicatrización, tópico)", "Hipérico (aceite para golpes)"],
+    "contraindicaciones": [
+      "NUNCA ingerir: contiene helenalina, MORTAL en cantidad",
+      "SOLO uso tópico",
+      "No sobre heridas abiertas",
+      "No con trastornos de coagulación",
+      "Suspender 2 semanas antes de cirugía"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes", "Jengibre/ginkgo/ajo (efecto aditivo sangrado)"],
+    "preparacion": "SOLO EXTERNO: gel o crema sobre golpes y moratones. Nunca sobre heridas abiertas. Nunca beber.",
+    "seguridad": "Segura SOLO como uso tópico. Tóxica y potencialmente letal si se ingiere.",
+    "usosColoquiales": ["Golpes", "Moratones", "Inflamación muscular", "Esguinces"],
+    "recomendacion": "Tenerla en formato crema o gel. No comprar para infusión.",
+    "historia": {
+      "etimologia": "Origen incierto, posiblemente del griego 'arnakis' = piel de cordero, por la textura suave de sus hojas.",
+      "origen": "Prados de montaña de Europa central y meridional, especialmente los Alpes y Pirineos.",
+      "datoCurioso": "Goethe atribuía a la árnica el haberle salvado la vida durante una crisis cardíaca en 1823. Está protegida en muchos países europeos por la sobreexplotación de sus poblaciones silvestres. En Alemania es una de las plantas medicinales más populares.",
+      "usoAntiguo": "Usada desde el siglo XII en la medicina popular europea de las regiones montañosas. Hildegarda de Bingen la mencionaba ya en el siglo XII."
+    }
+  },
+  {
+    "id": "erisimo",
+    "nombre": "Erísimo",
+    "nombreCientifico": "Sisymbrium officinale",
+    "otrosNombres": ["Hierba de los cantores", "Hedge mustard", "Jaramago oficinal"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Partes aéreas",
+    "sabor": "Ligeramente picante y mostaceo",
+    "mejorMomento": "Cuando hay afonía o laringitis",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Mientras dure la afonía",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min",
+    "descripcion": "La 'hierba de los cantores'. Demulcente para cuando te quedas sin voz.",
+    "propiedades": [{ "nombre": "Demulcente", "intensidad": 2 }],
+    "combinaciones": ["Malva (suavizar garganta)", "Miel (potencia efecto)", "Tomillo (antiséptico)"],
+    "contraindicaciones": ["Pocos datos disponibles", "Precaución en embarazo"],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: partes aéreas secas, 10 min. Gárgaras para afonía y laringitis.",
+    "seguridad": "Considerada segura en uso tradicional.",
+    "usosColoquiales": ["Afonía", "Laringitis", "Voz cansada", "Cantantes"],
+    "recomendacion": "Útil si cantas, das clases o te quedas afónico.",
+    "historia": {
+      "etimologia": "Del griego 'erysimon'. Su nombre popular 'hierba de los cantores' viene de su uso tradicional para la voz.",
+      "origen": "Europa y Asia occidental.",
+      "datoCurioso": "Se dice que los oradores y predicadores de la antigua Roma la masticaban antes de hablar en público para mantener la voz clara durante horas.",
+      "usoAntiguo": "Usada desde la antigüedad clásica para problemas de voz. Los cantores medievales la tomaban antes de las representaciones."
+    }
+  },
+  {
+    "id": "menta-piperita",
+    "nombre": "Menta Piperita",
+    "nombreCientifico": "Mentha × piperita",
+    "otrosNombres": ["Peppermint", "Menta inglesa"],
+    "categoria": "digestiva",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas",
+    "sabor": "Mentolado intenso, fresco, con un toque picante que la distingue de la hierbabuena",
+    "mejorMomento": "Después de comer o en verano con hielo",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-7 min",
+    "descripcion": "La menta con mas mentol: intensa, picante y refrescante. Hibrido natural entre menta acuatica y hierbabuena.",
+    "propiedades": [
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Carminativo", "intensidad": 2 },
+      { "nombre": "Refrescante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Jengibre (digestión potente)", "Limón (detox refrescante)", "Rooibos (base suave)"],
+    "contraindicaciones": [
+      "Puede empeorar reflujo gastroesofágico",
+      "Alergia a Lamiáceas"
+    ],
+    "interaccionesMedicamentos": ["Ciclosporina"],
+    "preparacion": "Infusión: hojas frescas o secas, 5-7 min. Deliciosa fría con hielo en verano.",
+    "seguridad": "Muy segura. Una de las hierbas más usadas y toleradas.",
+    "usosColoquiales": ["Digestión", "Gases", "Frescor", "Náuseas", "Dolor de cabeza"],
+    "historia": {
+      "etimologia": "Del latín 'mentha', del griego 'mintha', nombre de una ninfa. En la mitología griega, Minthe era amante de Hades y fue transformada en planta de menta por Perséfone (o Deméter) como castigo por celos. La 'piperita' viene del latín 'piper' = pimienta, por su sabor picante mentolado.",
+      "origen": "Europa, Asia y norte de África. Naturalizada en todo el mundo.",
+      "datoCurioso": "Los griegos consideraban la menta la 'hierba de la hospitalidad' y esparcían hojas por el suelo para perfumar la casa cuando llegaban invitados. También se usaba como afrodisíaco y anticonceptivo simultáneamente. India es hoy el mayor productor mundial de menta. Los peregrinos del Mayflower la llevaron a América.",
+      "usoAntiguo": "Los romanos llevaron la menta y la salsa de menta a Britania. Se usaba en los banquetes romanos como señal de bienvenida. En la antigua Grecia se usaba en ritos funerarios y en la preparación del kykeon, una bebida ritual de los Misterios Eleusinos."
+    }
+  },
+  {
+    "id": "hierbabuena",
+    "nombre": "Hierbabuena",
+    "nombreCientifico": "Mentha spicata",
+    "otrosNombres": ["Spearmint", "Menta verde", "Yerba buena", "Hortelana", "Menta romana"],
+    "categoria": "digestiva",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas",
+    "sabor": "Fresco y dulce, suave, sin el picor mentolado de la piperita. Mas herbaceo y delicado",
+    "mejorMomento": "Despues de comer o a cualquier hora",
+    "dosisMaxima": "3-4 tazas al dia",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-7 min",
+    "descripcion": "La menta suave y dulce, la de toda la vida. Su principio activo es la carvona (no el mentol), mas versatil y agradable en infusion que la piperita.",
+    "propiedades": [
+      { "nombre": "Digestivo", "intensidad": 3 },
+      { "nombre": "Carminativo", "intensidad": 2 },
+      { "nombre": "Antiespasmódico", "intensidad": 2 },
+      { "nombre": "Antioxidante", "intensidad": 2 },
+      { "nombre": "Antiandrogénico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Te verde (te moruno clasico)", "Limon (refrescante veraniego)", "Manzanilla (digestion suave)", "Jengibre (digestion potente)"],
+    "contraindicaciones": [
+      "Practicamente sin contraindicaciones en uso moderado",
+      "Puede empeorar reflujo en casos sensibles",
+      "Efecto antiandrogénico: estudiado para SOP, pero precaución si no es deseado",
+      "En grandes cantidades, precaución con enfermedad renal o hepática preexistente"
+    ],
+    "interaccionesMedicamentos": ["Medicamentos hepatotóxicos (paracetamol en dosis altas)", "Sedantes (efecto leve aditivo)"],
+    "preparacion": "Infusion: hojas frescas o secas, 5-7 min. Clasica del te moruno con te verde y azucar. Espectacular fria en verano.",
+    "seguridad": "Extremadamente segura. Probablemente la infusion mas consumida del mundo junto con la manzanilla.",
+    "usosColoquiales": ["Digestion", "Gases", "Frescor", "Nauseas", "Te moruno", "Mojitos", "SOP (ovario poliquistico)"],
+    "historia": {
+      "etimologia": "Del latin 'spicata' = con espigas, por la forma de sus flores. 'Hierbabuena' del castellano antiguo: 'hierba buena', por su agradable sabor y aroma. Es una de las mentas mas antiguas, madre de la piperita (que es su hibrido con Mentha aquatica).",
+      "origen": "Europa y Asia occidental. Naturalizada en todos los continentes. Es la menta original, la que existia antes de que apareciera el hibrido piperita.",
+      "datoCurioso": "La menta piperita NO existe en estado silvestre: es un hibrido esteril entre hierbabuena (M. spicata) y menta acuatica (M. aquatica) que solo se reproduce por esquejes. La hierbabuena es literalmente la madre de la piperita. El te moruno marroqui (te verde gunpowder + hierbabuena fresca + azucar) es Patrimonio Cultural Inmaterial de Marruecos. Un estudio turco de 2010 mostro que 2 tazas diarias de te de hierbabuena durante 5 dias redujeron significativamente los niveles de androgenos en mujeres con hirsutismo.",
+      "usoAntiguo": "Los romanos ya distinguian entre diferentes tipos de menta. Plinio el Viejo (siglo I d.C.) describia la 'mentha' como planta que 'estimula el apetito y el animo'. En la tradicion arabe medieval, era la hierba por excelencia para la hospitalidad: ofrecer te de hierbabuena a un invitado era (y sigue siendo) un ritual sagrado en el norte de Africa."
+    }
+  },
+  {
+    "id": "melisa",
+    "nombre": "Melisa",
+    "nombreCientifico": "Melissa officinalis",
+    "otrosNombres": ["Lemon balm", "Toronjil", "Hierba abejera"],
+    "categoria": "relajante",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas",
+    "sabor": "Cítrico a limón, suave, dulce",
+    "mejorMomento": "Tarde-noche",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "Equilibrio nervioso y digestivo con aroma a limón. La hermana tranquila de la menta.",
+    "propiedades": [
+      { "nombre": "Sedante", "intensidad": 2 },
+      { "nombre": "Ansiolítico", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 1 }
+    ],
+    "combinaciones": ["Manzanilla (relax total)", "Lavanda (sueño)", "Valeriana (insomnio fuerte)"],
+    "contraindicaciones": [
+      "Puede interferir con medicación tiroidea",
+      "Puede potenciar sedantes"
+    ],
+    "interaccionesMedicamentos": ["Medicación tiroidea", "Sedantes", "Barbitúricos"],
+    "preparacion": "Infusión: hojas frescas o secas, 5-10 min.",
+    "seguridad": "Muy segura. Aumenta el GABA de forma natural.",
+    "usosColoquiales": ["Ansiedad", "Insomnio leve", "Nervios", "Herpes labial (tópico)"],
+    "recomendacion": "Fácil de cultivar, crece como loca. Muy recomendable tenerla fresca.",
+    "historia": {
+      "etimologia": "Del griego 'melissa' = abeja. Las abejas se sienten muy atraídas por esta planta. 'Officinalis' = del almacén de hierbas del monasterio.",
+      "origen": "Sur de Europa, región mediterránea y Asia occidental.",
+      "datoCurioso": "Paracelso la llamaba 'el elixir de la vida' y aseguraba que podía rejuvenecer completamente a quien la tomara. Carlos V de España la bebía diariamente convencido de sus propiedades rejuvenecedoras. Los apicultores frotaban las colmenas con melisa para atraer a las abejas y evitar que enjambraran.",
+      "usoAntiguo": "Dioscórides la recomendaba para mordeduras de escorpión y perro. Los árabes la introdujeron en la medicina medieval como remedio contra la melancolía y la ansiedad. Los monjes carmelitas crearon el famoso 'Agua del Carmen' (siglo XVII), un licor medicinal a base de melisa."
+    }
+  },
+  {
+    "id": "romero",
+    "nombre": "Romero",
+    "nombreCientifico": "Salvia rosmarinus",
+    "otrosNombres": ["Rosemary", "Rosmarin"],
+    "categoria": "circulatoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas y flores",
+    "sabor": "Aromático, resinoso, ligeramente amargo y alcanforado",
+    "mejorMomento": "Mañana (estimulante cognitivo)",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min",
+    "descripcion": "Estimulante natural que mejora la circulación y hasta la memoria. El cerebro lo agradece.",
+    "propiedades": [
+      { "nombre": "Estimulante circulatorio", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Tónico general", "intensidad": 2 }
+    ],
+    "combinaciones": ["Tomillo (tónico)", "Salvia (memoria)", "Miel (suavizar sabor)"],
+    "contraindicaciones": [
+      "No usar aceite esencial puro internamente",
+      "Precaución en embarazo (dosis medicinales)"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes (leve)", "Antihipertensivos"],
+    "preparacion": "Infusión: 1 ramita o cucharadita de hojas secas, 8-10 min.",
+    "seguridad": "Muy seguro. Oler romero mejora el ánimo y la función cognitiva.",
+    "usosColoquiales": ["Memoria", "Concentración", "Circulación", "Cabello (enjuague)"],
+    "recomendacion": "Facilísimo de cultivar. Un must en cualquier balcón mediterráneo.",
+    "historia": {
+      "etimologia": "Del latín 'ros marinus' = rocío del mar, porque sobrevive solo con la humedad de la brisa marina. Recientemente reclasificado de Rosmarinus officinalis a Salvia rosmarinus.",
+      "origen": "Mediterráneo. Llevado a Britania por los ejércitos romanos.",
+      "datoCurioso": "Los estudiantes griegos llevaban guirnaldas de romero trenzadas en el pelo durante los exámenes para mejorar la memoria. Asociado a Mnemósine, la diosa griega de la memoria. Las novias griegas llevaban coronas de romero como símbolo de amor y fidelidad. Se encontraron restos en tumbas egipcias del 3.000 a.C.",
+      "usoAntiguo": "Los egipcios lo usaban en rituales funerarios. Carlomagno ordenó cultivarlo en jardines imperiales en el siglo IX. Las novias y novios medievales lo llevaban en las bodas. Dedicado a Afrodita, diosa del amor."
+    }
+  },
+  {
+    "id": "gordolobo",
+    "nombre": "Gordolobo",
+    "nombreCientifico": "Verbascum thapsus",
+    "otrosNombres": ["Mullein", "Candelaria", "Bastón de Júpiter", "Verbasco"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores y hojas",
+    "sabor": "Suave, ligeramente dulce",
+    "mejorMomento": "Cuando hay tos seca",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Mientras dure la tos",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min (filtrar con tela fina)",
+    "descripcion": "Hojas aterciopeladas y flores amarillas. Expectorante suave ideal para la tos seca.",
+    "propiedades": [
+      { "nombre": "Expectorante", "intensidad": 2 },
+      { "nombre": "Suavizante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Malva (tos + garganta)", "Tomillo (infección)", "Miel (potencia suavizante)"],
+    "contraindicaciones": ["Filtrar bien con tela fina (los pelitos irritan la garganta)"],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: flores y/o hojas secas, 10-15 min. IMPORTANTE: filtrar con tela fina para quitar pelitos.",
+    "seguridad": "Muy seguro. Uno de los mejores para tos seca.",
+    "usosColoquiales": ["Tos seca", "Bronquitis", "Irritación respiratoria"],
+    "recomendacion": "Imprescindible para temporada de tos. Se encuentra en herbolarios fácilmente.",
+    "historia": {
+      "etimologia": "'Verbascum' del latín 'barbascum' = barba, por las hojas peludas. 'Mullein' probablemente del latín 'mollis' = suave, por la textura aterciopelada. Los romanos lo llamaban 'Bastón de Júpiter'.",
+      "origen": "Europa y Asia. Llevado a América por los colonizadores, se naturalizó rápidamente.",
+      "datoCurioso": "Su tallo seco, bañado en sebo, se usaba como antorcha desde la antigua Roma. De ahí nombres como 'Candelaria' o 'antorcha del rey'. Durante la Fiebre del Oro de California (1849), los mineros iluminaban los túneles con antorchas de gordolobo. Las hojas se frotaban en las mejillas como colorete natural.",
+      "usoAntiguo": "Los griegos usaban las hojas secas como mecha para lámparas de aceite. En la Edad Media se le llamaba 'herba luminaria' (hierba de la luz) porque las hojas y tallos impregnados de cera o aceite de pescado se usaban como velas. Los pueblos náhuatl de México lo usaban como planta medicinal mucho antes de la conquista."
+    }
+  },
+  {
+    "id": "cardamomo",
+    "nombre": "Cardamomo",
+    "nombreCientifico": "Elettaria cardamomum",
+    "otrosNombres": ["Cardamom", "Queen of Spices", "Reina de las especias", "Granos del paraíso"],
+    "categoria": "especias",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Vainas con semillas",
+    "sabor": "Complejo: dulce, especiado, cítrico, cálido, ligeramente alcanforado",
+    "mejorMomento": "Cualquier hora",
+    "dosisMaxima": "Sin límite práctico en uso culinario",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min (vainas machacadas)",
+    "descripcion": "La reina de las especias. Aromático, digestivo, con un toque exótico que transforma cualquier infusión.",
+    "propiedades": [
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Carminativo", "intensidad": 2 },
+      { "nombre": "Refrescante", "intensidad": 1 }
+    ],
+    "combinaciones": ["Jengibre y canela (chai)", "Clavos (especiado)", "Café (café árabe)"],
+    "contraindicaciones": [
+      "Prácticamente sin contraindicaciones en uso culinario",
+      "Precaución con cálculos biliares en dosis muy altas"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: 2-3 vainas machacadas por taza, 8-10 min. Genial con chai o café árabe.",
+    "seguridad": "Muy seguro. Especia milenaria con uso extendidísimo.",
+    "usosColoquiales": ["Chai", "Digestión", "Aliento fresco", "Café árabe"],
+    "recomendacion": "Transforma un chai casero. Combina genial con jengibre, canela y clavos.",
+    "historia": {
+      "etimologia": "Del latín 'cardamomum', del griego 'kardamomon'. El nombre botánico 'Elettaria' proviene del tamil 'Elettari' = semillas de cardamomo. Es la tercera especia más cara del mundo, tras el azafrán y la vainilla.",
+      "origen": "Kerala, sureste de India, en las Montañas del Cardamomo (que llevan su nombre).",
+      "datoCurioso": "Los vikingos descubrieron el cardamomo en Constantinopla y lo llevaron a Escandinavia, donde se convirtió en ingrediente esencial de su repostería hasta hoy. Los egipcios masticaban vainas para mantener los dientes limpios. Guatemala es hoy el mayor productor mundial, superando a India, gracias a un caficultor alemán llamado Oscar Majus Kloeffer que en el siglo XX decidió cultivarlo allí.",
+      "usoAntiguo": "Usado desde el 3.000 a.C. en la India védica, donde se echaba al fuego sacrificial en ceremonias de boda. Los griegos y romanos lo usaban en perfumes y aceites. Los árabes lo adoptaron para su café tradicional."
+    }
+  },
+  {
+    "id": "pasiflora",
+    "nombre": "Pasiflora",
+    "nombreCientifico": "Passiflora incarnata",
+    "otrosNombres": ["Passionflower", "Flor de la pasión", "Maracuyá (fruto)", "La flor de las cinco llagas"],
+    "categoria": "relajante",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Partes aéreas (hojas, tallos, flores)",
+    "sabor": "Herbáceo suave, ligeramente dulce",
+    "mejorMomento": "Tarde-noche",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Consultar para uso prolongado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min",
+    "descripcion": "Ansiolítico natural potente. Flor espectacular con efecto tranquilizador sin dejarte grogui.",
+    "propiedades": [
+      { "nombre": "Ansiolítico", "intensidad": 3 },
+      { "nombre": "Sedante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Valeriana (insomnio fuerte)", "Melisa (ansiedad diurna)", "Tila (relax clásico)"],
+    "contraindicaciones": [
+      "NO usar en embarazo ni lactancia",
+      "Potencia sedantes y ansiolíticos",
+      "Puede causar somnolencia"
+    ],
+    "interaccionesMedicamentos": ["Sedantes", "Ansiolíticos", "Antiespasmódicos"],
+    "preparacion": "Infusión: 1-2 cucharaditas de partes aéreas secas, 10 min. Máx. 2-3 tazas/día.",
+    "seguridad": "Segura respetando contraindicaciones. Uno de los mejores ansiolíticos naturales.",
+    "usosColoquiales": ["Ansiedad", "Insomnio", "Nerviosismo", "Estrés"],
+    "recomendacion": "Para noches de ansiedad o épocas de mucho estrés.",
+    "historia": {
+      "etimologia": "Del latín 'passio' = sufrimiento. NO se refiere a la pasión amorosa sino a la Pasión de Cristo. Los misioneros españoles en el siglo XVI vieron en la flor símbolos de la Crucifixión.",
+      "origen": "Nativa de América tropical y subtropical, desde el sureste de EE.UU. hasta Sudamérica.",
+      "datoCurioso": "Los misioneros españoles (s. XVI-XVII) usaron la flor como herramienta visual para evangelizar: los 10 pétalos = los apóstoles (menos Judas y Pedro), los filamentos = la corona de espinas, los 5 estambres = las 5 llagas, los 3 estigmas = los 3 clavos. La describió el eclesiástico Giacomo Bosio en Roma en 1609. Hay más de 600 especies de Passiflora.",
+      "usoAntiguo": "Los aztecas, incas y otros pueblos sudamericanos la cultivaban como planta semi-domesticada durante miles de años. Usada como sedante por diversas culturas indígenas americanas."
+    }
+  },
+  {
+    "id": "maria-luisa",
+    "nombre": "María Luisa",
+    "nombreCientifico": "Aloysia citrodora",
+    "otrosNombres": ["Hierbaluisa", "Lemon verbena", "Verbena de Indias", "Cedrón", "Hierba de la Princesa"],
+    "categoria": "relajante",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas",
+    "sabor": "Cítrico a limón intenso, fresco, dulce",
+    "mejorMomento": "Después de comer o tarde",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-8 min",
+    "descripcion": "Aroma a limón suave y delicioso. Relaja sin tumbar, perfecta para después de comer. También llamada hierbaluisa.",
+    "propiedades": [
+      { "nombre": "Sedante", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Antiespasmódico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Menta (digestión refrescante)", "Rosas (floral-cítrico)", "Manzanilla (relax)"],
+    "contraindicaciones": [
+      "Pocos efectos adversos conocidos",
+      "Precaución en embarazo por falta de estudios"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: hojas frescas o secas, 5-8 min. No usar agua hirviendo para preservar aroma.",
+    "seguridad": "Muy segura. Excelente para uso diario.",
+    "usosColoquiales": ["Digestión", "Relax suave", "Gases", "Placer aromático"],
+    "recomendacion": "Fácil de cultivar en maceta. Una de las infusiones más agradables.",
+    "historia": {
+      "etimologia": "'Aloysia' en honor a María Luisa de Parma, princesa de Asturias, esposa del futuro Carlos IV de España. En español se la conoce como 'Hierba de la Princesa' por ella. 'Citrodora' del latín = olor a limón.",
+      "origen": "Nativa de Argentina y Chile. Crece silvestre en Sudamérica desde tiempos antiguos.",
+      "datoCurioso": "El primer botánico europeo que la documentó fue el francés Philibert Commerson durante su viaje alrededor del mundo con Bougainville, recolectándola en Buenos Aires hacia 1767. En 1797 ya era común en los invernaderos de Londres. Los españoles y portugueses la trajeron a Europa en el siglo XVII, cautivados por su aroma a limón.",
+      "usoAntiguo": "Usada por pueblos indígenas sudamericanos como planta digestiva y relajante. Los colonizadores españoles se enamoraron de su aroma y la llevaron a Europa, donde rápidamente se hizo popular en perfumería y como planta medicinal."
+    }
+  },
+  {
+    "id": "estigma-de-maiz",
+    "nombre": "Estigma de Maíz",
+    "nombreCientifico": "Zea mays (estigmas)",
+    "otrosNombres": ["Pelos de elote", "Corn silk", "Barba de maíz", "Cabello de ángel"],
+    "categoria": "urinaria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Estigmas (hilos sedosos de la mazorca)",
+    "sabor": "Muy suave, ligeramente dulce y herbáceo",
+    "mejorMomento": "Mañana o mediodía (diurético)",
+    "dosisMaxima": "3 tazas al día",
+    "duracionMaximaUso": "2-3 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min",
+    "descripcion": "Los hilos dorados de la mazorca son un diurético suave y efectivo. Aliado del sistema urinario.",
+    "propiedades": [
+      { "nombre": "Diurético", "intensidad": 2 },
+      { "nombre": "Antiinflamatorio", "intensidad": 1 }
+    ],
+    "combinaciones": ["Gayuba (infecciones urinarias)", "Cola de caballo (retención)", "Ortiga (depuración)"],
+    "contraindicaciones": [
+      "Puede potenciar diuréticos farmacológicos",
+      "Precaución con diabetes (puede bajar glucemia)",
+      "Puede interactuar con anticoagulantes"
+    ],
+    "interaccionesMedicamentos": ["Diuréticos", "Antidiabéticos", "Anticoagulantes (warfarina)"],
+    "preparacion": "Infusión: puñado de estigmas frescos o secos, 10-15 min. Colar bien.",
+    "seguridad": "Muy seguro en uso moderado. Diurético muy suave.",
+    "usosColoquiales": ["Retención de líquidos", "Cistitis", "Infecciones urinarias", "Riñón"],
+    "recomendacion": "Útil para problemas urinarios leves. Se puede recoger directamente de mazorcas frescas.",
+    "historia": {
+      "etimologia": "'Zea' del griego 'zeia', un tipo de cereal. 'Mays' del taíno 'mahís' = lo que sustenta la vida. Los estigmas son los hilos femeninos que capturan el polen para fecundar cada grano.",
+      "origen": "Mesoamérica. El maíz fue domesticado hace 9.000 años a partir del teosinte en el Valle de Tehuacán, México.",
+      "datoCurioso": "Cada hilo de seda de la mazorca corresponde exactamente a un grano: si un hilo no recibe polen, ese grano no se forma. Una mazorca tiene entre 400 y 1.000 hilos. Los nativos americanos ya usaban estos hilos como medicina mucho antes de la llegada de los europeos.",
+      "usoAntiguo": "Los mayas y aztecas utilizaban los estigmas como remedio para problemas urinarios. En la medicina tradicional china se conocen como 'yu mi xu' y se usan desde hace siglos para edemas y problemas renales."
+    }
+  },
+  {
+    "id": "genciana",
+    "nombre": "Genciana",
+    "nombreCientifico": "Gentiana lutea",
+    "otrosNombres": ["Great yellow gentian", "Genciana amarilla", "Bitter root"],
+    "categoria": "digestiva",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Raíz",
+    "sabor": "Extremadamente amargo, uno de los sabores más amargos del reino vegetal",
+    "mejorMomento": "15-30 min antes de comer (estimula jugos gástricos)",
+    "dosisMaxima": "1-2 tazas al día",
+    "duracionMaximaUso": "2-3 semanas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min (decocción)",
+    "descripcion": "La raíz más amarga de Europa. Estimula la digestión como ninguna otra planta. Base del Angostura y muchos amari italianos.",
+    "propiedades": [
+      { "nombre": "Amargo digestivo", "intensidad": 3 },
+      { "nombre": "Digestivo", "intensidad": 3 },
+      { "nombre": "Tónico general", "intensidad": 2 }
+    ],
+    "combinaciones": ["Menta (suaviza el amargor)", "Hinojo (digestión completa)", "Manzanilla (estómago delicado)"],
+    "contraindicaciones": [
+      "Contraindicada en úlcera gástrica activa",
+      "No en embarazo ni lactancia",
+      "Puede aumentar acidez gástrica",
+      "Cuidado: confundible con Veratrum album (tóxico) en estado silvestre"
+    ],
+    "interaccionesMedicamentos": ["Antiácidos (efecto contrario)"],
+    "preparacion": "Decocción: trocitos de raíz seca, hervir 10-15 min. Tomar antes de comer. Se puede mezclar con miel para suavizar.",
+    "seguridad": "Segura en dosis recomendadas. El riesgo principal es la confusión botánica con el venenoso Veratrum album.",
+    "usosColoquiales": ["Falta de apetito", "Digestión lenta", "Tónico amargo", "Resaca"],
+    "recomendacion": "Imprescindible para digestiones pesadas. Base de los famosos bitters y aperitivos alpinos.",
+    "historia": {
+      "etimologia": "Nombrada por Gentius, último rey de Iliria (siglo II a.C.), quien supuestamente descubrió sus propiedades medicinales. 'Lutea' = amarilla, por sus flores.",
+      "origen": "Montañas de Europa central y sur: Alpes, Pirineos, Balcanes. Crece entre 800 y 2.500 metros de altitud.",
+      "datoCurioso": "La raíz de genciana puede tardar 10 años en estar lista para cosechar. Es la base secreta del Angostura bitters, del Suze francés, del Aperol y de muchos amari italianos. En los Alpes suizos y franceses, los 'gencianeros' tienen derechos ancestrales para recolectarla.",
+      "usoAntiguo": "Dioscórides y Plinio ya la describían en el siglo I. En la Edad Media era considerada 'la hierba contra la peste'. Los monjes benedictinos la cultivaban en sus jardines medicinales y la usaban para elaborar sus famosos licores digestivos."
+    }
+  },
+  {
+    "id": "malvavisco",
+    "nombre": "Malvavisco",
+    "nombreCientifico": "Althaea officinalis",
+    "otrosNombres": ["Marshmallow", "Altea", "Bismalva"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Raíz y hojas",
+    "sabor": "Mucilaginoso, suave, ligeramente dulce",
+    "mejorMomento": "Cualquier hora, ideal con garganta irritada",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "Maceración en frío (raíz) o infusión 90°C (hojas)",
+    "tiempoInfusion": "Raíz: maceración en frío 4-8 horas. Hojas: 10 min",
+    "descripcion": "Emoliente supremo. La planta que dio nombre a las nubes de azúcar (marshmallows). Protege y suaviza todas las mucosas.",
+    "propiedades": [
+      { "nombre": "Emoliente", "intensidad": 3 },
+      { "nombre": "Suavizante", "intensidad": 3 },
+      { "nombre": "Antiinflamatorio", "intensidad": 2 }
+    ],
+    "combinaciones": ["Regaliz (garganta)", "Malva (doble emoliente)", "Tomillo (tos productiva)"],
+    "contraindicaciones": [
+      "Puede ralentizar absorción de medicamentos orales (separar 1-2 horas)",
+      "Sin contraindicaciones serias conocidas"
+    ],
+    "interaccionesMedicamentos": ["Puede retrasar absorción de cualquier medicamento oral (efecto del mucílago)"],
+    "preparacion": "Raíz: maceración en frío 4-8h para extraer mucílagos. Hojas: infusión 10 min. La raíz es más potente.",
+    "seguridad": "Extremadamente segura. Una de las plantas más suaves y toleradas que existen.",
+    "usosColoquiales": ["Garganta irritada", "Tos seca", "Gastritis", "Acidez"],
+    "recomendacion": "Excelente para gargantas castigadas. La maceración en frío de la raíz es espectacular.",
+    "historia": {
+      "etimologia": "'Althaea' del griego 'althainein' = curar. 'Officinalis' = del almacén de hierbas del monasterio. Su nombre inglés 'marshmallow' (del pantano) describe su hábitat natural en zonas húmedas.",
+      "origen": "Europa, norte de África y Asia occidental. Crece de forma natural en marismas y riberas.",
+      "datoCurioso": "Las nubes de azúcar (marshmallows) originalmente se hacían con extracto de raíz de malvavisco: los franceses batían el mucílago con azúcar y clara de huevo para crear la golosina. La versión industrial moderna ya no contiene la planta, solo gelatina y azúcar.",
+      "usoAntiguo": "Hipócrates la recetaba para heridas e inflamación. Los romanos la consideraban un manjar: Horacio describe un plato de raíz de malvavisco hervida. En el antiguo Egipto se preparaba un dulce real con miel y la savia de esta planta, reservado para dioses y faraones."
+    }
+  },
+  {
+    "id": "fumaria",
+    "nombre": "Fumaria",
+    "nombreCientifico": "Fumaria officinalis",
+    "otrosNombres": ["Common fumitory", "Palomilla", "Sangre de Cristo", "Earth smoke"],
+    "categoria": "depurativa",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Partes aéreas (tallos, hojas y flores)",
+    "sabor": "Amargo, herbáceo con notas terrosas",
+    "mejorMomento": "Mañana, antes de comer",
+    "dosisMaxima": "2 tazas al día",
+    "duracionMaximaUso": "Máximo 2-3 semanas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10 min",
+    "descripcion": "Depurativo hepático y cutáneo. Regula la bilis y limpia la piel desde dentro.",
+    "propiedades": [
+      { "nombre": "Depurativo hepático", "intensidad": 2 },
+      { "nombre": "Depurativo cutáneo", "intensidad": 2 },
+      { "nombre": "Regulador biliar", "intensidad": 2 }
+    ],
+    "combinaciones": ["Diente de león (hígado)", "Ortiga (depuración completa)", "Bardana (piel)"],
+    "contraindicaciones": [
+      "Contiene alcaloides: no usar a largo plazo",
+      "No en embarazo ni lactancia",
+      "Precaución con obstrucción biliar",
+      "No en niños"
+    ],
+    "interaccionesMedicamentos": ["Medicamentos metabolizados por el hígado"],
+    "preparacion": "Infusión: 1-2 cucharaditas de planta seca, 10 min. Curas cortas de 2-3 semanas.",
+    "seguridad": "Segura en curas cortas. El uso prolongado no es recomendable por su contenido en alcaloides.",
+    "usosColoquiales": ["Hígado", "Acné", "Eczema", "Digestión biliar", "Limpieza primaveral"],
+    "recomendacion": "Interesante para curas depurativas estacionales. Se encuentra en herbolarios.",
+    "historia": {
+      "etimologia": "'Fumaria' del latín 'fumus terrae' = humo de la tierra. Se decía que no nacía de semilla sino del humo que salía de la tierra. Sus hojas grises de lejos parecen humo. En inglés: 'earth smoke'.",
+      "origen": "Europa, norte de África y Asia occidental. Planta ruderal que crece en terrenos cultivados y bordes de caminos.",
+      "datoCurioso": "En la Edad Media se creía que la fumaria no nacía de semilla sino que brotaba espontáneamente de las emanaciones de la tierra. Los exorcistas medievales quemaban fumaria para expulsar demonios. Dioscórides decía que su jugo hacía llorar los ojos como el humo, de ahí su nombre.",
+      "usoAntiguo": "Galeno e Hipócrates la recetaban como depurativo sanguíneo. En la herbolaria medieval se quemaba en las casas para purificar el ambiente. Santa Hildegarda de Bingen la recomendaba para problemas de hígado y piel."
+    }
+  },
+  {
+    "id": "jengibre",
+    "nombre": "Jengibre",
+    "nombreCientifico": "Zingiber officinale",
+    "otrosNombres": ["Ginger", "Kion", "Shoga"],
+    "categoria": "digestiva",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Rizoma (raíz)",
+    "sabor": "Picante, cálido, con notas cítricas y terrosas",
+    "mejorMomento": "Mañana o después de comer. En invierno para calentar el cuerpo",
+    "dosisMaxima": "3-4 tazas al día (hasta 4g de jengibre fresco)",
+    "duracionMaximaUso": "Sin restricciones en uso moderado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min (rodajas frescas) o 5-8 min (polvo)",
+    "descripcion": "El todoterreno caliente. Antiinflamatorio, digestivo y antinauseoso. Te calienta por dentro en invierno.",
+    "propiedades": [
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Antivomitivo", "intensidad": 2 },
+      { "nombre": "Circulatorio", "intensidad": 2 }
+    ],
+    "combinaciones": ["Limón y miel (resfriados)", "Cúrcuma (antiinflamatorio potente)", "Canela (chai caliente)", "Menta (digestión intensa)"],
+    "contraindicaciones": [
+      "Puede interactuar con anticoagulantes en dosis altas",
+      "Precaución con cálculos biliares",
+      "En embarazo: seguro para náuseas en dosis moderadas (1g/día)"
+    ],
+    "interaccionesMedicamentos": ["Anticoagulantes (dosis altas)", "Antidiabéticos (puede bajar glucemia)"],
+    "preparacion": "Infusión: 3-4 rodajas finas de raíz fresca en agua hirviendo, 10-15 min. Añadir limón y miel al gusto.",
+    "seguridad": "Muy seguro. Miles de años de uso culinario y medicinal lo respaldan. Evidencia sólida para náuseas.",
+    "usosColoquiales": ["Náuseas", "Resfriados", "Digestión pesada", "Inflamación", "Mareo por movimiento"],
+    "recomendacion": "Imprescindible. Fresco dura semanas en nevera. Base de infinitas infusiones.",
+    "historia": {
+      "etimologia": "'Zingiber' del sánscrito 'shringa-vera' = cuerpo con forma de cuerno, por la forma del rizoma. El nombre pasó al griego 'zingiberis', luego al latín.",
+      "origen": "Sudeste asiático, probablemente sur de China o India. Cultivado desde hace más de 5.000 años.",
+      "datoCurioso": "En la Europa medieval el jengibre era tan caro como una oveja. Enrique VIII de Inglaterra sugirió al alcalde de Londres usar jengibre contra la peste. La reina Isabel I de Inglaterra inventó el gingerbread man (galleta de jengibre con forma humana) para agasajar a invitados importantes haciéndolos a su imagen.",
+      "usoAntiguo": "Confucio (551-479 a.C.) nunca comía sin jengibre. Los marineros chinos lo masticaban contra el mareo. Los romanos lo importaban de la India pagando fortunas. En Japón, el jengibre encurtido (gari) se usa desde hace siglos como limpiador de paladar entre piezas de sushi."
+    }
+  },
+  {
+    "id": "gayuba",
+    "nombre": "Gayuba",
+    "nombreCientifico": "Arctostaphylos uva-ursi",
+    "otrosNombres": ["Bearberry", "Uva de oso", "Uvaduz"],
+    "categoria": "urinaria",
+    "tenemos": false,
+    "peligrosidad": "media",
+    "parteUtilizada": "Hojas",
+    "sabor": "Astringente, amargo, con notas herbáceas",
+    "mejorMomento": "Repartido a lo largo del día (efecto antiséptico urinario)",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Máximo 1 semana sin supervisión",
+    "temperatura": "Maceración en frío (ideal) o infusión suave",
+    "tiempoInfusion": "Maceración en frío 12h (menos taninos) o infusión 10 min",
+    "descripcion": "El antiséptico urinario por excelencia. Contiene arbutina que se transforma en hidroquinona antibacteriana en la orina.",
+    "propiedades": [
+      { "nombre": "Antiséptico urinario", "intensidad": 3 },
+      { "nombre": "Diurético", "intensidad": 1 }
+    ],
+    "combinaciones": ["Cola de caballo (vías urinarias)", "Estigma de maíz (diurético suave)", "Arándano rojo (prevención cistitis)"],
+    "contraindicaciones": [
+      "Máximo 1 semana de uso y máximo 5 veces al año",
+      "Contiene hidroquinona: tóxica en uso prolongado",
+      "No en embarazo, lactancia ni niños",
+      "No con acidificantes urinarios (necesita orina alcalina para funcionar)"
+    ],
+    "interaccionesMedicamentos": ["Acidificantes urinarios (reduce eficacia)", "AINEs", "Litio"],
+    "preparacion": "Maceración en frío: hojas secas en agua fría 12h (extrae menos taninos). O infusión corta 10 min. Funciona mejor con orina alcalina.",
+    "seguridad": "Segura solo en uso corto (máximo 1 semana). La hidroquinona liberada es tóxica en uso prolongado.",
+    "usosColoquiales": ["Cistitis", "Infección de orina", "Antiséptico urinario"],
+    "recomendacion": "Útil para cistitis aguda como complemento. No para uso preventivo continuado.",
+    "historia": {
+      "etimologia": "'Arctostaphylos' del griego 'arktos' (oso) + 'staphyle' (uva) = uva de oso. 'Uva-ursi' es lo mismo en latín. Los osos la comen en otoño. En galés se llama 'merywen' = vino de los osos.",
+      "origen": "Circumpolar: crece en todo el hemisferio norte, desde Escandinavia hasta Canadá.",
+      "datoCurioso": "La gayuba necesita que su orina sea alcalina para funcionar: la arbutina se transforma en hidroquinona (el antiséptico activo) solo en medio alcalino. Por eso los herbolarios recomiendan evitar alimentos ácidos mientras se toma. El famoso explorador Marco Polo la describió entre las plantas medicinales de Asia Central.",
+      "usoAntiguo": "Los nativos americanos la mezclaban con tabaco en una mezcla ceremonial llamada 'kinnikinnick' que fumaban en pipas de la paz. En Europa, fue el médico galés Myddfai quien la documentó en el siglo XIII como remedio para cálculos renales."
+    }
+  },
+  {
+    "id": "judia-vaina",
+    "nombre": "Judía (vaina)",
+    "nombreCientifico": "Phaseolus vulgaris (vaina)",
+    "otrosNombres": ["Vaina de alubia", "Bean pod", "Chaucha"],
+    "categoria": "depurativa",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Vainas secas (sin semillas)",
+    "sabor": "Muy suave, ligeramente dulce y herbáceo",
+    "mejorMomento": "Mañana o mediodía",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "2-3 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "15-20 min (decocción)",
+    "descripcion": "Las vainas de las judías son diuréticas e hipoglucemiantes. Remedio popular para retención de líquidos.",
+    "propiedades": [
+      { "nombre": "Diurético", "intensidad": 2 },
+      { "nombre": "Hipoglucemiante", "intensidad": 2 },
+      { "nombre": "Depurativo", "intensidad": 1 }
+    ],
+    "combinaciones": ["Cola de caballo (diurético)", "Ortiga (depuración)", "Olivo (glucemia)"],
+    "contraindicaciones": [
+      "Precaución con diuréticos farmacológicos",
+      "Precaución con antidiabéticos (puede potenciar efecto)"
+    ],
+    "interaccionesMedicamentos": ["Diuréticos", "Antidiabéticos"],
+    "preparacion": "Decocción: vainas secas troceadas, hervir 15-20 min. Colar y beber 2-3 tazas al día.",
+    "seguridad": "Muy segura. Remedio casero tradicional con larga historia de uso.",
+    "usosColoquiales": ["Retención de líquidos", "Control de azúcar", "Dieta depurativa"],
+    "recomendacion": "Remedio económico y accesible. Las vainas secas se consiguen en cualquier herbolario.",
+    "historia": {
+      "etimologia": "'Phaseolus' del griego 'phaseolos' = barca pequeña, por la forma de la vaina. 'Vulgaris' = común. Las judías llegaron a Europa tras el descubrimiento de América.",
+      "origen": "Mesoamérica y los Andes. Domesticada independientemente en México y Perú hace más de 7.000 años.",
+      "datoCurioso": "Las judías eran una de las 'Tres Hermanas' de la agricultura nativa americana (junto con maíz y calabaza), cultivadas juntas en un sistema de policultivo que sigue considerándose un modelo de sostenibilidad. En fitoterapia se usan las vainas vacías, no las semillas.",
+      "usoAntiguo": "En la herbolaria europea tradicional, las vainas de judía se han usado desde el siglo XVI como diurético popular. El médico francés Henri Leclerc (s. XIX) popularizó su uso para diabetes leve."
+    }
+  },
+  {
+    "id": "rabo-de-gato",
+    "nombre": "Rabo de Gato",
+    "nombreCientifico": "Sideritis hyssopifolia",
+    "otrosNombres": ["Té de roca", "Rabo de gat", "Sideritis", "Ironwort"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Sumidades floridas",
+    "sabor": "Herbáceo suave, ligeramente aromático, agradable",
+    "mejorMomento": "Cualquier hora",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "Antiinflamatorio, digestivo y respiratorio. El 'té de montaña' ibérico que se toma como infusión cotidiana.",
+    "propiedades": [
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 1 },
+      { "nombre": "Antiséptico respiratorio", "intensidad": 1 }
+    ],
+    "combinaciones": ["Tomillo (resfriados)", "Miel (garganta)", "Manzanilla (digestión)"],
+    "contraindicaciones": [
+      "Sin contraindicaciones conocidas relevantes",
+      "Puede potenciar ligeramente sedantes"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: ramita de sumidades floridas, 5-10 min. Se toma como té cotidiano en muchas zonas de España.",
+    "seguridad": "Muy segura. Es el 'té de diario' en muchas zonas rurales de España y Grecia.",
+    "usosColoquiales": ["Resfriados", "Digestión", "Inflamación", "Garganta", "Té diario"],
+    "recomendacion": "Muy agradable como infusión de diario. Se encuentra silvestre en montañas ibéricas.",
+    "historia": {
+      "etimologia": "'Sideritis' del griego 'sideros' = hierro. Se usaba para curar heridas de armas de hierro. 'Rabo de gato' por la forma de sus inflorescencias alargadas y peludas.",
+      "origen": "Península Ibérica y regiones mediterráneas. Crece en zonas montañosas entre 500 y 2.000 metros.",
+      "datoCurioso": "En Grecia, la Sideritis (conocida como 'tsai tou vounou' = té de montaña) es la infusión más popular del país. Estudios recientes sugieren propiedades neuroprotectoras y posible efecto positivo contra el Alzheimer. Los pastores de montaña españoles la han tomado como té cotidiano durante siglos.",
+      "usoAntiguo": "Dioscórides la incluía en su Materia Médica como planta para curar heridas de espada y lanza. Los pastores trashumantes españoles la recolectaban en sus rutas de montaña como remedio universal."
+    }
+  },
+  {
+    "id": "olivo",
+    "nombre": "Olivo",
+    "nombreCientifico": "Olea europaea",
+    "otrosNombres": ["Olive tree", "Aceituno"],
+    "categoria": "circulatoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Hojas",
+    "sabor": "Amargo, astringente, herbáceo",
+    "mejorMomento": "Mañana",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Curas de 3-4 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min",
+    "descripcion": "Las hojas del olivo bajan la tensión y regulan el colesterol. El árbol milenario del Mediterráneo también cura.",
+    "propiedades": [
+      { "nombre": "Hipotensor", "intensidad": 2 },
+      { "nombre": "Antioxidante", "intensidad": 2 },
+      { "nombre": "Regulador colesterol", "intensidad": 2 }
+    ],
+    "combinaciones": ["Hibisco (tensión)", "Espino blanco (corazón)", "Olivo + rooibos (antioxidante)"],
+    "contraindicaciones": [
+      "Puede potenciar antihipertensivos",
+      "Puede potenciar antidiabéticos",
+      "Precaución con hipotensión"
+    ],
+    "interaccionesMedicamentos": ["Antihipertensivos", "Antidiabéticos"],
+    "preparacion": "Infusión: hojas secas, 10-15 min. 2-3 tazas al día en curas de 3-4 semanas.",
+    "seguridad": "Muy seguro. Oleuropeína y hidroxitirosol tienen respaldo científico sólido.",
+    "usosColoquiales": ["Tensión alta", "Colesterol", "Antioxidante", "Diabetes leve"],
+    "recomendacion": "Si tienes un olivo cerca, las hojas son gratis y muy efectivas. También en herbolarios.",
+    "historia": {
+      "etimologia": "'Olea' del latín, del griego 'elaia' = olivo. 'Europaea' = de Europa. El olivo es el árbol simbólico de la civilización mediterránea.",
+      "origen": "Oriente Próximo. Los olivos más antiguos conocidos tienen más de 3.000 años y siguen dando fruto en Creta y Palestina.",
+      "datoCurioso": "Hay olivos vivos de más de 3.000 años. El olivo de Vouves en Creta tiene al menos 3.000 años y sigue produciendo aceitunas. Los olivos del Huerto de Getsemaní en Jerusalén tienen unos 900 años. La rama de olivo es símbolo universal de paz desde la antigua Grecia.",
+      "usoAntiguo": "Los egipcios usaban hojas de olivo para momificar. Los griegos coronaban a los atletas olímpicos con ramas de olivo silvestre. Hipócrates describía el jugo de oliva como 'la gran medicina'. Las hojas se usaban como febrífugo en toda la cuenca mediterránea."
+    }
+  },
+  {
+    "id": "tila",
+    "nombre": "Tila",
+    "nombreCientifico": "Tilia platyphyllos / Tilia cordata",
+    "otrosNombres": ["Linden", "Flor de tilo", "Lime blossom", "Tilleul"],
+    "categoria": "relajante",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Flores con bráctea",
+    "sabor": "Dulce, floral, mieloso, muy agradable",
+    "mejorMomento": "Noche (antes de dormir) o en momentos de nerviosismo",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "95-100°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "El clasicazo para los nervios. La infusión que tu abuela ya te preparaba. Sedante suave, diaforética y deliciosa.",
+    "propiedades": [
+      { "nombre": "Sedante", "intensidad": 3 },
+      { "nombre": "Ansiolítico", "intensidad": 2 },
+      { "nombre": "Diaforético", "intensidad": 2 }
+    ],
+    "combinaciones": ["Valeriana (insomnio)", "Melisa (ansiedad)", "Miel (sabor y garganta)"],
+    "contraindicaciones": [
+      "Sin contraindicaciones significativas",
+      "Puede potenciar ligeramente sedantes farmacológicos"
+    ],
+    "interaccionesMedicamentos": ["Sedantes (efecto leve aditivo)"],
+    "preparacion": "Infusión: flores con bráctea, 5-10 min. No hervir para preservar aroma. Perfecta con miel.",
+    "seguridad": "Extremadamente segura. Siglos de uso tradicional sin problemas.",
+    "usosColoquiales": ["Nervios", "Insomnio", "Ansiedad", "Resfriado (diaforética)", "Niños nerviosos"],
+    "recomendacion": "Un must. La infusión más universal para calmar nervios. Todo el mundo debería tenerla.",
+    "historia": {
+      "etimologia": "'Tilia' del latín, posiblemente del griego 'ptilon' = ala, por la bráctea alada que acompaña a las flores. En alemán 'Linde', que dio nombre a innumerables ciudades (Leipzig = 'lugar de tilos').",
+      "origen": "Europa y regiones templadas del hemisferio norte.",
+      "datoCurioso": "El tilo de Berlín da nombre a la famosa avenida 'Unter den Linden' (bajo los tilos). En Alemania y Suiza, los tilos centenarios eran el centro social de los pueblos: bajo ellos se celebraban juicios, bodas y asambleas. Se les llamaba 'Gerichtslinde' (tilo de justicia). Los tilos pueden vivir más de 1.000 años.",
+      "usoAntiguo": "Los germanos consideraban el tilo un árbol sagrado dedicado a Freya, diosa del amor. En el Cantar de los Nibelungos, Sigfrido se baña en sangre de dragón bajo un tilo. Carlos I de España ordenó plantar tilos en todas las plazas del imperio. En Francia, tras la Revolución, se plantaron 'arbres de la liberté', muchos de ellos tilos."
+    }
+  },
+  {
+    "id": "pino",
+    "nombre": "Pino",
+    "nombreCientifico": "Pinus sylvestris",
+    "otrosNombres": ["Scots pine", "Pino silvestre", "Pino rojo"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Yemas y acículas (agujas)",
+    "sabor": "Resinoso, balsámico, fresco con notas de trementina",
+    "mejorMomento": "Cuando hay congestión respiratoria",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "1-2 semanas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min (yemas) o 5 min (acículas)",
+    "descripcion": "Balsámico y expectorante. Las yemas de pino abren las vías respiratorias y huelen a bosque.",
+    "propiedades": [
+      { "nombre": "Expectorante", "intensidad": 2 },
+      { "nombre": "Antiséptico respiratorio", "intensidad": 2 },
+      { "nombre": "Balsámico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Eucalipto (congestión intensa)", "Tomillo (infección)", "Miel (garganta)"],
+    "contraindicaciones": [
+      "No aplicar aceite esencial en cara de niños pequeños",
+      "Precaución con asma (puede irritar)",
+      "El aceite esencial puro no se ingiere"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión de yemas: 10-15 min. Vahos: acículas en agua hirviendo. Muy efectivo combinado con eucalipto.",
+    "seguridad": "Seguro como infusión y vahos. El aceite esencial requiere más precaución.",
+    "usosColoquiales": ["Congestión", "Tos", "Bronquitis", "Vahos", "Resfriado"],
+    "recomendacion": "Las yemas se recogen en primavera. Muy útil para temporada de resfriados.",
+    "historia": {
+      "etimologia": "'Pinus' del latín, posiblemente del celta 'pin' = montaña o roca. 'Sylvestris' = silvestre, del bosque. Es el pino con mayor distribución del mundo.",
+      "origen": "Eurasia, desde Escocia hasta Siberia oriental. El árbol con mayor distribución natural de todos los pinos.",
+      "datoCurioso": "Los marineros británicos descubrieron que el té de acículas de pino curaba el escorbuto por su contenido en vitamina C (hasta 5 veces más que el limón por peso). Jacques Cartier, el explorador francés, fue salvado del escorbuto en Canadá en 1536 por los iroqueses, que le dieron una infusión de acículas de pino.",
+      "usoAntiguo": "Hipócrates recetaba resina de pino para infecciones pulmonares. Los romanos usaban la brea de pino para impermeabilizar barcos. En la tradición finlandesa, los baños de sauna con ramas de pino eran un ritual de salud ancestral."
+    }
+  },
+  {
+    "id": "ruscus",
+    "nombre": "Ruscus",
+    "nombreCientifico": "Ruscus aculeatus",
+    "otrosNombres": ["Butcher's broom", "Brusco", "Rusco", "Arrayán silvestre"],
+    "categoria": "circulatoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Rizoma (raíz)",
+    "sabor": "Amargo, ligeramente astringente",
+    "mejorMomento": "Mañana",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Curas de 4-6 semanas",
+    "temperatura": "100°C",
+    "tiempoInfusion": "15-20 min (decocción)",
+    "descripcion": "El venotónico natural por excelencia. Para piernas cansadas, varices y mala circulación venosa.",
+    "propiedades": [
+      { "nombre": "Venotónico", "intensidad": 3 },
+      { "nombre": "Antiinflamatorio", "intensidad": 1 }
+    ],
+    "combinaciones": ["Castaño de Indias (varices)", "Vid roja (piernas pesadas)", "Hamamelis (circulación)"],
+    "contraindicaciones": [
+      "Precaución con hipertensión (puede subir tensión ligeramente)",
+      "No en embarazo sin supervisión"
+    ],
+    "interaccionesMedicamentos": ["Antihipertensivos (puede contrarrestar)", "IMAOs"],
+    "preparacion": "Decocción: rizoma troceado, hervir 15-20 min. 2-3 tazas al día en curas de 4-6 semanas.",
+    "seguridad": "Seguro en uso oral. Tiene monografía positiva de la EMA (Agencia Europea del Medicamento).",
+    "usosColoquiales": ["Piernas cansadas", "Varices", "Hemorroides", "Circulación venosa"],
+    "recomendacion": "Muy efectivo para problemas venosos. Existe en cápsulas también.",
+    "historia": {
+      "etimologia": "'Ruscus' del latín. 'Aculeatus' = con aguijones, por sus hojas puntiagudas. En inglés 'Butcher's broom' (escoba de carnicero) porque los carniceros lo usaban para barrer sus establecimientos: las hojas espinosas arrastraban los restos de carne.",
+      "origen": "Cuenca mediterránea y Europa occidental. Crece en sotobosques sombríos.",
+      "datoCurioso": "Lo que parecen las hojas del rusco en realidad son tallos aplanados (cladodios): las verdaderas hojas son diminutas escamas en el centro de estos cladodios. Los carniceros europeos lo usaban como escoba porque sus 'hojas' rígidas y puntiagudas limpiaban bien las tablas de corte.",
+      "usoAntiguo": "Dioscórides lo recomendaba como diurético. En la Edad Media se colgaban ramas de rusco en las puertas para proteger contra el mal de ojo. Los romanos lo usaban como decoración invernal, similar al acebo."
+    }
+  },
+  {
+    "id": "tavadera",
+    "nombre": "Tavadera",
+    "nombreCientifico": "Sideritis angustifolia / Sideritis tragoriganum",
+    "otrosNombres": ["Rabo de gato estrecho", "Zahareña", "Té de monte"],
+    "categoria": "respiratoria",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Sumidades floridas",
+    "sabor": "Suave, herbáceo, ligeramente aromático",
+    "mejorMomento": "Cualquier hora",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Sin restricciones",
+    "temperatura": "100°C",
+    "tiempoInfusion": "5-10 min",
+    "descripcion": "Variedad local de Sideritis. Emoliente y suavizante, similar al rabo de gato pero con hojas más estrechas.",
+    "propiedades": [
+      { "nombre": "Emoliente", "intensidad": 2 },
+      { "nombre": "Suavizante", "intensidad": 2 }
+    ],
+    "combinaciones": ["Malva (doble suavizante)", "Tomillo (garganta)", "Miel (protector)"],
+    "contraindicaciones": [
+      "Sin contraindicaciones conocidas"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: sumidades floridas, 5-10 min. Se toma como té cotidiano.",
+    "seguridad": "Muy segura. Uso tradicional como té cotidiano en zonas rurales españolas.",
+    "usosColoquiales": ["Garganta irritada", "Tos", "Digestión", "Té de diario"],
+    "recomendacion": "Si la encuentras silvestre o en mercados locales, merece la pena probarla.",
+    "historia": {
+      "etimologia": "Nombre vernáculo castellano regional. Pertenece al género Sideritis (del griego 'sideros' = hierro). 'Angustifolia' = hoja estrecha.",
+      "origen": "Endémica de la Península Ibérica, especialmente zona levantina y sureste.",
+      "datoCurioso": "Cada comarca española tiene su propia variedad de Sideritis y su propio nombre local: rabo de gato, zahareña, tavadera, té de monte, té de roca... Hay más de 50 especies de Sideritis solo en la Península Ibérica.",
+      "usoAntiguo": "Usada como té cotidiano por pastores y agricultores del Levante español desde tiempos inmemoriales. En muchos pueblos es la infusión más consumida, por delante del té comercial."
+    }
+  },
+  {
+    "id": "poleo-menta",
+    "nombre": "Poleo Menta",
+    "nombreCientifico": "Mentha pulegium",
+    "otrosNombres": ["Pennyroyal", "Poleo", "Menta poleo"],
+    "categoria": "digestiva",
+    "tenemos": false,
+    "peligrosidad": "alta",
+    "parteUtilizada": "Hojas y sumidades floridas",
+    "sabor": "Mentolado fuerte con un toque herbal diferente a la piperita",
+    "mejorMomento": "Después de comer",
+    "dosisMaxima": "1-2 tazas al día COMO MÁXIMO",
+    "duracionMaximaUso": "Uso puntual, no continuado",
+    "temperatura": "90-95°C",
+    "tiempoInfusion": "5-7 min (NO dejar más)",
+    "descripcion": "Digestivo popular pero con aceite esencial hepatotóxico. La infusión suave es segura, pero el aceite esencial es peligroso.",
+    "propiedades": [
+      { "nombre": "Carminativo", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Sedante", "intensidad": 1 }
+    ],
+    "combinaciones": ["Manzanilla (digestión segura)", "Hierbabuena (alternativa más suave)"],
+    "contraindicaciones": [
+      "NUNCA ingerir el aceite esencial: contiene pulegona, HEPATOTÓXICA y potencialmente mortal",
+      "ABSOLUTAMENTE PROHIBIDO en embarazo (abortivo documentado)",
+      "No en lactancia ni en niños",
+      "No en enfermedad hepática",
+      "La infusión suave y puntual es segura, pero NUNCA el aceite concentrado"
+    ],
+    "interaccionesMedicamentos": ["Medicamentos hepatotóxicos (efecto aditivo)"],
+    "preparacion": "Infusión SUAVE: poca cantidad de hojas, 5-7 min. No hervir las hojas. Nunca aceite esencial.",
+    "seguridad": "La infusión suave puntual es segura. El aceite esencial es TÓXICO: la pulegona causa daño hepático grave y ha causado muertes.",
+    "usosColoquiales": ["Digestión", "Gases", "Después de comer"],
+    "recomendacion": "Si te gusta el sabor, úsala puntualmente. Para uso diario es más segura la hierbabuena o la menta piperita.",
+    "historia": {
+      "etimologia": "'Pulegium' del latín 'pulex' = pulga, porque se usaba para repeler pulgas. 'Poleo' es la adaptación castellana de 'pulegium'. 'Pennyroyal' en inglés viene del anglonormando 'puliol real' = poleo real.",
+      "origen": "Europa, norte de África y Asia occidental. Crece en zonas húmedas y riberas.",
+      "datoCurioso": "En España, el poleo menta es una de las infusiones más populares después de comer, pero pocos saben que su aceite esencial es extremadamente peligroso. En 1978 una mujer murió en Colorado tras beber una cucharada de aceite esencial de poleo intentando provocar un aborto. La FDA no lo ha aprobado como suplemento.",
+      "usoAntiguo": "Los romanos y griegos lo usaban como repelente de insectos (de ahí su nombre). Plinio recomendaba colgar poleo en las habitaciones para ahuyentar pulgas. En la Edad Media se usaba como abortivo, con consecuencias a menudo fatales."
+    }
+  },
+  {
+    "id": "zarzaparrilla",
+    "nombre": "Zarzaparrilla",
+    "nombreCientifico": "Smilax aspera",
+    "otrosNombres": ["Sarsaparilla", "Zarza morisca", "Uva de perro"],
+    "categoria": "depurativa",
+    "tenemos": false,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Raíz",
+    "sabor": "Terroso, ligeramente dulce, con notas a vainilla",
+    "mejorMomento": "Mañana",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Curas de 3-4 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "15-20 min (decocción)",
+    "descripcion": "Depurativo sanguíneo clásico. La planta que dio nombre al refresco más famoso de los westerns.",
+    "propiedades": [
+      { "nombre": "Depurativo", "intensidad": 3 },
+      { "nombre": "Diurético", "intensidad": 1 }
+    ],
+    "combinaciones": ["Ortiga (depuración primaveral)", "Diente de león (hígado)", "Bardana (piel)"],
+    "contraindicaciones": [
+      "Puede afectar absorción de medicamentos (saponinas)",
+      "Precaución con medicación digitalica"
+    ],
+    "interaccionesMedicamentos": ["Digoxina y digitálicos", "Puede alterar absorción de otros medicamentos"],
+    "preparacion": "Decocción: raíz troceada, hervir 15-20 min. Curas primaverales de 3-4 semanas.",
+    "seguridad": "Segura en uso moderado. Larga tradición de uso como depurativo.",
+    "usosColoquiales": ["Depuración", "Acné", "Gota", "Reuma", "Limpieza de sangre"],
+    "recomendacion": "Clásica para curas depurativas de primavera. Se encuentra fácilmente en herbolarios.",
+    "historia": {
+      "etimologia": "'Smilax' del griego, nombre de una ninfa convertida en enredadera. 'Zarza' del árabe 'zarq' y 'parrilla' diminutivo de 'parra'. Literalmente: zarza pequeña con forma de parra.",
+      "origen": "Cuenca mediterránea y zonas tropicales de América (las especies americanas del género Smilax).",
+      "datoCurioso": "La 'sarsaparilla' de las películas del Oeste americano era un refresco hecho con extracto de zarzaparrilla americana. La root beer original también la contenía. En el siglo XVI se importaban toneladas de zarzaparrilla americana a Europa como supuesto remedio contra la sífilis, generando un comercio enorme.",
+      "usoAntiguo": "Los españoles conocieron la zarzaparrilla americana en el siglo XVI y la adoptaron como cura para la sífilis, exportándola masivamente a Europa. Monardes la describió en 1574 como 'milagrosa'. En España, la variedad mediterránea (Smilax aspera) se usaba como depurativo popular desde la Edad Media."
+    }
+  },
+  {
+    "id": "sol-de-oro",
+    "nombre": "Sol de Oro",
+    "nombreCientifico": "Helichrysum stoechas",
+    "otrosNombres": ["Siempreviva", "Perpetua", "Curry plant", "Manzanilla de pastor"],
+    "categoria": "respiratoria",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Sumidades floridas",
+    "sabor": "Herbáceo suave, ligeramente amargo con notas a curry",
+    "mejorMomento": "Cualquier hora, especialmente con alergia o congestión",
+    "dosisMaxima": "3 tazas al día",
+    "duracionMaximaUso": "Sin restricciones en uso moderado",
+    "temperatura": "100°C",
+    "tiempoInfusion": "8-10 min",
+    "descripcion": "Antiinflamatoria y antialérgica natural. Sus flores doradas que nunca se marchitan son un aliado contra alergias y problemas respiratorios.",
+    "propiedades": [
+      { "nombre": "Antialérgico", "intensidad": 2 },
+      { "nombre": "Antiinflamatorio", "intensidad": 2 },
+      { "nombre": "Expectorante", "intensidad": 1 }
+    ],
+    "combinaciones": ["Ortiga (alergias estacionales)", "Tomillo (respiratorio)", "Eucalipto (congestión)"],
+    "contraindicaciones": [
+      "Alergia a compuestas (Asteráceas)",
+      "Datos limitados en embarazo y lactancia"
+    ],
+    "interaccionesMedicamentos": [],
+    "preparacion": "Infusión: sumidades floridas secas, 8-10 min. 2-3 tazas al día en temporada de alergia.",
+    "seguridad": "Muy segura. Uso tradicional extendido en toda la cuenca mediterránea.",
+    "usosColoquiales": ["Alergia estacional", "Rinitis", "Congestión", "Bronquitis", "Tos"],
+    "historia": {
+      "etimologia": "'Helichrysum' del griego 'helios' (sol) + 'chrysos' (oro) = oro del sol. 'Stoechas' por las Islas Stoechades (hoy Îles d'Hyères en Francia). Se llama 'siempreviva' porque sus flores mantienen el color dorado incluso secas, sin marchitarse nunca.",
+      "origen": "Cuenca mediterránea. Crece silvestre en terrenos secos, arenosos y soleados.",
+      "datoCurioso": "Sus flores secas mantienen su color dorado durante años sin marchitarse, de ahí sus nombres populares 'siempreviva' y 'perpetua'. En la antigua Grecia se usaban para adornar templos porque simbolizaban la inmortalidad. El aceite esencial de Helichrysum italicum (una especie cercana) es uno de los más caros del mundo.",
+      "usoAntiguo": "Dioscórides la describió como remedio para la tos y problemas respiratorios. En la medicina popular mediterránea se ha usado durante siglos como antialérgico natural. Los pastores españoles la recogían en verano para tener provisiones todo el año."
+    }
+  },
+  {
+    "id": "artemisa",
+    "nombre": "Artemisa",
+    "nombreCientifico": "Artemisia vulgaris",
+    "otrosNombres": ["Mugwort", "Hierba de San Juan", "Altamisa", "Hierba de los sueños"],
+    "categoria": "hormonal",
+    "tenemos": true,
+    "peligrosidad": "alta",
+    "parteUtilizada": "Hojas y sumidades floridas",
+    "sabor": "Amargo, aromático, con notas a salvia y ajenjo",
+    "mejorMomento": "Tarde (tradición de infusión para sueños lúcidos)",
+    "dosisMaxima": "1-2 tazas al día COMO MÁXIMO",
+    "duracionMaximaUso": "Uso puntual, no continuado. Máximo 1-2 semanas",
+    "temperatura": "95-100°C",
+    "tiempoInfusion": "5-8 min (no más, se vuelve muy amarga)",
+    "descripcion": "Planta sagrada de las curanderas. Reguladora menstrual, digestiva y famosa por inducir sueños vívidos. Pero con precauciones serias.",
+    "propiedades": [
+      { "nombre": "Tónico hormonal", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 },
+      { "nombre": "Antiespasmódico", "intensidad": 2 }
+    ],
+    "combinaciones": ["Salvia (regulación hormonal)", "Manzanilla (suaviza el sabor)", "Melisa (sueños)"],
+    "contraindicaciones": [
+      "ABSOLUTAMENTE PROHIBIDA en embarazo (emenagoga y abortiva)",
+      "Contiene tuyona: neurotóxica en dosis altas",
+      "No en lactancia ni en niños",
+      "No en epilepsia (la tuyona baja el umbral convulsivo)",
+      "Alergia a compuestas (Asteráceas)",
+      "No usar de forma continuada"
+    ],
+    "interaccionesMedicamentos": ["Anticonvulsivos (puede reducir eficacia)", "Anticoagulantes"],
+    "preparacion": "Infusión: poca cantidad de hojas secas, 5-8 min máximo. Sabor amargo fuerte. Se puede mezclar con menta o miel.",
+    "seguridad": "La infusión puntual y suave es segura. El riesgo está en el uso prolongado, las dosis altas y sobre todo en el embarazo. Nunca usar aceite esencial interno.",
+    "usosColoquiales": ["Regulación menstrual", "Sueños lúcidos", "Digestión amarga", "Dolores menstruales"],
+    "historia": {
+      "etimologia": "Nombrada por Artemisa, diosa griega de la caza y la luna, protectora de las mujeres. O por la reina Artemisia II de Caria (siglo IV a.C.), botánica y esposa de Mausolo. 'Vulgaris' = común.",
+      "origen": "Europa, Asia y norte de África. Una de las plantas medicinales más extendidas del mundo.",
+      "datoCurioso": "En la tradición europea, la artemisa es LA planta de las mujeres y de los sueños. En la Edad Media se ponía bajo la almohada para provocar sueños proféticos. En la medicina china, la artemisa (ai ye) es la hierba de la moxibustión: se quema sobre puntos de acupuntura. Los romanos la ponían en las sandalias para evitar la fatiga en las marchas.",
+      "usoAntiguo": "Planta sagrada de las curanderas medievales y renacentistas. En la noche de San Juan se quemaba artemisa para proteger contra el mal de ojo. Los legionarios romanos la metían en las sandalias creyendo que aliviaba el cansancio de los pies. En la tradición anglosajona era una de las 'Nueve Hierbas Sagradas' del encantamiento pagano del siglo X."
+    }
+  },
+  {
+    "id": "diente-de-leon",
+    "nombre": "Diente de León",
+    "nombreCientifico": "Taraxacum officinale",
+    "otrosNombres": ["Dandelion", "Achicoria amarga", "Meacamas", "Amargón"],
+    "categoria": "depurativa",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Raíz y hojas",
+    "sabor": "Amargo herbáceo (hojas), tostado similar al café (raíz tostada)",
+    "mejorMomento": "Mañana o mediodía (diurético)",
+    "dosisMaxima": "3-4 tazas al día",
+    "duracionMaximaUso": "Curas de 3-4 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "Hojas: 10 min. Raíz: 15 min (decocción)",
+    "descripcion": "El depurativo más completo de la naturaleza. Limpia hígado y riñones a la vez. Las hojas son diuréticas, la raíz es hepática.",
+    "propiedades": [
+      { "nombre": "Depurativo hepático", "intensidad": 3 },
+      { "nombre": "Diurético", "intensidad": 2 },
+      { "nombre": "Digestivo", "intensidad": 2 }
+    ],
+    "combinaciones": ["Ortiga (depuración primaveral)", "Cola de caballo (retención)", "Cardo mariano (hígado)"],
+    "contraindicaciones": [
+      "Alergia a compuestas (Asteráceas)",
+      "Precaución con obstrucción biliar o cálculos biliares",
+      "Puede potenciar diuréticos y antidiabéticos"
+    ],
+    "interaccionesMedicamentos": ["Diuréticos", "Antidiabéticos", "Litio", "Ciprofloxacino"],
+    "preparacion": "Hojas: infusión 10 min (diurético). Raíz: decocción 15 min (hígado). Raíz tostada: sucedáneo de café sin cafeína.",
+    "seguridad": "Muy segura. Una de las plantas más estudiadas y con mayor tradición de uso.",
+    "usosColoquiales": ["Hígado", "Retención de líquidos", "Digestión", "Limpieza primaveral", "Sucedáneo de café"],
+    "historia": {
+      "etimologia": "'Taraxacum' probablemente del árabe 'tarakhshaqun' = achicoria amarga, o del griego 'taraxos' (desorden) + 'akos' (remedio). 'Diente de león' por la forma dentada de sus hojas. En francés 'pissenlit' = orina en la cama (por su efecto diurético).",
+      "origen": "Eurasia. Naturalizado en todo el mundo. Crece en prácticamente cualquier terreno.",
+      "datoCurioso": "El nombre francés 'pissenlit' (mea en la cama) y el español popular 'meacamas' hacen referencia directa a su potente efecto diurético. A diferencia de los diuréticos farmacológicos, el diente de león repone el potasio que elimina (es rico en potasio), algo único entre los diuréticos. Cada flor produce hasta 200 semillas con su característico 'paracaídas'.",
+      "usoAntiguo": "Los médicos árabes del siglo X ya lo documentaban como medicinal. En la China del siglo VII se usaba para problemas hepáticos. Los nativos americanos lo adoptaron rápidamente tras su llegada con los colonizadores europeos. En la Segunda Guerra Mundial, la raíz tostada se usaba como sucedáneo del café en toda Europa ocupada."
+    }
+  },
+  {
+    "id": "amapola-californiana",
+    "nombre": "Amapola Californiana",
+    "nombreCientifico": "Eschscholzia californica",
+    "otrosNombres": ["California poppy", "Copa de oro", "Dedal de oro", "Escholtzia"],
+    "categoria": "relajante",
+    "tenemos": true,
+    "peligrosidad": "baja",
+    "parteUtilizada": "Partes aéreas (tallos, hojas y flores)",
+    "sabor": "Herbáceo suave, ligeramente amargo",
+    "mejorMomento": "Noche (antes de dormir)",
+    "dosisMaxima": "2-3 tazas al día",
+    "duracionMaximaUso": "Curas de 3-4 semanas con descanso",
+    "temperatura": "100°C",
+    "tiempoInfusion": "10-15 min",
+    "descripcion": "Sedante suave y ansiolítico natural sin los riesgos de las amapolas opiáceas. Ideal para insomnio leve y ansiedad.",
+    "propiedades": [
+      { "nombre": "Sedante", "intensidad": 2 },
+      { "nombre": "Ansiolítico", "intensidad": 2 },
+      { "nombre": "Analgésico suave", "intensidad": 1 }
+    ],
+    "combinaciones": ["Pasiflora (ansiedad intensa)", "Valeriana (insomnio)", "Tila (nervios)", "Melisa (relax completo)"],
+    "contraindicaciones": [
+      "NO es opiácea pero puede potenciar sedantes farmacológicos",
+      "Precaución en embarazo y lactancia",
+      "Puede causar somnolencia: no conducir si te afecta"
+    ],
+    "interaccionesMedicamentos": ["Sedantes y ansiolíticos (efecto aditivo)", "Antihistamínicos sedantes"],
+    "preparacion": "Infusión: partes aéreas secas, 10-15 min. 1-2 tazas antes de dormir. Se puede combinar con pasiflora y valeriana.",
+    "seguridad": "Segura. NO contiene opiáceos a pesar de ser una amapola. Su mecanismo es diferente: actúa sobre receptores GABA y de serotonina.",
+    "usosColoquiales": ["Insomnio leve", "Ansiedad", "Nerviosismo", "Dolor leve", "Niños nerviosos (dosis reducida)"],
+    "historia": {
+      "etimologia": "Nombrada en honor a Johann Friedrich von Eschscholtz, naturalista y entomólogo ruso-báltico que acompañó a Otto von Kotzebue en su expedición al Pacífico (1815-1818). 'Californica' porque fue descrita por primera vez en California.",
+      "origen": "Costa oeste de Norteamérica, desde Oregon hasta Baja California. Es la flor oficial del estado de California.",
+      "datoCurioso": "Es la flor estatal de California desde 1903. El 6 de abril es el 'California Poppy Day'. A pesar de ser una amapola (Papaveraceae), NO contiene morfina, codeína ni ningún opiáceo. Sus alcaloides (californidina, eschscholtzina) actúan por una vía completamente diferente. En California es ilegal arrancarla de terrenos públicos.",
+      "usoAntiguo": "Los nativos americanos (especialmente los pueblos Cahuilla, Costanoan y Pomo) la usaban como analgésico suave y sedante. Las madres indígenas ponían la planta bajo la almohada de los niños para ayudarles a dormir. Los españoles que llegaron a California la llamaron 'copa de oro' por el color intenso de sus flores."
+    }
+  }
+]

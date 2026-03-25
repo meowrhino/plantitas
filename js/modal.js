@@ -159,16 +159,44 @@ export function openModal(nombre) {
     document.body.style.overflow = "hidden";
 
     document.getElementById("modal-close-btn").addEventListener("click", closeModal);
+
+    // Focus the close button and store trigger for focus restore
+    _triggerEl = document.activeElement;
+    setTimeout(() => document.getElementById("modal-close-btn").focus(), 50);
 }
+
+let _triggerEl = null;
 
 export function closeModal() {
     document.getElementById("modal-overlay").classList.remove("visible");
     document.body.style.overflow = "";
+    if (_triggerEl) { _triggerEl.focus(); _triggerEl = null; }
+}
+
+function trapFocus(e) {
+    const overlay = document.getElementById("modal-overlay");
+    if (!overlay.classList.contains("visible")) return;
+
+    if (e.key === "Escape") { closeModal(); return; }
+    if (e.key !== "Tab") return;
+
+    const modal = document.getElementById("modal");
+    const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
 }
 
 export function initModalListeners() {
     document.getElementById("modal-overlay").addEventListener("click", e => {
         if (e.target.id === "modal-overlay") closeModal();
     });
-    document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+    document.addEventListener("keydown", trapFocus);
 }

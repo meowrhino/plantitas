@@ -18,6 +18,7 @@ export let plantas = [];
 
 export async function cargarPlantas() {
     const res = await fetch("data/plantas.json");
+    if (!res.ok) throw new Error(`Error cargando datos: ${res.status}`);
     plantas = await res.json();
     return plantas;
 }

@@ -128,7 +128,7 @@ function renderGrid() {
         const escapedName = p.nombre.replace(/'/g, "\\'");
 
         return `
-        <div class="card" onclick="window._openModal('${escapedName}')">
+        <div class="card" role="button" tabindex="0" onclick="window._openModal('${escapedName}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window._openModal('${escapedName}')}">
             <div class="card-top-line" style="background:${cat.color}"></div>
             <div class="card-inner">
                 <div class="card-stamp ${stampClass}">${stampText}</div>

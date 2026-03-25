@@ -11,7 +11,7 @@ export function openModal(nombre) {
     const safetyLabel = p.peligrosidad === "alta" ? "Peligro alto" : p.peligrosidad === "media" ? "Precaucion" : "Segura";
 
     let html = `
-        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <button class="modal-close" id="modal-close-btn" aria-label="Cerrar">&times;</button>
         <div class="modal-top-line" style="background:${cat.color}"></div>
         <div class="modal-header">
             <div class="modal-category-bar">
